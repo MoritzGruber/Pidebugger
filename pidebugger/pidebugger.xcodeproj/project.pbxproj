@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		134EB570573BF372E8D96729 /* Pods_pidebugger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5301F31F2D2A7C849DED1C /* Pods_pidebugger.framework */; };
+		8E8FE49D1DB6388A0048D1A4 /* raspberrrypi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FE49C1DB6388A0048D1A4 /* raspberrrypi.swift */; };
 		A5A4E8951DB55DA10025ECF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A4E8941DB55DA10025ECF1 /* AppDelegate.swift */; };
 		A5A4E8971DB55DA10025ECF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A4E8961DB55DA10025ECF1 /* ViewController.swift */; };
 		A5A4E89A1DB55DA20025ECF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5A4E8981DB55DA20025ECF1 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		7059A6EC49A0A17D56F9C57C /* Pods-pidebuggerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pidebuggerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-pidebuggerTests/Pods-pidebuggerTests.release.xcconfig"; sourceTree = "<group>"; };
 		7E5301F31F2D2A7C849DED1C /* Pods_pidebugger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pidebugger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8459000015AE7490C16601ED /* Pods_pidebuggerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pidebuggerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E8FE49C1DB6388A0048D1A4 /* raspberrrypi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = raspberrrypi.swift; sourceTree = "<group>"; };
 		A1A8FD06B27064D046B11837 /* Pods-pidebuggerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pidebuggerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-pidebuggerUITests/Pods-pidebuggerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A5A4E8911DB55DA10025ECF1 /* pidebugger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pidebugger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5A4E8941DB55DA10025ECF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				A5A4E8A01DB55DA20025ECF1 /* LaunchScreen.storyboard */,
 				A5A4E8A31DB55DA20025ECF1 /* Info.plist */,
 				A5A4E89B1DB55DA20025ECF1 /* pidebugger.xcdatamodeld */,
+				8E8FE49C1DB6388A0048D1A4 /* raspberrrypi.swift */,
 			);
 			path = pidebugger;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 			files = (
 				A5A4E8971DB55DA10025ECF1 /* ViewController.swift in Sources */,
 				A5A4E89D1DB55DA20025ECF1 /* pidebugger.xcdatamodeld in Sources */,
+				8E8FE49D1DB6388A0048D1A4 /* raspberrrypi.swift in Sources */,
 				A5A4E8951DB55DA10025ECF1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
