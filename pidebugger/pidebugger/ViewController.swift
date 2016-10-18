@@ -13,6 +13,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let pi = raspberrypi.init()
+        print("              PI:  \( pi.pins[1])");
         let socket = SocketIOClient(socketURL: URL(string: "http://10.60.45.94:3000")!, config: [.log(true), .forcePolling(true)])
         
         socket.on("connect") {data, ack in

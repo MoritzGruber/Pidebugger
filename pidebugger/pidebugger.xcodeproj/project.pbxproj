@@ -106,6 +106,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A58D44F41DB669F7000473AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E8FE49C1DB6388A0048D1A4 /* raspberrrypi.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		A5A4E8881DB55DA10025ECF1 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +139,7 @@
 		A5A4E8931DB55DA10025ECF1 /* pidebugger */ = {
 			isa = PBXGroup;
 			children = (
+				A58D44F41DB669F7000473AD /* Model */,
 				A5A4E8941DB55DA10025ECF1 /* AppDelegate.swift */,
 				A5A4E8961DB55DA10025ECF1 /* ViewController.swift */,
 				A5A4E8981DB55DA20025ECF1 /* Main.storyboard */,
@@ -138,7 +147,6 @@
 				A5A4E8A01DB55DA20025ECF1 /* LaunchScreen.storyboard */,
 				A5A4E8A31DB55DA20025ECF1 /* Info.plist */,
 				A5A4E89B1DB55DA20025ECF1 /* pidebugger.xcdatamodeld */,
-				8E8FE49C1DB6388A0048D1A4 /* raspberrrypi.swift */,
 			);
 			path = pidebugger;
 			sourceTree = "<group>";

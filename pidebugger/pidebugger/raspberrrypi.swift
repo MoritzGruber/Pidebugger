@@ -8,11 +8,20 @@
 
 import Foundation
 
-var pins = [pin]()
-
-enum pin {
-    case low;
-    case high;
-    case input;
+class raspberrypi {
+    var pins = [pin](repeating: pin.low, count: 40)
+    
+    enum pin {
+        case low;
+        case high;
+        case input;
+        
+    }
+    
+    init(){
+        for i in 0..<40 {
+            pins[i] = pin.low
+        }
+    }
     
 }
