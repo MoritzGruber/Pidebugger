@@ -1,11 +1,12 @@
 var express = require('express');
 var app = express();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
+var https = require('https').Server(app);
+var io = require('socket.io')(https);
 
 app.use('/', express.static(__dirname + '/public'));
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
-http.listen(3000, function () {
+
+https.listen(3000, function () {
     console.log('listening on *:3000');
 });
 console.log('Simple server to test the socket connection, listin on /'/'socket');

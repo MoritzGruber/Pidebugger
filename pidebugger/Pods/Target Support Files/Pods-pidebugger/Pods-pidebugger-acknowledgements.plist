@@ -245,6 +245,8 @@ Apache License
    See the License for the specific language governing permissions and
    limitations under the License.
 </string>
+			<key>License</key>
+			<string>MIT</string>
 			<key>Title</key>
 			<string>Socket.IO-Client-Swift</string>
 			<key>Type</key>
