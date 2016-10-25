@@ -7,7 +7,7 @@ target 'pidebugger' do
 
   # Pods for pidebugger
   pod 'Socket.IO-Client-Swift', '~> 8.0.2' # Or latest version
-
+  pod 'NMSSH', '~> 2.2.5'
 	
   target 'pidebuggerTests' do
     inherit! :search_paths

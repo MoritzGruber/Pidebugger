@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "36DF8832169EB297BE1B43EB28AAE4C3"
+               BlueprintIdentifier = "26B7C032EAB62105DA728993982BC000"
                BuildableName = "Pods_pidebugger.framework"
                BlueprintName = "Pods-pidebugger"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "36DF8832169EB297BE1B43EB28AAE4C3"
+            BlueprintIdentifier = "26B7C032EAB62105DA728993982BC000"
             BuildableName = "Pods_pidebugger.framework"
             BlueprintName = "Pods-pidebugger"
             ReferencedContainer = "container:Pods.xcodeproj">

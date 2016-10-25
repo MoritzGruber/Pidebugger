@@ -45,6 +45,7 @@
 		7059A6EC49A0A17D56F9C57C /* Pods-pidebuggerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pidebuggerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-pidebuggerTests/Pods-pidebuggerTests.release.xcconfig"; sourceTree = "<group>"; };
 		7E5301F31F2D2A7C849DED1C /* Pods_pidebugger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pidebugger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8459000015AE7490C16601ED /* Pods_pidebuggerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pidebuggerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E803DCE1DBF54E000F40231 /* NMSSH-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NMSSH-Bridging-Header.h"; sourceTree = "<group>"; };
 		8E8FE49C1DB6388A0048D1A4 /* raspberrrypi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = raspberrrypi.swift; sourceTree = "<group>"; };
 		A1A8FD06B27064D046B11837 /* Pods-pidebuggerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pidebuggerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-pidebuggerUITests/Pods-pidebuggerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A5A4E8911DB55DA10025ECF1 /* pidebugger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pidebugger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +148,7 @@
 				A5A4E8A01DB55DA20025ECF1 /* LaunchScreen.storyboard */,
 				A5A4E8A31DB55DA20025ECF1 /* Info.plist */,
 				A5A4E89B1DB55DA20025ECF1 /* pidebugger.xcdatamodeld */,
+				8E803DCE1DBF54E000F40231 /* NMSSH-Bridging-Header.h */,
 			);
 			path = pidebugger;
 			sourceTree = "<group>";
@@ -257,17 +259,20 @@
 					A5A4E8901DB55DA10025ECF1 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = WVCLR2EPQZ;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					A5A4E8A71DB55DA20025ECF1 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = WVCLR2EPQZ;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A5A4E8901DB55DA10025ECF1;
 					};
 					A5A4E8B21DB55DA20025ECF1 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = WVCLR2EPQZ;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A5A4E8901DB55DA10025ECF1;
 					};
@@ -619,11 +624,15 @@
 			baseConfigurationReference = 55D5036D86D88039AF8E6F2C /* Pods-pidebugger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WVCLR2EPQZ;
 				INFOPLIST_FILE = pidebugger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moritzgruber.pidebugger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "pidebugger/pidebugger-Bridging-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "pidebugger/NMSSH-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -633,11 +642,14 @@
 			baseConfigurationReference = 1775701321D89A5602CE73D5 /* Pods-pidebugger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WVCLR2EPQZ;
 				INFOPLIST_FILE = pidebugger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moritzgruber.pidebugger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "pidebugger/pidebugger-Bridging-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "pidebugger/NMSSH-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -648,11 +660,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WVCLR2EPQZ;
 				INFOPLIST_FILE = pidebuggerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moritzgruber.pidebuggerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "pidebugger/pidebuggerTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pidebugger.app/pidebugger";
 			};
@@ -664,11 +679,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WVCLR2EPQZ;
 				INFOPLIST_FILE = pidebuggerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moritzgruber.pidebuggerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "pidebugger/pidebuggerTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pidebugger.app/pidebugger";
 			};
@@ -679,11 +696,14 @@
 			baseConfigurationReference = AAB9CFCFF79BA2ABF37F47EB /* Pods-pidebuggerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WVCLR2EPQZ;
 				INFOPLIST_FILE = pidebuggerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moritzgruber.pidebuggerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "pidebugger/pidebuggerUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = pidebugger;
 			};
@@ -694,11 +714,13 @@
 			baseConfigurationReference = A1A8FD06B27064D046B11837 /* Pods-pidebuggerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WVCLR2EPQZ;
 				INFOPLIST_FILE = pidebuggerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moritzgruber.pidebuggerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "pidebugger/pidebuggerUITests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = pidebugger;
 			};
