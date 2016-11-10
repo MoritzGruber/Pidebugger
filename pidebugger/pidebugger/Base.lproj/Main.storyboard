@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pidebugger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,449 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mpq-TC-TAH">
+                                <frame key="frameInset" minX="264" minY="30" width="72" height="480"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D6h-PT-hbT">
+                                        <subviews>
+                                            <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9s2-f9-Vhp" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="4qd-a4-7Tm"/>
+                                                    <constraint firstAttribute="width" constant="24" id="JnS-VW-NFs"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="3V">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vQ-I0-G1c" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="8Rb-nA-1Eq"/>
+                                                    <constraint firstAttribute="height" constant="24" id="vzM-U8-Rsz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTj-hZ-M8P" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="7hs-08-kGN"/>
+                                                    <constraint firstAttribute="width" constant="24" id="H2W-0H-8l8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2h7-zU-jdk" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="5Cw-AF-tmq"/>
+                                                    <constraint firstAttribute="width" constant="24" id="Oot-gi-K7m"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFc-we-war" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="GUg-oS-bIM"/>
+                                                    <constraint firstAttribute="height" constant="24" id="qDN-2h-GJD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="G">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZW-Pw-UXI" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="PaJ-ik-TgV"/>
+                                                    <constraint firstAttribute="width" constant="24" id="WdI-Uo-Thv"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="11">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzQ-Qu-TFQ" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="46h-s2-haF"/>
+                                                    <constraint firstAttribute="height" constant="24" id="bju-IN-S6C"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="13">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Y-IC-oSl" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="KQT-Be-hhb"/>
+                                                    <constraint firstAttribute="width" constant="24" id="iMm-Xj-mbm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="15">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BA9-dw-HMi" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="YNY-jy-euZ"/>
+                                                    <constraint firstAttribute="height" constant="24" id="rPP-ZG-Jkj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="3V">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSe-qd-geu" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="eyT-2M-MKd"/>
+                                                    <constraint firstAttribute="height" constant="24" id="wtg-SO-ZsD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="19">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMA-Lv-GQR" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="qqy-to-8zJ"/>
+                                                    <constraint firstAttribute="width" constant="24" id="uol-2v-DyN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="21">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62l-AI-9MO" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="6pc-6E-dQy"/>
+                                                    <constraint firstAttribute="width" constant="24" id="l8B-q6-GbX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="23">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcN-Is-uX6" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="0G8-Je-LXB"/>
+                                                    <constraint firstAttribute="height" constant="24" id="AWv-rI-bvM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="G">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="44" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yA-Ra-Nlv" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="sO4-RU-7S7"/>
+                                                    <constraint firstAttribute="height" constant="24" id="tAv-cC-ycc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="SD">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="29" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAd-l0-dDH" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="3r7-N3-WZ7"/>
+                                                    <constraint firstAttribute="width" constant="24" id="UGl-mF-CWp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="29">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zv3-WQ-MUC" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="OC6-g6-fwM"/>
+                                                    <constraint firstAttribute="width" constant="24" id="Oa2-tW-pVh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="31">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vv-Js-mew" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="6u7-pd-7zS"/>
+                                                    <constraint firstAttribute="height" constant="24" id="81K-rQ-Y43"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="33">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDc-ub-IFC" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="1rD-th-B4t"/>
+                                                    <constraint firstAttribute="height" constant="24" id="oEv-c3-DSe"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="35">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="37" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1KP-nc-NgS" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="aaS-KT-3JU"/>
+                                                    <constraint firstAttribute="width" constant="24" id="dzN-v3-AbJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="37">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M5-Vt-KRA" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="Nlj-24-8Q6"/>
+                                                    <constraint firstAttribute="width" constant="24" id="dyC-cR-Bud"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="G">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="480" id="2CU-Xj-4un"/>
+                                            <constraint firstAttribute="width" constant="24" id="U6m-i3-pHY"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6g9-hg-Idg">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="480" id="NOC-QO-osf"/>
+                                            <constraint firstAttribute="width" constant="24" id="tID-h6-lCw"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Rfc-Dc-bdp">
+                                        <subviews>
+                                            <button opaque="NO" tag="42" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdn-W1-stQ" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="m9j-OL-p8P"/>
+                                                    <constraint firstAttribute="height" constant="24" id="xeV-9X-YDP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="5V">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="42" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALY-Ix-az4" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="0MG-Ug-EwU"/>
+                                                    <constraint firstAttribute="height" constant="24" id="KsW-e7-bRc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="5V">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZkB-I5-CQF" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="ADb-vz-RFw"/>
+                                                    <constraint firstAttribute="height" constant="24" id="BnO-29-qeR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="G">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPG-Ei-IIR" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="Z6Q-kz-Qcc"/>
+                                                    <constraint firstAttribute="height" constant="24" id="peI-pg-1Nm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Iq-Ew-uiB" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="FlI-tS-uPJ"/>
+                                                    <constraint firstAttribute="width" constant="24" id="Oej-1V-jLb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="10">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXp-jg-gQ4" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="Pu2-ew-NrT"/>
+                                                    <constraint firstAttribute="width" constant="24" id="kc2-ao-fMd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="12">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2g-76-0Pr" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="pkr-Ey-4Ti"/>
+                                                    <constraint firstAttribute="width" constant="24" id="ska-Zo-MUJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="G">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJn-pt-7Ay" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="PW6-6C-np4"/>
+                                                    <constraint firstAttribute="width" constant="24" id="iTk-av-MT1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="16">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQt-Z1-kRX" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="wXO-Tj-Pd9"/>
+                                                    <constraint firstAttribute="height" constant="24" id="wnl-wa-tK9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="18">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iah-Ux-j92" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="Q3M-HP-Aef"/>
+                                                    <constraint firstAttribute="height" constant="24" id="h3Y-gj-M7A"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="G">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfJ-FY-1Ob" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="ibv-0V-mqZ"/>
+                                                    <constraint firstAttribute="width" constant="24" id="z8Q-0o-393"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="22">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Er8-Qn-vnl" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="3N0-3Q-GEU"/>
+                                                    <constraint firstAttribute="height" constant="24" id="DfL-8p-ITV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="24">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKJ-BL-Xk5" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="kNg-Qs-Fjd"/>
+                                                    <constraint firstAttribute="height" constant="24" id="qHu-JD-nyS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="26">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="44" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9f-hc-rgC" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="6eR-Nm-AIc"/>
+                                                    <constraint firstAttribute="width" constant="24" id="yS6-AM-4fj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="SC">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHJ-Iq-qbG" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="JFl-be-JhG"/>
+                                                    <constraint firstAttribute="width" constant="24" id="WN2-GG-YPx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="G">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hD1-gD-4jl" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="5fL-8T-HmL"/>
+                                                    <constraint firstAttribute="width" constant="24" id="nFh-Ao-hpD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="32">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmT-Wg-W8M" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="FGu-fg-ojL"/>
+                                                    <constraint firstAttribute="height" constant="24" id="Fj4-z0-SGF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="G">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="36" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEK-Ln-q4u" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="5M5-lT-GH7"/>
+                                                    <constraint firstAttribute="width" constant="24" id="frg-CB-yLp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="36">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="38" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10m-Bv-2eR" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="Eql-JI-dvX"/>
+                                                    <constraint firstAttribute="height" constant="24" id="lDT-JM-LBY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="38">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IP-A4-8I3" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="F2q-2x-lSx"/>
+                                                    <constraint firstAttribute="height" constant="24" id="TAs-8J-MXg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="40">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="480" id="6d7-CX-PaL"/>
+                                            <constraint firstAttribute="width" constant="24" id="9cJ-nO-YZO"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="QhT-An-qEy"/>
+                                    <constraint firstAttribute="height" constant="480" id="x30-Go-Ob7"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Mpq-TC-TAH" secondAttribute="trailing" constant="10" id="Lrf-I9-4B4"/>
+                            <constraint firstItem="Mpq-TC-TAH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="khR-BU-6lW"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>
