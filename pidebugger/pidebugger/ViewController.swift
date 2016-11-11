@@ -32,6 +32,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    //Array initialized with 40 default values ("f" = false, "t" = true, "i" = input)
+    var pinValue = [String](repeating: "f", count: 40)
+    
+    
 
 }
 

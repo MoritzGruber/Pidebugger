@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,14 +20,201 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mpq-TC-TAH">
-                                <frame key="frameInset" minX="264" minY="30" width="72" height="480"/>
+                                <frame key="frameInset" minX="191" minY="28" width="158" height="480"/>
                                 <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IfC-6G-8aR">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+3,3V" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKy-PE-btA">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="Pij-mw-adB"/>
+                                                    <constraint firstAttribute="height" constant="24" id="Zsb-6S-32x"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 02" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BnY-yG-r9N">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="iPN-XL-bqb"/>
+                                                    <constraint firstAttribute="width" constant="40" id="zly-a7-frM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 03" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWB-n3-5ib">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="AGY-vg-i4s"/>
+                                                    <constraint firstAttribute="height" constant="24" id="Z3t-oW-dT2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 04" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bC-t8-wLe">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="BlT-OE-34m"/>
+                                                    <constraint firstAttribute="width" constant="40" id="NFK-9I-cMY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GND" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LkS-ic-XVw">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="62o-pe-jeS"/>
+                                                    <constraint firstAttribute="height" constant="24" id="caj-fC-Oxg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 17" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxk-yE-uYy">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="m5l-lb-eil"/>
+                                                    <constraint firstAttribute="height" constant="24" id="sr7-V4-cx4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 27" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUZ-eR-sDU">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="FFH-c5-hW4"/>
+                                                    <constraint firstAttribute="height" constant="24" id="Qxn-5E-h2c"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 22" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtL-w1-6jf">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="9pj-zw-ybB"/>
+                                                    <constraint firstAttribute="height" constant="24" id="nC6-l2-1sq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+3,3V" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmk-zu-WvN">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="4DZ-jV-mCW"/>
+                                                    <constraint firstAttribute="height" constant="24" id="uWD-9W-4yJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLu-Sn-c6y">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="xOn-wh-nfp"/>
+                                                    <constraint firstAttribute="width" constant="40" id="xfE-EY-WPm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 09" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqa-Mf-gyv">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="SR0-Ne-p8S"/>
+                                                    <constraint firstAttribute="width" constant="40" id="rUd-aw-6kL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 11" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhG-qb-IGH">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="7EL-z4-ci6"/>
+                                                    <constraint firstAttribute="width" constant="40" id="cQy-6m-fGb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GND" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8W-cc-8sb">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="f0V-Jq-Hb0"/>
+                                                    <constraint firstAttribute="width" constant="40" id="no4-IV-a6Z"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID_SD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiS-Aw-Thy">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="Y6o-c6-nSf"/>
+                                                    <constraint firstAttribute="height" constant="24" id="x0t-Xg-bhu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 05" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZc-It-09k">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="Wft-QQ-sdi"/>
+                                                    <constraint firstAttribute="width" constant="40" id="bEC-Uk-EGH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 06" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7V4-t4-MSy">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="2eN-l9-rkj"/>
+                                                    <constraint firstAttribute="width" constant="40" id="Pig-XT-qZS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 13" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vh-It-4mF">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="Jlj-Le-SmV"/>
+                                                    <constraint firstAttribute="width" constant="40" id="Zer-MY-g6i"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 19" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpI-iY-WPc">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="CxR-C7-wHe"/>
+                                                    <constraint firstAttribute="height" constant="24" id="l9z-yk-6p5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 26" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0W-fh-XiJ">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="Ikh-XG-TZZ"/>
+                                                    <constraint firstAttribute="height" constant="24" id="icf-Yv-9mU"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GND" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgv-Gb-7X6">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="bxm-Iw-JJn"/>
+                                                    <constraint firstAttribute="height" constant="24" id="cF5-An-10K"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="FT5-Is-DmI"/>
+                                        </constraints>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D6h-PT-hbT">
                                         <subviews>
                                             <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9s2-f9-Vhp" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="4qd-a4-7Tm"/>
-                                                    <constraint firstAttribute="width" constant="24" id="JnS-VW-NFs"/>
+                                                    <constraint firstAttribute="height" constant="24" id="A9a-1w-Axh"/>
+                                                    <constraint firstAttribute="width" constant="24" id="nEU-9R-dCe"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="3V">
@@ -35,8 +223,8 @@
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vQ-I0-G1c" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="8Rb-nA-1Eq"/>
-                                                    <constraint firstAttribute="height" constant="24" id="vzM-U8-Rsz"/>
+                                                    <constraint firstAttribute="width" constant="24" id="MJJ-7p-Jc2"/>
+                                                    <constraint firstAttribute="height" constant="24" id="mQv-tk-WaZ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="3">
@@ -45,8 +233,8 @@
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTj-hZ-M8P" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="7hs-08-kGN"/>
-                                                    <constraint firstAttribute="width" constant="24" id="H2W-0H-8l8"/>
+                                                    <constraint firstAttribute="width" constant="24" id="Hdh-Ub-irm"/>
+                                                    <constraint firstAttribute="height" constant="24" id="sUr-2a-Xu4"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="5">
@@ -55,8 +243,8 @@
                                             </button>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2h7-zU-jdk" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="5Cw-AF-tmq"/>
-                                                    <constraint firstAttribute="width" constant="24" id="Oot-gi-K7m"/>
+                                                    <constraint firstAttribute="width" constant="24" id="dYT-nU-Iuw"/>
+                                                    <constraint firstAttribute="height" constant="24" id="kl9-Q5-Od9"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="7">
@@ -65,8 +253,8 @@
                                             </button>
                                             <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFc-we-war" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="GUg-oS-bIM"/>
-                                                    <constraint firstAttribute="height" constant="24" id="qDN-2h-GJD"/>
+                                                    <constraint firstAttribute="width" constant="24" id="3TF-gs-Csw"/>
+                                                    <constraint firstAttribute="height" constant="24" id="Jc7-SE-dqy"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="G">
@@ -75,8 +263,8 @@
                                             </button>
                                             <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZW-Pw-UXI" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="PaJ-ik-TgV"/>
-                                                    <constraint firstAttribute="width" constant="24" id="WdI-Uo-Thv"/>
+                                                    <constraint firstAttribute="width" constant="24" id="YLk-ua-uUL"/>
+                                                    <constraint firstAttribute="height" constant="24" id="bds-nc-pAC"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="11">
@@ -85,8 +273,8 @@
                                             </button>
                                             <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzQ-Qu-TFQ" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="46h-s2-haF"/>
-                                                    <constraint firstAttribute="height" constant="24" id="bju-IN-S6C"/>
+                                                    <constraint firstAttribute="height" constant="24" id="DXU-Nj-a07"/>
+                                                    <constraint firstAttribute="width" constant="24" id="Gfb-fs-JHC"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="13">
@@ -95,8 +283,8 @@
                                             </button>
                                             <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Y-IC-oSl" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="KQT-Be-hhb"/>
-                                                    <constraint firstAttribute="width" constant="24" id="iMm-Xj-mbm"/>
+                                                    <constraint firstAttribute="width" constant="24" id="HmL-FX-pwf"/>
+                                                    <constraint firstAttribute="height" constant="24" id="T9g-2A-1tN"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="15">
@@ -105,8 +293,8 @@
                                             </button>
                                             <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BA9-dw-HMi" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="YNY-jy-euZ"/>
-                                                    <constraint firstAttribute="height" constant="24" id="rPP-ZG-Jkj"/>
+                                                    <constraint firstAttribute="height" constant="24" id="axL-1c-x7M"/>
+                                                    <constraint firstAttribute="width" constant="24" id="iWS-tq-ZFZ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="3V">
@@ -115,8 +303,8 @@
                                             </button>
                                             <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSe-qd-geu" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="eyT-2M-MKd"/>
-                                                    <constraint firstAttribute="height" constant="24" id="wtg-SO-ZsD"/>
+                                                    <constraint firstAttribute="width" constant="24" id="Ktg-8C-9bi"/>
+                                                    <constraint firstAttribute="height" constant="24" id="lRy-VI-GTz"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="19">
@@ -125,8 +313,8 @@
                                             </button>
                                             <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMA-Lv-GQR" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="qqy-to-8zJ"/>
-                                                    <constraint firstAttribute="width" constant="24" id="uol-2v-DyN"/>
+                                                    <constraint firstAttribute="width" constant="24" id="lt5-xw-pfl"/>
+                                                    <constraint firstAttribute="height" constant="24" id="oC6-vP-LWK"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="21">
@@ -135,8 +323,8 @@
                                             </button>
                                             <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62l-AI-9MO" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="6pc-6E-dQy"/>
-                                                    <constraint firstAttribute="width" constant="24" id="l8B-q6-GbX"/>
+                                                    <constraint firstAttribute="height" constant="24" id="sxj-xo-fU8"/>
+                                                    <constraint firstAttribute="width" constant="24" id="t1n-oN-aUG"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="23">
@@ -145,8 +333,8 @@
                                             </button>
                                             <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcN-Is-uX6" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="0G8-Je-LXB"/>
-                                                    <constraint firstAttribute="height" constant="24" id="AWv-rI-bvM"/>
+                                                    <constraint firstAttribute="height" constant="24" id="9j7-FH-9O6"/>
+                                                    <constraint firstAttribute="width" constant="24" id="Qwc-WN-bdN"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="G">
@@ -155,8 +343,8 @@
                                             </button>
                                             <button opaque="NO" tag="44" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yA-Ra-Nlv" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="sO4-RU-7S7"/>
-                                                    <constraint firstAttribute="height" constant="24" id="tAv-cC-ycc"/>
+                                                    <constraint firstAttribute="width" constant="24" id="1cW-dc-JxA"/>
+                                                    <constraint firstAttribute="height" constant="24" id="ubt-qn-s2d"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="SD">
@@ -165,8 +353,8 @@
                                             </button>
                                             <button opaque="NO" tag="29" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAd-l0-dDH" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="3r7-N3-WZ7"/>
-                                                    <constraint firstAttribute="width" constant="24" id="UGl-mF-CWp"/>
+                                                    <constraint firstAttribute="width" constant="24" id="T1i-jO-35Q"/>
+                                                    <constraint firstAttribute="height" constant="24" id="U4p-6f-b97"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="29">
@@ -175,8 +363,8 @@
                                             </button>
                                             <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zv3-WQ-MUC" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="OC6-g6-fwM"/>
-                                                    <constraint firstAttribute="width" constant="24" id="Oa2-tW-pVh"/>
+                                                    <constraint firstAttribute="width" constant="24" id="5QV-7v-dcI"/>
+                                                    <constraint firstAttribute="height" constant="24" id="f8x-pG-6zP"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="31">
@@ -185,8 +373,8 @@
                                             </button>
                                             <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vv-Js-mew" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="6u7-pd-7zS"/>
-                                                    <constraint firstAttribute="height" constant="24" id="81K-rQ-Y43"/>
+                                                    <constraint firstAttribute="height" constant="24" id="RrW-AW-pda"/>
+                                                    <constraint firstAttribute="width" constant="24" id="x0N-ag-w7S"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="33">
@@ -195,8 +383,8 @@
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDc-ub-IFC" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="1rD-th-B4t"/>
-                                                    <constraint firstAttribute="height" constant="24" id="oEv-c3-DSe"/>
+                                                    <constraint firstAttribute="height" constant="24" id="JNd-Nv-KKg"/>
+                                                    <constraint firstAttribute="width" constant="24" id="p9n-dD-syp"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="35">
@@ -205,8 +393,8 @@
                                             </button>
                                             <button opaque="NO" tag="37" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1KP-nc-NgS" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="aaS-KT-3JU"/>
-                                                    <constraint firstAttribute="width" constant="24" id="dzN-v3-AbJ"/>
+                                                    <constraint firstAttribute="height" constant="24" id="Ebd-em-yro"/>
+                                                    <constraint firstAttribute="width" constant="24" id="M7F-lY-mcE"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="37">
@@ -215,8 +403,8 @@
                                             </button>
                                             <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M5-Vt-KRA" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="Nlj-24-8Q6"/>
-                                                    <constraint firstAttribute="width" constant="24" id="dyC-cR-Bud"/>
+                                                    <constraint firstAttribute="height" constant="24" id="660-w7-kQZ"/>
+                                                    <constraint firstAttribute="width" constant="24" id="v8T-kj-wwG"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="G">
@@ -229,18 +417,346 @@
                                             <constraint firstAttribute="width" constant="24" id="U6m-i3-pHY"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6g9-hg-Idg">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="j2E-5R-a4C">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gza-9p-7cI">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="V6y-6g-MSk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2a-zV-9Em">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="GLP-WS-MUd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqr-r3-0A0">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="Qrs-7p-JzI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oy-a4-oAN">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="Wzt-jg-2nk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvY-td-41x">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="7yy-5f-yLf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="inf-tb-iuC">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="L9c-b8-dhA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ps-mt-3RD">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="ZmR-8C-DRF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sx-oT-6eI">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="ddh-WF-Y4A"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zh-Gm-LHi">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="rf9-be-s21"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5g-g0-vcW">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="BwD-vf-99B"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wl5-48-eWk">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="544-lD-eAR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqd-P7-H7P">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="ppb-4c-6gW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSI-Qa-Jxl">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="5M4-fW-MFf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNl-C9-qHw">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="olx-D8-OAJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLB-c2-P9f">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="X21-GP-xFG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAC-yz-93R">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="fth-Fl-mtJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fF6-yp-j2Z">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="kr1-Su-5I8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilJ-nq-fRn">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="3Zl-10-a83"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="37" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPc-Q5-UJJ">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="zc8-aM-M8s"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="39" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUJ-wL-73N">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="WtT-JV-pE4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="480" id="NOC-QO-osf"/>
-                                            <constraint firstAttribute="width" constant="24" id="tID-h6-lCw"/>
+                                            <constraint firstAttribute="width" constant="20" id="Gtm-hL-Cfq"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MXB-6b-bVi">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mp1-RJ-cB6">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="yjN-qo-Ajo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="04" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZN-mm-fa0">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="lOW-L0-K0m"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiH-PO-Pxq">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="ImG-Lv-y2D"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sV7-7E-UqS">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="xVY-fp-4I0"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzS-cd-gZo">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="Thq-8Q-oXP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRW-jn-G7x">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="Kjl-H6-Ly4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3y-1h-kex">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="r0j-ZS-g4d"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtl-d1-dP0">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="2dq-G6-gaI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDi-0X-xaa">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="y0u-xc-5SY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLP-yB-O73">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="Y0h-0x-S6Y"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KG4-08-C1v">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="saO-BO-Kf7"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTs-nt-hWG">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="fTq-Xc-s9S"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EE-hI-D9d">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="nh6-2V-iR5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h32-He-IR5">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="YF0-6J-K6H"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5s-L5-GDP">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="PSJ-0T-JRw"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8b-ye-EDE">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="tAh-wf-3g5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7EP-mf-Ivg">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="BzA-GF-810"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="36" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixk-UL-qqg">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="f7j-JB-sEa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="38" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKw-tA-JYL">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="08L-hY-vzy"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ee5-Nr-7Ih">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="rcL-sc-gMa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="ffn-rk-14V"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Rfc-Dc-bdp">
                                         <subviews>
                                             <button opaque="NO" tag="42" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdn-W1-stQ" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="m9j-OL-p8P"/>
-                                                    <constraint firstAttribute="height" constant="24" id="xeV-9X-YDP"/>
+                                                    <constraint firstAttribute="height" constant="24" id="7S4-tK-SoW"/>
+                                                    <constraint firstAttribute="width" constant="24" id="I6P-H7-csU"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="5V">
@@ -249,8 +765,8 @@
                                             </button>
                                             <button opaque="NO" tag="42" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALY-Ix-az4" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="0MG-Ug-EwU"/>
-                                                    <constraint firstAttribute="height" constant="24" id="KsW-e7-bRc"/>
+                                                    <constraint firstAttribute="width" constant="24" id="QKK-64-Fh2"/>
+                                                    <constraint firstAttribute="height" constant="24" id="gIl-9u-hUs"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="5V">
@@ -259,8 +775,8 @@
                                             </button>
                                             <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZkB-I5-CQF" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="ADb-vz-RFw"/>
-                                                    <constraint firstAttribute="height" constant="24" id="BnO-29-qeR"/>
+                                                    <constraint firstAttribute="height" constant="24" id="QhS-uu-8x5"/>
+                                                    <constraint firstAttribute="width" constant="24" id="ZJT-0Z-Zua"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="G">
@@ -269,8 +785,8 @@
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPG-Ei-IIR" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="Z6Q-kz-Qcc"/>
-                                                    <constraint firstAttribute="height" constant="24" id="peI-pg-1Nm"/>
+                                                    <constraint firstAttribute="width" constant="24" id="bBN-Hr-nyN"/>
+                                                    <constraint firstAttribute="height" constant="24" id="hjd-Pe-WEW"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="8">
@@ -279,8 +795,8 @@
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Iq-Ew-uiB" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="FlI-tS-uPJ"/>
-                                                    <constraint firstAttribute="width" constant="24" id="Oej-1V-jLb"/>
+                                                    <constraint firstAttribute="width" constant="24" id="IUw-TX-gYe"/>
+                                                    <constraint firstAttribute="height" constant="24" id="K9V-EF-Ygu"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="10">
@@ -289,8 +805,8 @@
                                             </button>
                                             <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXp-jg-gQ4" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="Pu2-ew-NrT"/>
-                                                    <constraint firstAttribute="width" constant="24" id="kc2-ao-fMd"/>
+                                                    <constraint firstAttribute="height" constant="24" id="qhZ-lQ-SX4"/>
+                                                    <constraint firstAttribute="width" constant="24" id="rhc-RQ-aNE"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="12">
@@ -299,8 +815,8 @@
                                             </button>
                                             <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2g-76-0Pr" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="pkr-Ey-4Ti"/>
-                                                    <constraint firstAttribute="width" constant="24" id="ska-Zo-MUJ"/>
+                                                    <constraint firstAttribute="width" constant="24" id="9rg-ma-jwM"/>
+                                                    <constraint firstAttribute="height" constant="24" id="W6z-jp-7DW"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="G">
@@ -309,8 +825,8 @@
                                             </button>
                                             <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJn-pt-7Ay" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="PW6-6C-np4"/>
-                                                    <constraint firstAttribute="width" constant="24" id="iTk-av-MT1"/>
+                                                    <constraint firstAttribute="height" constant="24" id="7tm-ws-y5J"/>
+                                                    <constraint firstAttribute="width" constant="24" id="QVU-3t-TrS"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="16">
@@ -319,8 +835,8 @@
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQt-Z1-kRX" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="wXO-Tj-Pd9"/>
-                                                    <constraint firstAttribute="height" constant="24" id="wnl-wa-tK9"/>
+                                                    <constraint firstAttribute="width" constant="24" id="9W7-2f-1JE"/>
+                                                    <constraint firstAttribute="height" constant="24" id="geI-4q-hmV"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="18">
@@ -329,8 +845,8 @@
                                             </button>
                                             <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iah-Ux-j92" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="Q3M-HP-Aef"/>
-                                                    <constraint firstAttribute="height" constant="24" id="h3Y-gj-M7A"/>
+                                                    <constraint firstAttribute="width" constant="24" id="Fgi-YT-R2f"/>
+                                                    <constraint firstAttribute="height" constant="24" id="L3t-jg-Z5g"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="G">
@@ -339,8 +855,8 @@
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfJ-FY-1Ob" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="ibv-0V-mqZ"/>
-                                                    <constraint firstAttribute="width" constant="24" id="z8Q-0o-393"/>
+                                                    <constraint firstAttribute="height" constant="24" id="iqZ-3H-f3f"/>
+                                                    <constraint firstAttribute="width" constant="24" id="jjh-Bb-m6h"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="22">
@@ -349,8 +865,8 @@
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Er8-Qn-vnl" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="3N0-3Q-GEU"/>
-                                                    <constraint firstAttribute="height" constant="24" id="DfL-8p-ITV"/>
+                                                    <constraint firstAttribute="height" constant="24" id="0R8-R1-2s0"/>
+                                                    <constraint firstAttribute="width" constant="24" id="mCX-tQ-0n6"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="24">
@@ -359,8 +875,8 @@
                                             </button>
                                             <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKJ-BL-Xk5" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="kNg-Qs-Fjd"/>
-                                                    <constraint firstAttribute="height" constant="24" id="qHu-JD-nyS"/>
+                                                    <constraint firstAttribute="width" constant="24" id="Le1-c2-Bfe"/>
+                                                    <constraint firstAttribute="height" constant="24" id="OBJ-qG-NlV"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="26">
@@ -369,8 +885,8 @@
                                             </button>
                                             <button opaque="NO" tag="44" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9f-hc-rgC" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="6eR-Nm-AIc"/>
-                                                    <constraint firstAttribute="width" constant="24" id="yS6-AM-4fj"/>
+                                                    <constraint firstAttribute="height" constant="24" id="YFf-Xn-hOt"/>
+                                                    <constraint firstAttribute="width" constant="24" id="faa-jN-0TH"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="SC">
@@ -379,8 +895,8 @@
                                             </button>
                                             <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHJ-Iq-qbG" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="JFl-be-JhG"/>
-                                                    <constraint firstAttribute="width" constant="24" id="WN2-GG-YPx"/>
+                                                    <constraint firstAttribute="height" constant="24" id="YH6-P6-9YS"/>
+                                                    <constraint firstAttribute="width" constant="24" id="hQZ-9p-VzE"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="G">
@@ -389,8 +905,8 @@
                                             </button>
                                             <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hD1-gD-4jl" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="5fL-8T-HmL"/>
-                                                    <constraint firstAttribute="width" constant="24" id="nFh-Ao-hpD"/>
+                                                    <constraint firstAttribute="width" constant="24" id="Agh-bC-niT"/>
+                                                    <constraint firstAttribute="height" constant="24" id="QKS-wf-6vD"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="32">
@@ -399,8 +915,8 @@
                                             </button>
                                             <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmT-Wg-W8M" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="FGu-fg-ojL"/>
-                                                    <constraint firstAttribute="height" constant="24" id="Fj4-z0-SGF"/>
+                                                    <constraint firstAttribute="height" constant="24" id="CxX-4l-qLp"/>
+                                                    <constraint firstAttribute="width" constant="24" id="WfJ-l7-d7g"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="G">
@@ -409,8 +925,8 @@
                                             </button>
                                             <button opaque="NO" tag="36" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEK-Ln-q4u" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="5M5-lT-GH7"/>
-                                                    <constraint firstAttribute="width" constant="24" id="frg-CB-yLp"/>
+                                                    <constraint firstAttribute="height" constant="24" id="qjv-yJ-G0U"/>
+                                                    <constraint firstAttribute="width" constant="24" id="sTL-pL-Tdl"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="36">
@@ -419,8 +935,8 @@
                                             </button>
                                             <button opaque="NO" tag="38" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10m-Bv-2eR" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="Eql-JI-dvX"/>
-                                                    <constraint firstAttribute="height" constant="24" id="lDT-JM-LBY"/>
+                                                    <constraint firstAttribute="height" constant="24" id="E2x-gk-m7I"/>
+                                                    <constraint firstAttribute="width" constant="24" id="GfV-36-ncr"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="38">
@@ -429,8 +945,8 @@
                                             </button>
                                             <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IP-A4-8I3" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="F2q-2x-lSx"/>
-                                                    <constraint firstAttribute="height" constant="24" id="TAs-8J-MXg"/>
+                                                    <constraint firstAttribute="width" constant="24" id="5kV-YU-Le7"/>
+                                                    <constraint firstAttribute="height" constant="24" id="anC-Mp-N3e"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <state key="normal" title="40">
@@ -443,17 +959,185 @@
                                             <constraint firstAttribute="width" constant="24" id="9cJ-nO-YZO"/>
                                         </constraints>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i8r-MU-jU6">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+5V" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0r-Y6-cdM">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="fff-8y-93F"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+5V" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvV-Tw-g5R">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="le2-44-nOV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GND" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpj-KV-1Ms">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="G7v-gS-zFW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 14" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndF-M9-hz4">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="Xkx-Fs-q0V"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 15" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eW2-f2-pGe">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="SHt-7c-Od1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 18" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcf-Vl-uUk">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="OX6-rH-STe"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GND" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsm-jh-VnT">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="xZe-b3-3x9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSV-Hi-6cG">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="yEo-Ti-sCq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 24" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qR8-Wp-SIt">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="03E-QZ-f9D"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GND" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tz2-Re-6YF">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="48p-9A-5go"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 25" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCC-Jm-1qc">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="FuL-7b-re1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 08" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4C-RW-YFg">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="fKV-EY-nDa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 07" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpk-8N-yFi">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="vI2-AL-UIx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID_SC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INF-tg-BOu">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="zRh-Jf-luj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GND" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MI7-ac-ffR">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="lcp-fq-6j6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 12" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIA-8M-bRl">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="fvW-uD-EQY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GND" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngk-ae-hjk">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="S2W-xN-dfk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 16" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1j-PS-jSf">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="cHU-dl-5hu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ffd-rh-jpy">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="5Ve-sw-tJf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPIO 21" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96R-Wr-6Mh">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="TmL-mY-376"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="dBV-MF-7Is"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="72" id="QhT-An-qEy"/>
-                                    <constraint firstAttribute="height" constant="480" id="x30-Go-Ob7"/>
+                                    <constraint firstAttribute="height" constant="480" id="caj-wY-89e"/>
+                                    <constraint firstAttribute="width" constant="158" id="yhB-el-Q5l"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Mpq-TC-TAH" secondAttribute="trailing" constant="10" id="Lrf-I9-4B4"/>
-                            <constraint firstItem="Mpq-TC-TAH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="khR-BU-6lW"/>
+                            <constraint firstItem="Mpq-TC-TAH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="RM3-AC-AqL"/>
+                            <constraint firstItem="Mpq-TC-TAH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="VBK-RI-6O4"/>
+                            <constraint firstItem="Mpq-TC-TAH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="10" id="WZz-5x-nEY"/>
                         </constraints>
                     </view>
                 </viewController>

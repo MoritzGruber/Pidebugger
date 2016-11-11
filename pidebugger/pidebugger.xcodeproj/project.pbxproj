@@ -148,8 +148,8 @@
 			children = (
 				A58D44F41DB669F7000473AD /* Model */,
 				A5A4E8941DB55DA10025ECF1 /* AppDelegate.swift */,
-				A5A4E8961DB55DA10025ECF1 /* ViewController.swift */,
 				4AD09B611DD349A6009EA548 /* TriStateButton.swift */,
+				A5A4E8961DB55DA10025ECF1 /* ViewController.swift */,
 				8EAA59021DD1EA5B00CBAE64 /* sshService.swift */,
 				8EAA59041DD1EE4500CBAE64 /* socketService.swift */,
 				A5A4E8981DB55DA20025ECF1 /* Main.storyboard */,
