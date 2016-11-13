@@ -11,7 +11,21 @@ import UIKit
 
 
 class ViewController: UIViewController {
+    
+    //2 variables to temporary store data from the TriStateButton class before adding it to the pinValue Array
+    var buttonTag: Int!
+    var buttonState: String!
+    
+    
+    //Array initialized with 40 default values ("f" = false). Only 26 Pins of the GPIO are user-editable (3 states "f" = false, "t" = true, "i" = input). 14 Pins are non user-editable and will be deactivated ("d" = deactivated).
+    var pinValue = [String](repeating: "f", count: 40)
 
+    //Array with all inactive Pin numbers. They will be deactivated in the pinValue Array
+    let inactivePins = [1,2,4,6,9,14,17,20,25,27,28,30,34,39]
+
+    
+    var currentPin = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +37,13 @@ class ViewController: UIViewController {
         sshService.start();
         
         
+        //Loop for deactivating all inactive Pins
+        for pin in inactivePins {
+            
+            currentPin = pin - 1
+            pinValue[currentPin] = "d"
+        }
+        
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -33,10 +54,26 @@ class ViewController: UIViewController {
     }
 
     
-    //Array initialized with 40 default values ("f" = false, "t" = true, "i" = input)
-    var pinValue = [String](repeating: "f", count: 40)
+    
+    //Storing the current Pin state of a Button in the pinValue Array (Button tag - 1 = corresponding index in the Array)
+    @IBAction func getButtonTag(_ sender: TriStateButton) {
+    
+        buttonTag = (sender.tag - 1)
+        buttonState = sender.pinState[sender.currentPinState]
+        
+        pinValue[buttonTag] = buttonState
+        
+        setPinValues()
+    }
     
     
-
+    //Test function to see if pinValue Array values are set properly
+    func setPinValues(){
+        
+        print(buttonTag)
+        print(buttonState)
+        print(pinValue)
+    }
+ 
 }
 

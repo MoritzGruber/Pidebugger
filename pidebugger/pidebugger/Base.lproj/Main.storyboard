@@ -230,6 +230,9 @@
                                                 <state key="normal" title="3">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AL4-7D-ALb"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTj-hZ-M8P" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
@@ -240,6 +243,9 @@
                                                 <state key="normal" title="5">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GTm-es-cb1"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2h7-zU-jdk" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
@@ -250,6 +256,9 @@
                                                 <state key="normal" title="7">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ICI-x6-fYN"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFc-we-war" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
@@ -270,6 +279,9 @@
                                                 <state key="normal" title="11">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EN4-IH-0Xs"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzQ-Qu-TFQ" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
@@ -280,6 +292,9 @@
                                                 <state key="normal" title="13">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hut-YJ-9BM"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Y-IC-oSl" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
@@ -290,6 +305,9 @@
                                                 <state key="normal" title="15">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7M9-BD-xUw"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BA9-dw-HMi" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
@@ -310,6 +328,9 @@
                                                 <state key="normal" title="19">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KeE-Hc-0Xq"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMA-Lv-GQR" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
@@ -320,6 +341,9 @@
                                                 <state key="normal" title="21">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zoW-De-iZr"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62l-AI-9MO" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
@@ -330,6 +354,9 @@
                                                 <state key="normal" title="23">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hwY-Pu-q9f"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcN-Is-uX6" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
@@ -360,6 +387,9 @@
                                                 <state key="normal" title="29">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JuB-o0-Gek"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zv3-WQ-MUC" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
@@ -370,6 +400,9 @@
                                                 <state key="normal" title="31">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vbc-xg-zep"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vv-Js-mew" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
@@ -380,8 +413,11 @@
                                                 <state key="normal" title="33">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wvf-lE-WHe"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDc-ub-IFC" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                            <button opaque="NO" tag="35" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDc-ub-IFC" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="JNd-Nv-KKg"/>
                                                     <constraint firstAttribute="width" constant="24" id="p9n-dD-syp"/>
@@ -390,6 +426,9 @@
                                                 <state key="normal" title="35">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pfb-IY-vcz"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="37" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1KP-nc-NgS" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
@@ -400,6 +439,9 @@
                                                 <state key="normal" title="37">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v04-Ap-QHG"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M5-Vt-KRA" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
@@ -792,8 +834,11 @@
                                                 <state key="normal" title="8">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q0v-g0-fvm"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Iq-Ew-uiB" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Iq-Ew-uiB" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="24" id="IUw-TX-gYe"/>
                                                     <constraint firstAttribute="height" constant="24" id="K9V-EF-Ygu"/>
@@ -802,6 +847,9 @@
                                                 <state key="normal" title="10">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E8E-ck-4kb"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXp-jg-gQ4" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
@@ -812,6 +860,9 @@
                                                 <state key="normal" title="12">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1KQ-9w-eqa"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2g-76-0Pr" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
@@ -832,8 +883,11 @@
                                                 <state key="normal" title="16">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aBU-JI-Dka"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQt-Z1-kRX" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQt-Z1-kRX" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="24" id="9W7-2f-1JE"/>
                                                     <constraint firstAttribute="height" constant="24" id="geI-4q-hmV"/>
@@ -842,6 +896,9 @@
                                                 <state key="normal" title="18">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EhV-8m-ac8"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iah-Ux-j92" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
@@ -853,7 +910,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfJ-FY-1Ob" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfJ-FY-1Ob" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="iqZ-3H-f3f"/>
                                                     <constraint firstAttribute="width" constant="24" id="jjh-Bb-m6h"/>
@@ -862,8 +919,11 @@
                                                 <state key="normal" title="22">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Icl-yN-kjt"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Er8-Qn-vnl" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
+                                            <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Er8-Qn-vnl" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="0R8-R1-2s0"/>
                                                     <constraint firstAttribute="width" constant="24" id="mCX-tQ-0n6"/>
@@ -872,6 +932,9 @@
                                                 <state key="normal" title="24">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O5q-dt-4ED"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKJ-BL-Xk5" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
@@ -882,6 +945,9 @@
                                                 <state key="normal" title="26">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="525-LC-VEB"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="44" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9f-hc-rgC" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
@@ -912,6 +978,9 @@
                                                 <state key="normal" title="32">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y26-Wp-vZ6"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmT-Wg-W8M" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
@@ -932,6 +1001,9 @@
                                                 <state key="normal" title="36">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lcq-Tz-60t"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="38" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10m-Bv-2eR" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
@@ -942,6 +1014,9 @@
                                                 <state key="normal" title="38">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bLp-Eq-ywK"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IP-A4-8I3" customClass="TriStateButton" customModule="pidebugger" customModuleProvider="target">
                                                 <constraints>
@@ -952,6 +1027,9 @@
                                                 <state key="normal" title="40">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="getButtonTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6GN-Lb-j0b"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
