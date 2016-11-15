@@ -12,6 +12,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let pi = raspberrypi.init()
+    //print("              PI:  \( pi.pins[1])");
+    
+    
     //2 variables to temporary store data from the TriStateButton class before adding it to the pinValue Array
     var buttonTag: Int!
     var buttonState: String!
@@ -29,8 +33,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let pi = raspberrypi.init()
-        print("              PI:  \( pi.pins[1])");
+       
         
         socketService.connect();
  
@@ -61,7 +64,7 @@ class ViewController: UIViewController {
         buttonTag = (sender.tag - 1)
         buttonState = sender.pinState[sender.currentPinState]
         
-        pinValue[buttonTag] = buttonState
+        pi.pins[buttonTag] = buttonState
         
         setPinValues()
     }

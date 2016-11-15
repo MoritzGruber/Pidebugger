@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		134EB570573BF372E8D96729 /* Pods_pidebugger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5301F31F2D2A7C849DED1C /* Pods_pidebugger.framework */; };
 		4AD09B621DD349A6009EA548 /* TriStateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD09B611DD349A6009EA548 /* TriStateButton.swift */; };
-		8E8FE49D1DB6388A0048D1A4 /* raspberrrypi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FE49C1DB6388A0048D1A4 /* raspberrrypi.swift */; };
+		8E8FE49D1DB6388A0048D1A4 /* raspberrypi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FE49C1DB6388A0048D1A4 /* raspberrypi.swift */; };
 		8EAA59031DD1EA5B00CBAE64 /* sshService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA59021DD1EA5B00CBAE64 /* sshService.swift */; };
 		8EAA59051DD1EE4500CBAE64 /* socketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA59041DD1EE4500CBAE64 /* socketService.swift */; };
 		A5A4E8951DB55DA10025ECF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A4E8941DB55DA10025ECF1 /* AppDelegate.swift */; };
@@ -50,7 +50,7 @@
 		7E5301F31F2D2A7C849DED1C /* Pods_pidebugger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pidebugger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8459000015AE7490C16601ED /* Pods_pidebuggerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pidebuggerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E803DCE1DBF54E000F40231 /* NMSSH-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NMSSH-Bridging-Header.h"; sourceTree = "<group>"; };
-		8E8FE49C1DB6388A0048D1A4 /* raspberrrypi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = raspberrrypi.swift; sourceTree = "<group>"; };
+		8E8FE49C1DB6388A0048D1A4 /* raspberrypi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = raspberrypi.swift; sourceTree = "<group>"; };
 		8EAA59021DD1EA5B00CBAE64 /* sshService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sshService.swift; sourceTree = "<group>"; };
 		8EAA59041DD1EE4500CBAE64 /* socketService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = socketService.swift; sourceTree = "<group>"; };
 		A1A8FD06B27064D046B11837 /* Pods-pidebuggerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pidebuggerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-pidebuggerUITests/Pods-pidebuggerUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 		A58D44F41DB669F7000473AD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8E8FE49C1DB6388A0048D1A4 /* raspberrrypi.swift */,
+				8E8FE49C1DB6388A0048D1A4 /* raspberrypi.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -481,7 +481,7 @@
 				4AD09B621DD349A6009EA548 /* TriStateButton.swift in Sources */,
 				A5A4E8971DB55DA10025ECF1 /* ViewController.swift in Sources */,
 				A5A4E89D1DB55DA20025ECF1 /* pidebugger.xcdatamodeld in Sources */,
-				8E8FE49D1DB6388A0048D1A4 /* raspberrrypi.swift in Sources */,
+				8E8FE49D1DB6388A0048D1A4 /* raspberrypi.swift in Sources */,
 				8EAA59051DD1EE4500CBAE64 /* socketService.swift in Sources */,
 				A5A4E8951DB55DA10025ECF1 /* AppDelegate.swift in Sources */,
 			);
