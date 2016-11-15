@@ -75,7 +75,7 @@ class ViewController: UIViewController {
         
         print(buttonTag)
         print(buttonState)
-        print(pinValue)
+        print(pi.pins)
     }
  
 }
