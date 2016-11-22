@@ -12,6 +12,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var left: UIStackView!
     let pi = raspberrypi.init()
     //print("              PI:  \( pi.pins[1])");
     
@@ -33,11 +34,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-        
-        socketService.connect();
+    
+        //socketService.connect();
  
-        sshService.start();
+        //sshService.start();
         
         
         //Loop for deactivating all inactive Pins
@@ -49,6 +49,23 @@ class ViewController: UIViewController {
         
         
         // Do any additional setup after loading the view, typically from a nib.
+        super.viewDidLoad()
+        for index in 1...40 {
+            let y = index * 30
+            let button = UIButton(frame: CGRect(x: 100, y: y, width: 20, height: 20))
+            button.setTitle("asdfasdf", for: .normal)
+            button.backgroundColor = UIColor.blue
+            //self.view.addSubview(button)
+            left.addSubview(button)
+            
+        }
+        
+    }
+    
+    
+    func buttonAction(sender: UIButton!) {
+        print("Button tapped")
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,7 +92,7 @@ class ViewController: UIViewController {
         
         print(buttonTag)
         print(buttonState)
-        print(pinValue)
+        print(pi.pins)
     }
  
 }
