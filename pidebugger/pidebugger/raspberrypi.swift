@@ -13,16 +13,6 @@ class raspberrypi {
     
     let inactivePins = [1,2,4,6,9,14,17,20,25,27,28,30,34,39]
     
-    
-    
-    enum pin: String {
-        case f = "f";
-        case t = "t";
-        case i = "i";
-        case d = "d";
-        
-    }
-    
     init(){
         
         var currentPin = 0
