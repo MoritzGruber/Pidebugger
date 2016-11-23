@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         
         let spacingTop = 30;
         let spacingBot = 50;
-        let oneButtonSpace = (Int(screenHeightInPixels) - (spacingTop + spacingBot))/40;
+        let oneButtonSpace = (Int(screenheight!) - (spacingTop + spacingBot))/20;
                 print(oneButtonSpace);
         var yHeight = spacingTop;
         let xFirstRow = (Int(screenwidth) - 4 * oneButtonSpace);
@@ -68,10 +68,10 @@ class ViewController: UIViewController {
         print(xSecRow);
         // Do any additional setup after loading the view, typically from a nib.
         super.viewDidLoad()
-        for _ in 1...20 {
-            let button = UIButton(frame: CGRect(x: xFirstRow, y: (Int(yHeight)), width: Int(oneButtonSpace)-2, height: Int(oneButtonSpace)-2));
-            button.setTitle("x", for: .normal);
-            button.backgroundColor = UIColor.blue;
+        for index in 1...20 {
+            let button = TriStateButton(frame: CGRect(x: xFirstRow, y: (Int(yHeight)), width: Int(oneButtonSpace)-2, height: Int(oneButtonSpace)-2), indexTag:(index * 2 ) - 1 );
+            //button.setTitle("x", for: .normal);
+            //button.backgroundColor = UIColor.blue;
             //self.view.addSubview(button)
             
                 print(yHeight);
@@ -80,10 +80,11 @@ class ViewController: UIViewController {
             
         }
         yHeight = spacingTop;
-        for _ in 1...20 {
-            let button = UIButton(frame: CGRect(x:xSecRow, y: (Int(yHeight)), width: Int(oneButtonSpace)-2, height: Int(oneButtonSpace)-2));
-            button.setTitle("y", for: .normal);
-            button.backgroundColor = UIColor.blue;
+        for index in 1...20 {
+            
+            let button = TriStateButton(frame: CGRect(x:xSecRow, y: (Int(yHeight)), width: Int(oneButtonSpace)-2, height: Int(oneButtonSpace)-2), indexTag: (index * 2));
+            //button.setTitle("y", for: .normal);
+            //button.backgroundColor = UIColor.blue;
             //self.view.addSubview(button)
             
             print(yHeight);
