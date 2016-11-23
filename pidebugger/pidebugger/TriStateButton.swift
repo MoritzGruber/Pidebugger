@@ -35,7 +35,8 @@ class TriStateButton: UIButton {
         
         layer.borderWidth = 2.0
         layer.borderColor = UIColor.black.cgColor
-        layer.cornerRadius = 12.0
+
+        layer.cornerRadius = (frame.width / 2)
         clipsToBounds = true
         contentEdgeInsets = UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
         self.setTitleColor(UIColor.clear, for: UIControlState.normal)
