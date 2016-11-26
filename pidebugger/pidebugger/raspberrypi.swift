@@ -9,15 +9,18 @@
 import Foundation
 
 class raspberrypi {
+    
+    //Array initialized with 40 default values ("f" = false). Only 26 Pins of the GPIO are user-editable (3 states "f" = false, "t" = true, "i" = input). 14 Pins are non user-editable (inactive) and will later be deactivated ("d" = deactivated).
     var pins = [String](repeating: "f", count: 40)
     
-    //let inactivePins = [1,2,4,6,9,14,17,20,25,27,28,30,34,39]
     
-
+    //inactive Pins = 1,2,4,6,9,14,17,20,25,27,28,30,34,39
     let groundPins = [6,9,14,20,25,30,34,39];
     let I2CPins = [27,28];
     let V5Pins = [2,4];
     let V3Pins = [1,17];
+    
+    
     //Array with all inactive Pin numbers. They will be deactivated in the pinValue Array
     let inactivePins:[Int];
     

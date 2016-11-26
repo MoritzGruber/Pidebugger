@@ -21,11 +21,13 @@ class ViewController: UIViewController {
     //2 variables to temporary store data from the TriStateButton class before adding it to the pinValue Array
     var buttonTag: Int!
     var buttonState: String!
+    
+    
     var screenwidth : CGFloat!
     var screenheight : CGFloat!
     
-    //Array initialized with 40 default values ("f" = false). Only 26 Pins of the GPIO are user-editable (3 states "f" = false, "t" = true, "i" = input). 14 Pins are non user-editable and will be deactivated ("d" = deactivated).
-    var pinValue = [String](repeating: "f", count: 40)
+    
+    //var pinValue = [String](repeating: "f", count: 40)
 
     
     
@@ -33,6 +35,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        addBackground()
+        
+    
         
         screenwidth = self.view.frame.size.width
         screenheight = self.view.frame.size.height
@@ -41,8 +47,6 @@ class ViewController: UIViewController {
  
         //sshService.start();
         
-        
-        //Loop for deactivating all inactive Pins
         
         let screenWidthInPixels = UIScreen.main.nativeBounds.width;
         let screenHeightInPixels = UIScreen.main.nativeBounds.height;
@@ -61,6 +65,8 @@ class ViewController: UIViewController {
         print(xFirstRow);
         print(xSecRow);
         // Do any additional setup after loading the view, typically from a nib.
+    
+        
         super.viewDidLoad()
         for index in 1...20 {
             let button = TriStateButton(frame: CGRect(x: xFirstRow, y: (Int(yHeight)), width: Int(oneButtonSpace)-2, height: Int(oneButtonSpace)-2), indexTag:(index * 2 ) - 1, piObject: pi);
@@ -86,6 +92,57 @@ class ViewController: UIViewController {
             yHeight += Int(oneButtonSpace);
             
         }
+        
+        yHeight = spacingTop;
+        for index in 1...5 {
+            let button = TriStateButton(frame: CGRect(x: 10, y: (Int(yHeight)), width: Int(((oneButtonSpace)-2)/2), height: Int(((oneButtonSpace)-2))/2), indexTag: 0, piObject: pi);
+            //button.setTitle("x", for: .normal);
+            //button.backgroundColor = UIColor.blue;
+            //self.view.addSubview(button)
+        
+            
+            switch index {
+            case 1: button.backgroundColor = UIColor.green;
+            case 2: button.backgroundColor = UIColor.orange;
+            case 3: button.backgroundColor = UIColor.red;
+            case 4: button.backgroundColor = UIColor.black;
+            case 5: button.backgroundColor = UIColor.gray;
+            default: print("wrong index value");
+            }
+            
+            print(yHeight);
+            self.view.addSubview(button);
+            yHeight += Int(oneButtonSpace);
+            
+        }
+        
+        let xLabel = 10 + oneButtonSpace;
+        
+        yHeight = spacingTop;
+        for index in 1...5 {
+            let label = UILabel(frame: CGRect(x: xLabel, y: (Int(yHeight)), width: 200, height: Int(((oneButtonSpace)-2))/2));
+            
+            label.textAlignment = .left
+            label.font = UIFont(name: "Helvetica", size: CGFloat(Int(oneButtonSpace/4)));
+            
+            switch index {
+            case 1: label.text = "Active Pins (l = low, h = high, i = input)";
+            case 2: label.text = "3,3V Pins (inactive)";
+            case 3: label.text = "5V Pins (inactive)";
+            case 4: label.text = "Ground Pins (inactive)";
+            case 5: label.text = "ID Pins (inactive)";
+            default: print("wrong index value");
+            }
+          
+            
+            print(yHeight);
+            self.view.addSubview(label);
+            yHeight += Int(oneButtonSpace);
+ 
+ 
+        }
+        
+        
 
     }
     
@@ -121,6 +178,32 @@ class ViewController: UIViewController {
         print(buttonState)
         print(pi.pins)
     }
+    
+    
+    func addBackground(){
+        
+        let background = UIImage(named: "raspi")
+        
+        var imageView : UIImageView!
+        
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIViewContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+
+        view.addSubview(blurEffectView)
+        view.addSubview(imageView)
+        
+        self.view.sendSubview(toBack: imageView)
+    }
+    
+    
  
 }
 
