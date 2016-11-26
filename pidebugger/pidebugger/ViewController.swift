@@ -27,9 +27,11 @@ class ViewController: UIViewController {
     var screenheight : CGFloat!
     
     
-    //var pinValue = [String](repeating: "f", count: 40)
-
+    var imageView : UIImageView!
+    let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
     
+    
+    let durationFadeIn = 6
     
     var currentPin = 0
     
@@ -39,7 +41,6 @@ class ViewController: UIViewController {
         addBackground()
         
     
-        
         screenwidth = self.view.frame.size.width
         screenheight = self.view.frame.size.height
         print("\(screenwidth) ,\(screenheight)")
@@ -68,11 +69,16 @@ class ViewController: UIViewController {
     
         
         super.viewDidLoad()
+        
+        
         for index in 1...20 {
             let button = TriStateButton(frame: CGRect(x: xFirstRow, y: (Int(yHeight)), width: Int(oneButtonSpace)-2, height: Int(oneButtonSpace)-2), indexTag:(index * 2 ) - 1, piObject: pi);
             //button.setTitle("x", for: .normal);
             //button.backgroundColor = UIColor.blue;
             //self.view.addSubview(button)
+            
+            button.alpha = 0
+            button.fadeIn(duration: TimeInterval(Int(durationFadeIn)), delay: 0)
             
                 print(yHeight);
                 self.view.addSubview(button);
@@ -87,6 +93,9 @@ class ViewController: UIViewController {
             //button.backgroundColor = UIColor.blue;
             //self.view.addSubview(button)
             
+            button.alpha = 0
+            button.fadeIn(duration: TimeInterval(Int(durationFadeIn)), delay: 0)
+            
             print(yHeight);
             self.view.addSubview(button);
             yHeight += Int(oneButtonSpace);
@@ -100,6 +109,8 @@ class ViewController: UIViewController {
             //button.backgroundColor = UIColor.blue;
             //self.view.addSubview(button)
         
+            button.alpha = 0
+            button.fadeIn(duration: TimeInterval(Int(durationFadeIn)), delay: 0)
             
             switch index {
             case 1: button.backgroundColor = UIColor.green;
@@ -122,9 +133,12 @@ class ViewController: UIViewController {
         for index in 1...5 {
             let label = UILabel(frame: CGRect(x: xLabel, y: (Int(yHeight)), width: 200, height: Int(((oneButtonSpace)-2))/2));
             
+            label.alpha = 0
+            label.fadeIn(duration: TimeInterval(Int(durationFadeIn)), delay: 0)
+            
             label.textAlignment = .left
             label.font = UIFont(name: "Helvetica", size: CGFloat(Int(oneButtonSpace/4)));
-            
+        
             switch index {
             case 1: label.text = "Active Pins (l = low, h = high, i = input)";
             case 2: label.text = "3,3V Pins (inactive)";
@@ -133,18 +147,48 @@ class ViewController: UIViewController {
             case 5: label.text = "ID Pins (inactive)";
             default: print("wrong index value");
             }
-          
-            
+        
             print(yHeight);
             self.view.addSubview(label);
             yHeight += Int(oneButtonSpace);
- 
- 
+
         }
         
         
+        
+        
+    }
+    
+
+    
+    
+    /*
+    let duration = 0.5
+    
+    func fadeIn(finished: Bool) {
+        UIView.animateWithDuration(self.duration, delay: 0, options: [.CurveEaseInOut], animations: { self.view.alpha = 1 } , completion: self.fadeOut)
+    }
+        */
+ 
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
     }
+    
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        UIView.animate(withDuration: 3.0, animations: { self.blurEffectView.alpha = 1.0; return })
+        
+        //self.button.fadeIn(duration: 3, delay: 0)
+        
+        //TriStateButton.animate(withDuration: 3.0, animations: { .alpha = 1.0; return })
+        
+    }
+ 
     
     
     func buttonAction(sender: UIButton!) {
@@ -182,23 +226,31 @@ class ViewController: UIViewController {
     
     func addBackground(){
         
-        let background = UIImage(named: "raspi")
+        let backgroundImage = UIImage(named: "raspi_background")
+        let launchImage = UIImage(named: "raspi_launch")
         
-        var imageView : UIImageView!
+        //var imageView : UIImageView!
         
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode =  UIViewContentMode.scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.image = background
+        imageView.image = backgroundImage
         imageView.center = view.center
         
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        //imageView.alpha = 0
+        
+        
+        //let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+        //let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        //blurEffectView = UIVisualEffectView(effect: blurEffect)
+        
         blurEffectView.frame = view.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        blurEffectView.alpha = 0
 
-        view.addSubview(blurEffectView)
         view.addSubview(imageView)
+        view.addSubview(blurEffectView)
         
         self.view.sendSubview(toBack: imageView)
     }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		134EB570573BF372E8D96729 /* Pods_pidebugger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5301F31F2D2A7C849DED1C /* Pods_pidebugger.framework */; };
+		4A52B6271DEA261A0001D685 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A52B6261DEA261A0001D685 /* UIViewExtensions.swift */; };
 		4AD09B621DD349A6009EA548 /* TriStateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD09B611DD349A6009EA548 /* TriStateButton.swift */; };
 		8E8FE49D1DB6388A0048D1A4 /* raspberrypi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FE49C1DB6388A0048D1A4 /* raspberrypi.swift */; };
 		8EAA59031DD1EA5B00CBAE64 /* sshService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA59021DD1EA5B00CBAE64 /* sshService.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		1775701321D89A5602CE73D5 /* Pods-pidebugger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pidebugger.release.xcconfig"; path = "Pods/Target Support Files/Pods-pidebugger/Pods-pidebugger.release.xcconfig"; sourceTree = "<group>"; };
+		4A52B6261DEA261A0001D685 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		4AD09B611DD349A6009EA548 /* TriStateButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriStateButton.swift; sourceTree = "<group>"; };
 		55D5036D86D88039AF8E6F2C /* Pods-pidebugger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pidebugger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pidebugger/Pods-pidebugger.debug.xcconfig"; sourceTree = "<group>"; };
 		5FC818AF70FA652095F4B49E /* Pods_pidebuggerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pidebuggerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +151,7 @@
 				A58D44F41DB669F7000473AD /* Model */,
 				A5A4E8941DB55DA10025ECF1 /* AppDelegate.swift */,
 				4AD09B611DD349A6009EA548 /* TriStateButton.swift */,
+				4A52B6261DEA261A0001D685 /* UIViewExtensions.swift */,
 				A5A4E8961DB55DA10025ECF1 /* ViewController.swift */,
 				8EAA59021DD1EA5B00CBAE64 /* sshService.swift */,
 				8EAA59041DD1EE4500CBAE64 /* socketService.swift */,
@@ -479,6 +482,7 @@
 			files = (
 				8EAA59031DD1EA5B00CBAE64 /* sshService.swift in Sources */,
 				4AD09B621DD349A6009EA548 /* TriStateButton.swift in Sources */,
+				4A52B6271DEA261A0001D685 /* UIViewExtensions.swift in Sources */,
 				A5A4E8971DB55DA10025ECF1 /* ViewController.swift in Sources */,
 				A5A4E89D1DB55DA20025ECF1 /* pidebugger.xcdatamodeld in Sources */,
 				8E8FE49D1DB6388A0048D1A4 /* raspberrypi.swift in Sources */,
