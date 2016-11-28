@@ -21,7 +21,6 @@
 		A5A4E8A21DB55DA20025ECF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5A4E8A01DB55DA20025ECF1 /* LaunchScreen.storyboard */; };
 		A5A4E8AD1DB55DA20025ECF1 /* pidebuggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A4E8AC1DB55DA20025ECF1 /* pidebuggerTests.swift */; };
 		A5A4E8B81DB55DA20025ECF1 /* pidebuggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A4E8B71DB55DA20025ECF1 /* pidebuggerUITests.swift */; };
-		A5B7EDCE1DEC9F1D0042400C /* asdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B7EDCD1DEC9F1D0042400C /* asdf.swift */; };
 		CE4572EE5CBE58225A2F0EF3 /* Pods_pidebuggerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8459000015AE7490C16601ED /* Pods_pidebuggerUITests.framework */; };
 		D483DBA1183DFF8167CF1358 /* Pods_pidebuggerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC818AF70FA652095F4B49E /* Pods_pidebuggerTests.framework */; };
 /* End PBXBuildFile section */
@@ -71,7 +70,6 @@
 		A5A4E8B31DB55DA20025ECF1 /* pidebuggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pidebuggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5A4E8B71DB55DA20025ECF1 /* pidebuggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pidebuggerUITests.swift; sourceTree = "<group>"; };
 		A5A4E8B91DB55DA20025ECF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A5B7EDCD1DEC9F1D0042400C /* asdf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = asdf.swift; sourceTree = "<group>"; };
 		AAB9CFCFF79BA2ABF37F47EB /* Pods-pidebuggerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pidebuggerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pidebuggerUITests/Pods-pidebuggerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC2D8EB491C824E784DE64E2 /* Pods-pidebuggerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pidebuggerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pidebuggerTests/Pods-pidebuggerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,7 +170,6 @@
 			children = (
 				A5A4E8AC1DB55DA20025ECF1 /* pidebuggerTests.swift */,
 				A5A4E8AE1DB55DA20025ECF1 /* Info.plist */,
-				A5B7EDCD1DEC9F1D0042400C /* asdf.swift */,
 			);
 			path = pidebuggerTests;
 			sourceTree = "<group>";
@@ -499,7 +496,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5A4E8AD1DB55DA20025ECF1 /* pidebuggerTests.swift in Sources */,
-				A5B7EDCE1DEC9F1D0042400C /* asdf.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,7 +644,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WVCLR2EPQZ;
 				INFOPLIST_FILE = pidebugger/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moritzgruber.pidebugger;
@@ -669,7 +665,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WVCLR2EPQZ;
 				INFOPLIST_FILE = pidebugger/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moritzgruber.pidebugger;

@@ -45,7 +45,7 @@ class TriStateButton: UIButton {
         clipsToBounds = true
         contentEdgeInsets = UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
         self.setTitleColor(UIColor.clear, for: UIControlState.normal)
-        //self.setTitle("f", for: UIControlState.normal)
+
         
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 2, height: 2)
@@ -98,7 +98,7 @@ class TriStateButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //cylce-function on button-click through the three active Pin states ("f", "t", "i")
+    //cylce-function on button-click through the three active Pin states ("l", "h", "i")
     func nextState(_ sender: TriStateButton) {
         
         print(indexTag);

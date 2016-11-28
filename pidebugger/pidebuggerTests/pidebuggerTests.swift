@@ -21,12 +21,31 @@ class pidebuggerTests: XCTestCase {
         super.tearDown()
     }
     
-    func testButtonTapping() {
-        //this test taps on all buttons and checks if the pins array change at the correct pin value
-        //let app = XCUIApplication()
-        //app.launch()
-        //let pi = raspberrypi.init()
-       // print(pi.pins)
+    func testTriStateButtonTap() {
+        //define a new active button and check if the state and pi value change correctly
+        let pi = raspberrypi.init()
+        for index in 1...40 {
+            let button = TriStateButton(frame: CGRect(x:10, y: (Int(10)), width: Int(10)-2, height: Int(10)-2), indexTag: (index), piObject: pi)
+
+            if(pi.inactivePins.contains(index)){
+                //here we make sure all deactivated buttons have no targets
+                XCTAssertTrue(button.allTargets.count == 0)
+            } else {
+                //here we check if the buttun state, aswell as th pi.pins array change correctly
+                button.nextState(button)
+                XCTAssertTrue(button.buttonState == "h")
+                XCTAssertTrue(pi.pins[index-1] == "h")
+                button.nextState(button)
+                XCTAssertTrue(button.buttonState == "i")
+                XCTAssertTrue(pi.pins[index-1] == "i")
+                button.nextState(button)
+                XCTAssertTrue(button.buttonState == "l")
+                XCTAssertTrue(pi.pins[index-1] == "l")
+
+            }
+           
+
+        }
         
         
     }
