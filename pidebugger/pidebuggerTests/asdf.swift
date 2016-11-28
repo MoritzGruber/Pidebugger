@@ -1,15 +1,14 @@
 //
-//  pidebuggerTests.swift
-//  pidebuggerTests
+//  asdf.swift
+//  pidebugger
 //
-//  Created by Moritz Gruber on 17/10/2016.
+//  Created by Moritz Gruber on 28/11/2016.
 //  Copyright © 2016 Moritz Gruber. All rights reserved.
 //
 
 import XCTest
-@testable import pidebugger
 
-class pidebuggerTests: XCTestCase {
+class asdf: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,14 +20,11 @@ class pidebuggerTests: XCTestCase {
         super.tearDown()
     }
     
-    func testButtonTapping() {
-        //this test taps on all buttons and checks if the pins array change at the correct pin value
-        //let app = XCUIApplication()
-        //app.launch()
-        //let pi = raspberrypi.init()
-       // print(pi.pins)
-        
-        
+    func testExample() {
+        let app = XCUIApplication()
+        app.launch()
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
     func testPerformanceExample() {

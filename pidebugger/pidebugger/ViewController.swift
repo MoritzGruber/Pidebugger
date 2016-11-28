@@ -39,14 +39,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         addBackground()
+        //socketService.connect();
         
+        //sshService.start();
     
         screenwidth = self.view.frame.size.width
         screenheight = self.view.frame.size.height
         print("\(screenwidth) ,\(screenheight)")
-        //socketService.connect();
- 
-        //sshService.start();
+        
         
         
         let screenWidthInPixels = UIScreen.main.nativeBounds.width;
