@@ -9,12 +9,19 @@
 import Foundation
 import SocketIO
 
+
+
 class socketService {
-    static func connect (){
-        let socket = SocketIOClient(socketURL: URL(string: "http://10.60.45.94:3000")!, config: [.log(true), .forcePolling(true)])
+    var socket:SocketIOClient;
+    
+    init(ip: String){
+        socket = SocketIOClient(socketURL: URL(string: "http://"+ip+":3000")!, config: [.log(true), .forcePolling(true)])
         
         socket.on("connect") {data, ack in
             print("socket connected")
+        }
+        socket.on("disconnect") {data, ack in
+            print("socket disconnected")
         }
         
         socket.emit("set", 40, 1);

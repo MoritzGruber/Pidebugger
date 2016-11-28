@@ -12,8 +12,8 @@ import NMSSH
 class sshService {
     
    
-    static func start(){
-    let session = NMSSHSession(host: "138.68.74.156", andUsername: "root")
+    static func start(ip: String){
+    let session = NMSSHSession(host: ip, andUsername: "root")
     session?.connect()
     if let isConnected = session?.isConnected {
     print(isConnected)
