@@ -6,30 +6,18 @@
 //  Copyright © 2016 Moritz Gruber. All rights reserved.
 //
 
+
+import UIKit
 import Foundation
-import LANScanner
 
-class scanService: LANScannerDelegate {
 
-    init(){
-        let scanner = LANScanner(delegate: self, continuous: false)
-        scanner.startScan()
-        
+class scanService: NSObject {
+    var lanScanner : MMLANScanner!
+    
+    override init() {
+        //super.init()
+        //self.lanScanner = MMLANScanner(delegate:self)
+        //self.lanScanner.start()
     }
-    func LANScannerDiscovery(_ device: LANDevice){
-        print("asdfa")
-        print(device.hostName)
-        print(device.ipAddress)
-
+    
     }
-    func LANScannerFinished(){
-        print("asdfa2")
-    }
-    func LANScannerRestarted(){
-        print("asdfa3")
-    }
-    func LANScannerFailed(_ error: NSError){
-        print("asdfa4")
-    }
-
-}

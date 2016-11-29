@@ -9,11 +9,11 @@
 import UIKit
 
 //View controller for the setup screen
-class ViewControllerSetup: UIViewController {
-
+class ViewControllerSetup: UIViewController  {
+    
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-
+       scanService.init()
         // Do any additional setup after loading the view.
     }
 

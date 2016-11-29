@@ -14,6 +14,15 @@
 		8E8FE49D1DB6388A0048D1A4 /* raspberrypi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FE49C1DB6388A0048D1A4 /* raspberrypi.swift */; };
 		8EAA59031DD1EA5B00CBAE64 /* sshService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA59021DD1EA5B00CBAE64 /* sshService.swift */; };
 		8EAA59051DD1EE4500CBAE64 /* socketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA59041DD1EE4500CBAE64 /* socketService.swift */; };
+		A52F89B61DEDBA2E00E0DAF9 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = A52F89A11DEDBA2E00E0DAF9 /* data.plist */; };
+		A52F89B71DEDBA2E00E0DAF9 /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = A52F89A31DEDBA2E00E0DAF9 /* Device.m */; };
+		A52F89B81DEDBA2E00E0DAF9 /* LANProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A52F89A81DEDBA2E00E0DAF9 /* LANProperties.m */; };
+		A52F89B91DEDBA2E00E0DAF9 /* MacFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = A52F89AA1DEDBA2E00E0DAF9 /* MacFinder.m */; };
+		A52F89BA1DEDBA2E00E0DAF9 /* MACOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A52F89AC1DEDBA2E00E0DAF9 /* MACOperation.m */; };
+		A52F89BB1DEDBA2E00E0DAF9 /* MMLANScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = A52F89AE1DEDBA2E00E0DAF9 /* MMLANScanner.m */; };
+		A52F89BC1DEDBA2E00E0DAF9 /* NetworkCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = A52F89B01DEDBA2E00E0DAF9 /* NetworkCalculator.m */; };
+		A52F89BD1DEDBA2E00E0DAF9 /* PingOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A52F89B21DEDBA2E00E0DAF9 /* PingOperation.m */; };
+		A52F89BE1DEDBA2E00E0DAF9 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = A52F89B51DEDBA2E00E0DAF9 /* SimplePing.m */; };
 		A56FE5751DECE6170086478F /* scanService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56FE5741DECE6170086478F /* scanService.swift */; };
 		A56FE5831DECEDBE0086478F /* Pods_pidebugger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56FE5801DECEDBE0086478F /* Pods_pidebugger.framework */; };
 		A5A4E8951DB55DA10025ECF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A4E8941DB55DA10025ECF1 /* AppDelegate.swift */; };
@@ -55,11 +64,31 @@
 		7E5301F31F2D2A7C849DED1C /* Pods_pidebugger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pidebugger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8459000015AE7490C16601ED /* Pods_pidebuggerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pidebuggerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E18F4921DED8FC600A44B5B /* ViewControllerSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerSetup.swift; sourceTree = "<group>"; };
-		8E803DCE1DBF54E000F40231 /* NMSSH-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NMSSH-Bridging-Header.h"; sourceTree = "<group>"; };
 		8E8FE49C1DB6388A0048D1A4 /* raspberrypi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = raspberrypi.swift; sourceTree = "<group>"; };
 		8EAA59021DD1EA5B00CBAE64 /* sshService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sshService.swift; sourceTree = "<group>"; };
 		8EAA59041DD1EE4500CBAE64 /* socketService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = socketService.swift; sourceTree = "<group>"; };
 		A1A8FD06B27064D046B11837 /* Pods-pidebuggerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pidebuggerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-pidebuggerUITests/Pods-pidebuggerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A52F89A11DEDBA2E00E0DAF9 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		A52F89A21DEDBA2E00E0DAF9 /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
+		A52F89A31DEDBA2E00E0DAF9 /* Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Device.m; sourceTree = "<group>"; };
+		A52F89A41DEDBA2E00E0DAF9 /* if_arp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_arp.h; sourceTree = "<group>"; };
+		A52F89A51DEDBA2E00E0DAF9 /* if_ether.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_ether.h; sourceTree = "<group>"; };
+		A52F89A61DEDBA2E00E0DAF9 /* if_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_types.h; sourceTree = "<group>"; };
+		A52F89A71DEDBA2E00E0DAF9 /* LANProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LANProperties.h; sourceTree = "<group>"; };
+		A52F89A81DEDBA2E00E0DAF9 /* LANProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LANProperties.m; sourceTree = "<group>"; };
+		A52F89A91DEDBA2E00E0DAF9 /* MacFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFinder.h; sourceTree = "<group>"; };
+		A52F89AA1DEDBA2E00E0DAF9 /* MacFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFinder.m; sourceTree = "<group>"; };
+		A52F89AB1DEDBA2E00E0DAF9 /* MACOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACOperation.h; sourceTree = "<group>"; };
+		A52F89AC1DEDBA2E00E0DAF9 /* MACOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACOperation.m; sourceTree = "<group>"; };
+		A52F89AD1DEDBA2E00E0DAF9 /* MMLANScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLANScanner.h; sourceTree = "<group>"; };
+		A52F89AE1DEDBA2E00E0DAF9 /* MMLANScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLANScanner.m; sourceTree = "<group>"; };
+		A52F89AF1DEDBA2E00E0DAF9 /* NetworkCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCalculator.h; sourceTree = "<group>"; };
+		A52F89B01DEDBA2E00E0DAF9 /* NetworkCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCalculator.m; sourceTree = "<group>"; };
+		A52F89B11DEDBA2E00E0DAF9 /* PingOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingOperation.h; sourceTree = "<group>"; };
+		A52F89B21DEDBA2E00E0DAF9 /* PingOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingOperation.m; sourceTree = "<group>"; };
+		A52F89B31DEDBA2E00E0DAF9 /* route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
+		A52F89B41DEDBA2E00E0DAF9 /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
+		A52F89B51DEDBA2E00E0DAF9 /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
 		A56FE5741DECE6170086478F /* scanService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scanService.swift; sourceTree = "<group>"; };
 		A56FE5761DECEC8E0086478F /* LANScanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LANScanner.framework; path = "../../../Library/Developer/Xcode/DerivedData/pidebugger-hkypnyxqtafaeqdobkeqkuyotmtj/Build/Products/Debug-iphonesimulator/LANScanner/LANScanner.framework"; sourceTree = "<group>"; };
 		A56FE5771DECEC8E0086478F /* NMSSH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMSSH.framework; path = "../../../Library/Developer/Xcode/DerivedData/pidebugger-hkypnyxqtafaeqdobkeqkuyotmtj/Build/Products/Debug-iphonesimulator/NMSSH/NMSSH.framework"; sourceTree = "<group>"; };
@@ -129,6 +158,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A52F899B1DEDB9A400E0DAF9 /* MMLanScan */ = {
+			isa = PBXGroup;
+			children = (
+				A52F89A11DEDBA2E00E0DAF9 /* data.plist */,
+				A52F89A21DEDBA2E00E0DAF9 /* Device.h */,
+				A52F89A31DEDBA2E00E0DAF9 /* Device.m */,
+				A52F89A41DEDBA2E00E0DAF9 /* if_arp.h */,
+				A52F89A51DEDBA2E00E0DAF9 /* if_ether.h */,
+				A52F89A61DEDBA2E00E0DAF9 /* if_types.h */,
+				A52F89A71DEDBA2E00E0DAF9 /* LANProperties.h */,
+				A52F89A81DEDBA2E00E0DAF9 /* LANProperties.m */,
+				A52F89A91DEDBA2E00E0DAF9 /* MacFinder.h */,
+				A52F89AA1DEDBA2E00E0DAF9 /* MacFinder.m */,
+				A52F89AB1DEDBA2E00E0DAF9 /* MACOperation.h */,
+				A52F89AC1DEDBA2E00E0DAF9 /* MACOperation.m */,
+				A52F89AD1DEDBA2E00E0DAF9 /* MMLANScanner.h */,
+				A52F89AE1DEDBA2E00E0DAF9 /* MMLANScanner.m */,
+				A52F89AF1DEDBA2E00E0DAF9 /* NetworkCalculator.h */,
+				A52F89B01DEDBA2E00E0DAF9 /* NetworkCalculator.m */,
+				A52F89B11DEDBA2E00E0DAF9 /* PingOperation.h */,
+				A52F89B21DEDBA2E00E0DAF9 /* PingOperation.m */,
+				A52F89B31DEDBA2E00E0DAF9 /* route.h */,
+				A52F89B41DEDBA2E00E0DAF9 /* SimplePing.h */,
+				A52F89B51DEDBA2E00E0DAF9 /* SimplePing.m */,
+			);
+			name = MMLanScan;
+			path = ../MMLanScan;
+			sourceTree = "<group>";
+		};
 		A58D44F41DB669F7000473AD /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +220,7 @@
 		A5A4E8931DB55DA10025ECF1 /* pidebugger */ = {
 			isa = PBXGroup;
 			children = (
+				A52F899B1DEDB9A400E0DAF9 /* MMLanScan */,
 				A58D44F41DB669F7000473AD /* Model */,
 				A5A4E8941DB55DA10025ECF1 /* AppDelegate.swift */,
 				4AD09B611DD349A6009EA548 /* TriStateButton.swift */,
@@ -171,12 +230,11 @@
 				8EAA59021DD1EA5B00CBAE64 /* sshService.swift */,
 				8EAA59041DD1EE4500CBAE64 /* socketService.swift */,
 				A56FE5741DECE6170086478F /* scanService.swift */,
-				A5A4E8981DB55DA20025ECF1 /* Main.storyboard */,
 				A5A4E89E1DB55DA20025ECF1 /* Assets.xcassets */,
+				A5A4E8981DB55DA20025ECF1 /* Main.storyboard */,
 				A5A4E8A01DB55DA20025ECF1 /* LaunchScreen.storyboard */,
 				A5A4E8A31DB55DA20025ECF1 /* Info.plist */,
 				A5A4E89B1DB55DA20025ECF1 /* pidebugger.xcdatamodeld */,
-				8E803DCE1DBF54E000F40231 /* NMSSH-Bridging-Header.h */,
 			);
 			path = pidebugger;
 			sourceTree = "<group>";
@@ -341,6 +399,7 @@
 			files = (
 				A5A4E8A21DB55DA20025ECF1 /* LaunchScreen.storyboard in Resources */,
 				A5A4E89F1DB55DA20025ECF1 /* Assets.xcassets in Resources */,
+				A52F89B61DEDBA2E00E0DAF9 /* data.plist in Resources */,
 				A5A4E89A1DB55DA20025ECF1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,6 +565,11 @@
 			files = (
 				8EAA59031DD1EA5B00CBAE64 /* sshService.swift in Sources */,
 				4AD09B621DD349A6009EA548 /* TriStateButton.swift in Sources */,
+				A52F89B81DEDBA2E00E0DAF9 /* LANProperties.m in Sources */,
+				A52F89BA1DEDBA2E00E0DAF9 /* MACOperation.m in Sources */,
+				A52F89BB1DEDBA2E00E0DAF9 /* MMLANScanner.m in Sources */,
+				A52F89B71DEDBA2E00E0DAF9 /* Device.m in Sources */,
+				A52F89BE1DEDBA2E00E0DAF9 /* SimplePing.m in Sources */,
 				4A52B6271DEA261A0001D685 /* UIViewExtensions.swift in Sources */,
 				A5A4E8971DB55DA10025ECF1 /* ViewControllerMain.swift in Sources */,
 				A5A4E89D1DB55DA20025ECF1 /* pidebugger.xcdatamodeld in Sources */,
@@ -514,6 +578,9 @@
 				A5A4E8951DB55DA10025ECF1 /* AppDelegate.swift in Sources */,
 				8E18F4931DED8FC600A44B5B /* ViewControllerSetup.swift in Sources */,
 				A56FE5751DECE6170086478F /* scanService.swift in Sources */,
+				A52F89BC1DEDBA2E00E0DAF9 /* NetworkCalculator.m in Sources */,
+				A52F89B91DEDBA2E00E0DAF9 /* MacFinder.m in Sources */,
+				A52F89BD1DEDBA2E00E0DAF9 /* PingOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,11 +743,11 @@
 				INFOPLIST_FILE = pidebugger/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACH_O_TYPE = mh_execute;
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moritzgruber.pidebugger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "pidebugger/pidebugger-Bridging-Header.h";
-				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "pidebugger/NMSSH-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -701,11 +768,11 @@
 				INFOPLIST_FILE = pidebugger/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACH_O_TYPE = mh_execute;
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moritzgruber.pidebugger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "pidebugger/pidebugger-Bridging-Header.h";
-				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "pidebugger/NMSSH-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

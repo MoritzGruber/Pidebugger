@@ -221,7 +221,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "17"
             endingLineNumber = "17"
-            landmarkName = "init(ip:)"
+            landmarkName = "init(pi:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -279,22 +279,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "pidebugger/scanService.swift"
-            timestampString = "502066222.030669"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "LANScannerFailed(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "pidebugger/sshService.swift"
             timestampString = "502071292.350015"
             startingColumnNumber = "9223372036854775807"
@@ -303,6 +287,132 @@
             endingLineNumber = "68"
             landmarkName = "sshService"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pidebugger/ViewControllerSetup.swift"
+            timestampString = "502116729.142151"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "ViewControllerSetup"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pidebugger.ViewControllerSetup.__deallocating_deinit"
+                  moduleName = "pidebugger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/morris/ios/pma-ws16-pidebugger2/ios/pidebugger/pidebugger/ViewControllerSetup.swift"
+                  timestampString = "502117982.782823"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pidebugger.ViewControllerSetup.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; pidebugger.ViewControllerSetup"
+                  moduleName = "pidebugger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/morris/ios/pma-ws16-pidebugger2/ios/pidebugger/pidebugger/ViewControllerSetup.swift"
+                  timestampString = "502117982.787681"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pidebugger.ViewControllerSetup.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;pidebugger.ViewControllerSetup&gt;"
+                  moduleName = "pidebugger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/morris/ios/pma-ws16-pidebugger2/ios/pidebugger/pidebugger/ViewControllerSetup.swift"
+                  timestampString = "502117982.78979"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pidebugger.ViewControllerSetup.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;pidebugger.ViewControllerSetup&gt;"
+                  moduleName = "pidebugger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/morris/ios/pma-ws16-pidebugger2/ios/pidebugger/pidebugger/ViewControllerSetup.swift"
+                  timestampString = "502117982.79233"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "105">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pidebugger/scanService.swift"
+            timestampString = "502118078.904498"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "scanService"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pidebugger.scanService.init () -&gt; pidebugger.scanService"
+                  moduleName = "pidebugger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/morris/ios/pma-ws16-pidebugger2/ios/pidebugger/pidebugger/scanService.swift"
+                  timestampString = "502118079.110445"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "53">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pidebugger.scanService.__allocating_init () -&gt; pidebugger.scanService"
+                  moduleName = "pidebugger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/morris/ios/pma-ws16-pidebugger2/ios/pidebugger/pidebugger/scanService.swift"
+                  timestampString = "502118079.112886"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
