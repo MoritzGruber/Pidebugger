@@ -34,8 +34,8 @@ class ViewControllerMain: UIViewController {
         addBackground()
 
         
+        //ab hier bitte löschen!!!
         /*
-       
         //get Screensize
         screenwidth = self.view.frame.size.width
         screenheight = self.view.frame.size.height
@@ -124,6 +124,9 @@ class ViewControllerMain: UIViewController {
             yHeight += Int(oneButtonSpace);
         }
         */
+        //bis hier löschen!!!
+        
+        
         
     }
     
