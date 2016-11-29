@@ -91,7 +91,6 @@ class ViewControllerMain: UIViewController {
             default: print("wrong index value");
             }
             
-            print(yHeight);
             self.view.addSubview(button);
             yHeight += Int(oneButtonSpace);
             
@@ -119,7 +118,6 @@ class ViewControllerMain: UIViewController {
             default: print("wrong index value");
             }
         
-            print(yHeight);
             self.view.addSubview(label);
             yHeight += Int(oneButtonSpace);
         }

@@ -167,16 +167,16 @@
 				4AD09B611DD349A6009EA548 /* TriStateButton.swift */,
 				4A52B6261DEA261A0001D685 /* UIViewExtensions.swift */,
 				A5A4E8961DB55DA10025ECF1 /* ViewControllerMain.swift */,
+				8E18F4921DED8FC600A44B5B /* ViewControllerSetup.swift */,
 				8EAA59021DD1EA5B00CBAE64 /* sshService.swift */,
 				8EAA59041DD1EE4500CBAE64 /* socketService.swift */,
+				A56FE5741DECE6170086478F /* scanService.swift */,
 				A5A4E8981DB55DA20025ECF1 /* Main.storyboard */,
 				A5A4E89E1DB55DA20025ECF1 /* Assets.xcassets */,
 				A5A4E8A01DB55DA20025ECF1 /* LaunchScreen.storyboard */,
 				A5A4E8A31DB55DA20025ECF1 /* Info.plist */,
 				A5A4E89B1DB55DA20025ECF1 /* pidebugger.xcdatamodeld */,
 				8E803DCE1DBF54E000F40231 /* NMSSH-Bridging-Header.h */,
-				A56FE5741DECE6170086478F /* scanService.swift */,
-				8E18F4921DED8FC600A44B5B /* ViewControllerSetup.swift */,
 			);
 			path = pidebugger;
 			sourceTree = "<group>";
@@ -674,7 +674,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = pidebugger/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moritzgruber.pidebugger;
@@ -699,7 +699,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = pidebugger/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moritzgruber.pidebugger;
