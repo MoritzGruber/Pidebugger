@@ -10,7 +10,7 @@ import UIKit
 import LANScanner
 
 
-class ViewController: UIViewController {
+class ViewControllerMain: UIViewController {
     
     @IBOutlet weak var right: UIStackView!
     @IBOutlet weak var left: UIStackView!
