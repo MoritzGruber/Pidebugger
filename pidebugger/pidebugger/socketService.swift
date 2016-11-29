@@ -14,8 +14,8 @@ import SocketIO
 class socketService {
     var socket:SocketIOClient;
     
-    init(ip: String){
-        socket = SocketIOClient(socketURL: URL(string: "http://"+ip+":3000")!, config: [.log(true), .forcePolling(true)])
+    init(pi: raspberrypi){
+        socket = SocketIOClient(socketURL: URL(string: "http://"+pi.ip+":3000")!, config: [.log(true), .forcePolling(true)])
         
         socket.on("connect") {data, ack in
             print("socket connected")

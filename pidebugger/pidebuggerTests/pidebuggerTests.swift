@@ -23,7 +23,7 @@ class pidebuggerTests: XCTestCase {
     
     func testTriStateButtonTap() {
         //define a new active button and check if the state and pi value change correctly
-        let pi = raspberrypi.init()
+        let pi = raspberrypi.init(ip: "localhost")
         for index in 1...40 {
             let button = TriStateButton(frame: CGRect(x:10, y: (Int(10)), width: Int(10)-2, height: Int(10)-2), indexTag: (index), piObject: pi)
 

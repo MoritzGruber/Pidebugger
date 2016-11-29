@@ -7,14 +7,14 @@
 //
 
 import UIKit
-
+import LANScanner
 
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var right: UIStackView!
     @IBOutlet weak var left: UIStackView!
-    let pi = raspberrypi.init()
+    let pi = raspberrypi.init(ip: "192.168.0.105")
     //print("              PI:  \( pi.pins[1])");
     
     
@@ -37,10 +37,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //let scannerDelegate = LANScanner().delegate;
+        //let scanner = LANScanner(delegate: scannerDelegate! , continuous: false)
+        //scanner.startScan()
+
+        
 
         addBackground()
+        //scanService.init()
+        //sshService.start(pi: pi)
   
-        socketService.init(ip: "192.168.0.105")
+        //socketService.init(pi: pi)
         
         //get Screensize
         screenwidth = self.view.frame.size.width
