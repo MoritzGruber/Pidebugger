@@ -1,0 +1,24 @@
+framework module LANScanner {
+    umbrella header "LANScanner-umbrella.h"
+    
+    export *
+    module * { export * }
+}
+
+module ifaddrsiOS [system] {
+    header
+    "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/ifaddrs.h"
+    export *
+}
+
+module ifaddrsOSX [system] {
+    header
+    "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/ifaddrs.h"
+    export *
+}
+
+module ifaddrsiOSSim [system] {
+    header
+    "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/include/ifaddrs.h"
+    export *
+}
