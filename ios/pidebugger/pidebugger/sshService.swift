@@ -19,43 +19,35 @@ class sshService {
             print(isConnected)
             session?.authenticate(byPassword: piPassword)
             if let isAuthorized = session?.isAuthorized {
-                print("step1")
+                VC.setLoadingPercentage(percentage: 0.2, status: "Updating Pi")
                 do {
                     //update os
                     try session?.channel.execute("sudo apt-get update")
-                    print("step2")
                     print(session?.channel.lastResponse ?? "no respone of last command")
                     try session?.channel.execute("sudo apt-get dist upgrade")
-                    print("step3")
+                    VC.setLoadingPercentage(percentage: 0.4, status: "Installing Git")
                     print(session?.channel.lastResponse ?? "no respone of last command")
                     //install git
                     try session?.channel.execute("sudo apt-get install git -y")
-                    print("step4")
+                    VC.setLoadingPercentage(percentage: 0.5, status: "Installing Node")
                     print(session?.channel.lastResponse ?? "no respone of last command")
                     //install node and npm
                     try session?.channel.execute("sudo apt-get install nodejs -y")
-                    print("step5")
                     print(session?.channel.lastResponse ?? "no respone of last command")
                     try session?.channel.execute("sudo apt-get install npm -y && sudo ln -s /usr/bin/nodejs /usr/bin/node")
-                    print("step6")
+                    VC.setLoadingPercentage(percentage: 0.7, status: "Pulling Server Code")
                     print(session?.channel.lastResponse ?? "no respone of last command")
                     //pull repo
                     try session?.channel.execute("git clone https://github.com/MoritzGruber/RPI.git")
-                    print("step7")
                     print(session?.channel.lastResponse ?? "no respone of last command")
-                    //npm install
+                    VC.setLoadingPercentage(percentage: 0.8, status: "Installing node modules")
                     try session?.channel.execute("cd RPI && npm install")
-                    print("step8")
                     print(session?.channel.lastResponse ?? "no respone of last command")
-                    //start npm
-                    try session?.channel.execute("node RPI/server.js &")
-                    print("step9")
-                    print(session?.channel.lastResponse ?? "no respone of last command")
-                    try session?.channel.execute("pwd")
-                    print(session?.channel.lastResponse ?? "no respone of last command")
-
-                    
-                    }
+                    VC.setLoadingPercentage(percentage: 0.9, status: "Running Server")
+                    try session?.channel.execute("sh RPI/start.sh &")
+                    VC.setLoadingPercentage(percentage: 1.0, status: "Done")
+                    try session?.disconnect()
+                }
                     catch {
                         print("catchted error")
                 

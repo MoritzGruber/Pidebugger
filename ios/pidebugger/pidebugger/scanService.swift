@@ -24,7 +24,7 @@ class scanService: NSObject, MMLANScannerDelegate  {
     }
     
     func start() {
-        //on start we start a wifi scan that gets killed by a async task after 20 sec if he finds nothing
+        //on start we start a wifi scan that gets killed by a async task after 20 sec if he finds nothing (basic timeout)
         DispatchQueue.global(qos: .background).async {
             sleep(20)
             self.lanScanner.stop()

@@ -34,13 +34,15 @@ class pidebuggerUITests: XCTestCase {
         
         let states:[String] = ["h","i", "l"]
         
-        //get all UIButton elements
-        XCUIApplication().buttons["Button"].tap()
+        //skip the first screep
+        XCUIApplication().buttons["Skip"].tap()
         
+        
+        //get all UIButton elements
         
         let activePinsLLowHHighIInputElementsQuery = XCUIApplication().otherElements.containing(.staticText, identifier:"Active Pins (l = low, h = high, i = input)")
         
-        //check if all th
+        //check if all the buttons are deactived that should be deactivated and all active have a l
         
         var foundMatchingButtons = XCUIApplication().otherElements.containing(.image, identifier:"raspi_background").children(matching: .button).matching(identifier: states[2])
         

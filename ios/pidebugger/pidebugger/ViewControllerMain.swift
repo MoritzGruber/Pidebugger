@@ -43,6 +43,8 @@ class ViewControllerMain: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        let socket = socketService.init()
+        
         // fading the blur effect for background
         UIView.animate(withDuration: 3.0, animations: { self.blurEffectView.alpha = 1.0; return })
         
@@ -66,7 +68,7 @@ class ViewControllerMain: UIViewController {
             yHeight = spacingTop;
             for index in 1...20 {
                 //create button with the right index to call him later by his index
-                let button = TriStateButton(frame: CGRect(x: x, y: (Int(yHeight)), width: Int(oneButtonSpace)-2, height: Int(oneButtonSpace)-2), buttonTag: (index * 2) + indexOffset, piObject: pi);
+                let button = TriStateButton(frame: CGRect(x: x, y: (Int(yHeight)), width: Int(oneButtonSpace)-2, height: Int(oneButtonSpace)-2), buttonTag: (index * 2) + indexOffset, piObject: pi, socket: socket);
                 //set attributes
                 button.alpha = 0
                 button.fadeIn(duration: durationFadeIn, delay: 0.0)
@@ -86,7 +88,7 @@ class ViewControllerMain: UIViewController {
         // Create buttons for the legend on the left side
         yHeight = spacingTop;
         for index in 1...5 {
-            let button = TriStateButton(frame: CGRect(x: 10, y: (Int(yHeight)), width: Int(((oneButtonSpace)-2)/2), height: Int(((oneButtonSpace)-2))/2), buttonTag: 0, piObject: pi);
+            let button = TriStateButton(frame: CGRect(x: 10, y: (Int(yHeight)), width: Int(((oneButtonSpace)-2)/2), height: Int(((oneButtonSpace)-2))/2), buttonTag: 0, piObject: pi, socket: socket);
         
             button.alpha = 0
             button.fadeIn(duration: durationFadeIn, delay: 0.0)

@@ -12,25 +12,43 @@ import UIKit
 //View controller for the setup screen
 class ViewControllerSetup: UIViewController  {
     
+    @IBOutlet weak var setup: UIButton!
+    @IBOutlet weak var skip: UIButton!
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var progress: UIProgressView!
 
     override func viewDidLoad() {
        //we start scanning the wifi network
-       let wifiScanner = scanService.init(VC: self)
-       wifiScanner.start()
         
         
     }
 
+    @IBAction func skipaction(_ sender: Any) {
+        let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "main")
+        self.show(vc as! UIViewController, sender: vc)
+
+    }
+    @IBAction func setupaction(_ sender: Any) {
+         sshService.start(VC: self)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        
+        let wifiScanner = scanService.init(VC: self)
+        wifiScanner.start()
         if let label = statusLabel {
             label.text = "Status: Searching for to Pi"
         }
+        if let bar = progress {
+            bar.setProgress(0.0, animated: false)
+        }
+        
+
         
     }
     
@@ -39,16 +57,33 @@ class ViewControllerSetup: UIViewController  {
         
         
         if let label = statusLabel {
-            label.text = "Status: Connecting to Pi"
+            label.text = "Status: Ready, Pi found"
             }
+        if let bar = progress {
+            bar.setProgress(0.1, animated: true)
+        }
         
-        //sshService.start(VC: self)
+        
+        
+        
 
     }
     
     func setLoadingPercentage(percentage: Float, status: String){
         
-        statusLabel.text = "Status: \(status)"
+        
+        
+        if let label = statusLabel {
+            label.text = "Status: \(status)"
+        }
+        if let bar = progress {
+            bar.setProgress(percentage, animated: true)
+        }
+        if(status == "Done"){
+            let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "main")
+            self.show(vc as! UIViewController, sender: vc)
+        }
+
         
     }
 

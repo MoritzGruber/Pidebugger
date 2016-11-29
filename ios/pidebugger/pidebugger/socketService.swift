@@ -15,6 +15,7 @@ class socketService {
     var socket:SocketIOClient;
     
     init(){
+        //setup socket connection
         socket = SocketIOClient(socketURL: URL(string: "http://"+piIp+":3000")!, config: [.log(true), .forcePolling(true)])
         
         socket.on("connect") {data, ack in
@@ -24,9 +25,12 @@ class socketService {
             print("socket disconnected")
         }
         
-        socket.emit("set", 40, 1);
-        
         socket.connect();
         
+    }
+    
+    func setPin(pin: Int, Value: Int) {
+        //emit the set pin to the raspberrypi
+        socket.emit("set", 40, 1);
     }
 }

@@ -27,19 +27,20 @@ class TriStateButton: UIButton {
     var buttonState: String!
     
     var pi:raspberrypi!
-    
+    var socketServiceObject: socketService = socketService.init()
     override init(frame: CGRect) {
         super.init(frame: frame);
     }
     
     
     // Setting shape and look of the buttons
-    required convenience init(frame: CGRect, buttonTag: Int, piObject: raspberrypi) {
+    required convenience init(frame: CGRect, buttonTag: Int, piObject: raspberrypi, socket: socketService) {
         
         // Set myValue before super.init is called
         self.init(frame: frame);
         self.pi = piObject;
         self.buttonTag = buttonTag;
+        self.socketServiceObject = socket
         
         
         // General shape and look of the buttons
@@ -113,6 +114,8 @@ class TriStateButton: UIButton {
         
         // Set the current Pin state value on the related position in the pins Array.
         pi.pins[indexTag] = buttonState
+        
+        socketServiceObject.setPin(pin: indexTag, Value: currentPinState)
         
     }
     
