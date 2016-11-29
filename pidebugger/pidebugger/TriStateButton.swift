@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class TriStateButton: UIButton {
     
@@ -50,6 +51,7 @@ class TriStateButton: UIButton {
         clipsToBounds = true
         contentEdgeInsets = UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
         self.setTitleColor(UIColor.clear, for: UIControlState.normal)
+
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 2, height: 2)
         layer.shadowRadius = 1
@@ -97,6 +99,7 @@ class TriStateButton: UIButton {
     
     
     // Cylce-function on button-click through the three active Pin states ("l", "h", "i"). The current Pin state value will be stored on the fly in the pins Array.
+
     func nextState(_ sender: TriStateButton) {
         
         // Cycle through the 3 possible index numbers for the pinState Array (0,1,2)

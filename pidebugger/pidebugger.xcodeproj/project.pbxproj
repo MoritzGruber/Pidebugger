@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		134EB570573BF372E8D96729 /* Pods_pidebugger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5301F31F2D2A7C849DED1C /* Pods_pidebugger.framework */; };
+		016FB9D4F3C93340FD8D81DE /* Pods_pidebugger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5301F31F2D2A7C849DED1C /* Pods_pidebugger.framework */; };
 		4A52B6271DEA261A0001D685 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A52B6261DEA261A0001D685 /* UIViewExtensions.swift */; };
 		4AD09B621DD349A6009EA548 /* TriStateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD09B611DD349A6009EA548 /* TriStateButton.swift */; };
 		8E8FE49D1DB6388A0048D1A4 /* raspberrypi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FE49C1DB6388A0048D1A4 /* raspberrypi.swift */; };
 		8EAA59031DD1EA5B00CBAE64 /* sshService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA59021DD1EA5B00CBAE64 /* sshService.swift */; };
 		8EAA59051DD1EE4500CBAE64 /* socketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA59041DD1EE4500CBAE64 /* socketService.swift */; };
+		A56FE5751DECE6170086478F /* scanService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56FE5741DECE6170086478F /* scanService.swift */; };
+		A56FE5831DECEDBE0086478F /* Pods_pidebugger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56FE5801DECEDBE0086478F /* Pods_pidebugger.framework */; };
 		A5A4E8951DB55DA10025ECF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A4E8941DB55DA10025ECF1 /* AppDelegate.swift */; };
 		A5A4E8971DB55DA10025ECF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A4E8961DB55DA10025ECF1 /* ViewController.swift */; };
 		A5A4E89A1DB55DA20025ECF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5A4E8981DB55DA20025ECF1 /* Main.storyboard */; };
@@ -56,6 +58,15 @@
 		8EAA59021DD1EA5B00CBAE64 /* sshService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sshService.swift; sourceTree = "<group>"; };
 		8EAA59041DD1EE4500CBAE64 /* socketService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = socketService.swift; sourceTree = "<group>"; };
 		A1A8FD06B27064D046B11837 /* Pods-pidebuggerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pidebuggerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-pidebuggerUITests/Pods-pidebuggerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A56FE5741DECE6170086478F /* scanService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scanService.swift; sourceTree = "<group>"; };
+		A56FE5761DECEC8E0086478F /* LANScanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LANScanner.framework; path = "../../../Library/Developer/Xcode/DerivedData/pidebugger-hkypnyxqtafaeqdobkeqkuyotmtj/Build/Products/Debug-iphonesimulator/LANScanner/LANScanner.framework"; sourceTree = "<group>"; };
+		A56FE5771DECEC8E0086478F /* NMSSH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMSSH.framework; path = "../../../Library/Developer/Xcode/DerivedData/pidebugger-hkypnyxqtafaeqdobkeqkuyotmtj/Build/Products/Debug-iphonesimulator/NMSSH/NMSSH.framework"; sourceTree = "<group>"; };
+		A56FE5781DECEC8E0086478F /* Pods_pidebuggerTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_pidebuggerTests.framework; path = "../../../Library/Developer/Xcode/DerivedData/pidebugger-hkypnyxqtafaeqdobkeqkuyotmtj/Build/Products/Debug-iphonesimulator/Pods_pidebuggerTests.framework"; sourceTree = "<group>"; };
+		A56FE5791DECEC8E0086478F /* Pods_pidebuggerUITests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_pidebuggerUITests.framework; path = "../../../Library/Developer/Xcode/DerivedData/pidebugger-hkypnyxqtafaeqdobkeqkuyotmtj/Build/Products/Debug-iphonesimulator/Pods_pidebuggerUITests.framework"; sourceTree = "<group>"; };
+		A56FE57A1DECEC8E0086478F /* SocketIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketIO.framework; path = "../../../Library/Developer/Xcode/DerivedData/pidebugger-hkypnyxqtafaeqdobkeqkuyotmtj/Build/Products/Debug-iphonesimulator/Socket.IO-Client-Swift/SocketIO.framework"; sourceTree = "<group>"; };
+		A56FE5801DECEDBE0086478F /* Pods_pidebugger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_pidebugger.framework; path = "../../../Library/Developer/Xcode/DerivedData/pidebugger-hkypnyxqtafaeqdobkeqkuyotmtj/Build/Products/Debug-iphonesimulator/Pods_pidebugger.framework"; sourceTree = "<group>"; };
+		A56FE5811DECEDBE0086478F /* Pods_pidebuggerTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_pidebuggerTests.framework; path = "Pods/../build/Debug-iphoneos/Pods_pidebuggerTests.framework"; sourceTree = "<group>"; };
+		A56FE5821DECEDBE0086478F /* Pods_pidebuggerUITests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_pidebuggerUITests.framework; path = "Pods/../build/Debug-iphoneos/Pods_pidebuggerUITests.framework"; sourceTree = "<group>"; };
 		A5A4E8911DB55DA10025ECF1 /* pidebugger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pidebugger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5A4E8941DB55DA10025ECF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5A4E8961DB55DA10025ECF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				134EB570573BF372E8D96729 /* Pods_pidebugger.framework in Frameworks */,
+				A56FE5831DECEDBE0086478F /* Pods_pidebugger.framework in Frameworks */,
+				016FB9D4F3C93340FD8D81DE /* Pods_pidebugger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +173,7 @@
 				A5A4E8A31DB55DA20025ECF1 /* Info.plist */,
 				A5A4E89B1DB55DA20025ECF1 /* pidebugger.xcdatamodeld */,
 				8E803DCE1DBF54E000F40231 /* NMSSH-Bridging-Header.h */,
+				A56FE5741DECE6170086478F /* scanService.swift */,
 			);
 			path = pidebugger;
 			sourceTree = "<group>";
@@ -186,6 +199,14 @@
 		DA14D47586346855FFFE5A05 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A56FE5801DECEDBE0086478F /* Pods_pidebugger.framework */,
+				A56FE5811DECEDBE0086478F /* Pods_pidebuggerTests.framework */,
+				A56FE5821DECEDBE0086478F /* Pods_pidebuggerUITests.framework */,
+				A56FE5761DECEC8E0086478F /* LANScanner.framework */,
+				A56FE5771DECEC8E0086478F /* NMSSH.framework */,
+				A56FE5781DECEC8E0086478F /* Pods_pidebuggerTests.framework */,
+				A56FE5791DECEC8E0086478F /* Pods_pidebuggerUITests.framework */,
+				A56FE57A1DECEC8E0086478F /* SocketIO.framework */,
 				7E5301F31F2D2A7C849DED1C /* Pods_pidebugger.framework */,
 				5FC818AF70FA652095F4B49E /* Pods_pidebuggerTests.framework */,
 				8459000015AE7490C16601ED /* Pods_pidebuggerUITests.framework */,
@@ -488,6 +509,7 @@
 				8E8FE49D1DB6388A0048D1A4 /* raspberrypi.swift in Sources */,
 				8EAA59051DD1EE4500CBAE64 /* socketService.swift in Sources */,
 				A5A4E8951DB55DA10025ECF1 /* AppDelegate.swift in Sources */,
+				A56FE5751DECE6170086478F /* scanService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,6 +665,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WVCLR2EPQZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = pidebugger/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -664,6 +690,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WVCLR2EPQZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = pidebugger/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

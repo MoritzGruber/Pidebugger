@@ -7,14 +7,14 @@
 //
 
 import UIKit
-
+import LANScanner
 
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var right: UIStackView!
     @IBOutlet weak var left: UIStackView!
-    let pi = raspberrypi.init()
+    let pi = raspberrypi.init(ip: "192.168.0.105")
     //print("              PI:  \( pi.pins[1])");
     
    
@@ -31,72 +31,57 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //let scannerDelegate = LANScanner().delegate;
+        //let scanner = LANScanner(delegate: scannerDelegate! , continuous: false)
+        //scanner.startScan()
+
+        
 
         // Loading the background design to the ViewController
         addBackground()
+        //scanService.init()
+        //sshService.start(pi: pi)
+  
+        //socketService.init(pi: pi)
         
-    
+        //get Screensize
         screenwidth = self.view.frame.size.width
         screenheight = self.view.frame.size.height
-        print("\(screenwidth) ,\(screenheight)")
-        //socketService.connect();
- 
-        //sshService.start();
         
-        
-        let screenWidthInPixels = UIScreen.main.nativeBounds.width;
-        let screenHeightInPixels = UIScreen.main.nativeBounds.height;
-        print(screenWidthInPixels);
-        print(screenHeightInPixels);
-        
-        
-        
+        //calculate variables for rendering buttons later
         let spacingTop = 30;
         let spacingBot = 50;
         let oneButtonSpace = (Int(screenheight!) - (spacingTop + spacingBot))/20;
-                print(oneButtonSpace);
         var yHeight = spacingTop;
         let xFirstRow = (Int(screenwidth) - 4 * oneButtonSpace);
         let xSecRow = (Int(screenwidth) - 2 * oneButtonSpace);
-        print(xFirstRow);
-        print(xSecRow);
-        // Do any additional setup after loading the view, typically from a nib.
-    
-        
 
+       
         
-        for index in 1...20 {
-            let button = TriStateButton(frame: CGRect(x: xFirstRow, y: (Int(yHeight)), width: Int(oneButtonSpace)-2, height: Int(oneButtonSpace)-2), buttonTag:(index * 2 ) - 1, piObject: pi);
-            //button.setTitle("x", for: .normal);
-            //button.backgroundColor = UIColor.blue;
-            //self.view.addSubview(button)
-            
-            button.alpha = 0
-            button.fadeIn(duration: TimeInterval(Int(durationFadeIn)), delay: 0)
-            
-                print(yHeight);
+        //define function to gerate a responive row of buttons
+        func generateRow(x: Int, indexOffset: Int){
+            //reset top start point
+            yHeight = spacingTop;
+            for index in 1...20 {
+                //create button with the right index to call him later by his index
+                let button = TriStateButton(frame: CGRect(x: x, y: (Int(yHeight)), width: Int(oneButtonSpace)-2, height: Int(oneButtonSpace)-2), buttonTag: (index * 2) + indexOffset, piObject: pi);
+                //set attributes
+                button.alpha = 0
+                button.fadeIn(duration: TimeInterval(Int(durationFadeIn)), delay: 0)
+
+                //add to view
                 self.view.addSubview(button);
             yHeight += Int(oneButtonSpace);
+            }
             
         }
-        yHeight = spacingTop;
-        for index in 1...20 {
+
+        //create the left Row of buttons
+        generateRow(x: xFirstRow, indexOffset: -1)
+        //create the right Row of buttons
+        generateRow(x: xSecRow, indexOffset: 0)
             
-            let button = TriStateButton(frame: CGRect(x:xSecRow, y: (Int(yHeight)), width: Int(oneButtonSpace)-2, height: Int(oneButtonSpace)-2), buttonTag: (index * 2), piObject: pi);
-            //button.setTitle("y", for: .normal);
-            //button.backgroundColor = UIColor.blue;
-            //self.view.addSubview(button)
-            
-            button.alpha = 0
-            button.fadeIn(duration: TimeInterval(Int(durationFadeIn)), delay: 0)
-            
-            print(yHeight);
-            self.view.addSubview(button);
-            yHeight += Int(oneButtonSpace);
-            
-        }
-        
-        // Creating the buttons for the description legend
+        //create Elements for the legend on the left side
         yHeight = spacingTop;
         for index in 1...5 {
             

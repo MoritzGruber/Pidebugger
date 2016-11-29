@@ -10,8 +10,14 @@ import Foundation
 
 class raspberrypi {
     
+    
     // Array initialized with 40 default values ("l" = low). Only 26 Pins of the Raspberry's GPIO are user-editable (3 possible states: "l" = low, "h" = high, "i" = input). 14 Pins are non user-editable (inactive) and will later be deactivated ("d" = deactivated).
-    var pins = [String](repeating: "l", count: 40)
+    var pins = [String](repeating: "f", count: 40)
+    
+    //setup to connect via ssh/socket
+    var ip:String;
+    var username:String = "pi";
+    var password:String = "raspberry";
     
     
     // All inactive Pin numbers (1,2,4,6,9,14,17,20,25,27,28,30,34,39)
@@ -24,9 +30,10 @@ class raspberrypi {
     // Array with all inactive Pin numbers. They will be deactivated in the pinValue Array (with the value "d")
     let inactivePins:[Int];
     
-    
-    // Deactivate all inactive Pin numbers in the pins Array.
-    init(){
+
+    init(ip: String){
+        
+        self.ip = ip
         
         var currentPin = 0
         inactivePins = groundPins + I2CPins + V5Pins + V3Pins;
@@ -37,5 +44,11 @@ class raspberrypi {
         }
 
     }
+    convenience init(ip: String, username: String, password: String){
+        self.init(ip: ip)
+        self.username = username
+        self.password = password
+    }
+    
     
 }

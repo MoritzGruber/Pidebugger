@@ -28,9 +28,41 @@ class pidebuggerUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testAllButtonsTap() {
+        
+        //define diffrent states of the button
+        
+        let states:[String] = ["h","i", "l"]
+        
+        //get all UIButton elements
+
+        
+        let activePinsLLowHHighIInputElementsQuery = XCUIApplication().otherElements.containing(.staticText, identifier:"Active Pins (l = low, h = high, i = input)")
+        
+        //check if all th
+        
+        var foundMatchingButtons = XCUIApplication().otherElements.containing(.image, identifier:"raspi_background").children(matching: .button).matching(identifier: states[2])
+        
+        XCTAssertEqual(foundMatchingButtons.count, 26, "found instead: \(foundMatchingButtons.debugDescription)")
+        
+        
+        
+        //we test all 3 states each button can have
+        for stateIndex in 0...2 {
+            //we go over all buttons and tap them once for each state
+            for buttonIndex in 1...44 {
+                //find by index and tap that button
+                let button = activePinsLLowHHighIInputElementsQuery.children(matching: .button).allElementsBoundByIndex[buttonIndex]
+                button.tap()
+                
+            }
+
+            // now we check if all buttons that are activated (26 buttons) have changed to the next state
+            foundMatchingButtons = XCUIApplication().otherElements.containing(.image, identifier:"raspi_background").children(matching: .button).matching(identifier: states[stateIndex])
+            XCTAssertEqual(foundMatchingButtons.count, 26, "found instead: \(foundMatchingButtons.debugDescription)")
+
+        }
+        
     }
     
 }

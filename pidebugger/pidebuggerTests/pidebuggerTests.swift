@@ -21,9 +21,33 @@ class pidebuggerTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testTriStateButtonTap() {
+        //define a new active button and check if the state and pi value change correctly
+        let pi = raspberrypi.init(ip: "localhost")
+        for index in 1...40 {
+            let button = TriStateButton(frame: CGRect(x:10, y: (Int(10)), width: Int(10)-2, height: Int(10)-2), indexTag: (index), piObject: pi)
+
+            if(pi.inactivePins.contains(index)){
+                //here we make sure all deactivated buttons have no targets
+                XCTAssertTrue(button.allTargets.count == 0)
+            } else {
+                //here we check if the buttun state, aswell as th pi.pins array change correctly
+                button.nextState(button)
+                XCTAssertTrue(button.buttonState == "h")
+                XCTAssertTrue(pi.pins[index-1] == "h")
+                button.nextState(button)
+                XCTAssertTrue(button.buttonState == "i")
+                XCTAssertTrue(pi.pins[index-1] == "i")
+                button.nextState(button)
+                XCTAssertTrue(button.buttonState == "l")
+                XCTAssertTrue(pi.pins[index-1] == "l")
+
+            }
+           
+
+        }
+        
+        
     }
     
     func testPerformanceExample() {

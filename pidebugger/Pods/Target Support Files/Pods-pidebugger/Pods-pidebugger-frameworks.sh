@@ -89,10 +89,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/LANScanner/LANScanner.framework"
   install_framework "$BUILT_PRODUCTS_DIR/NMSSH/NMSSH.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Socket.IO-Client-Swift/SocketIO.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/LANScanner/LANScanner.framework"
   install_framework "$BUILT_PRODUCTS_DIR/NMSSH/NMSSH.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Socket.IO-Client-Swift/SocketIO.framework"
 fi
