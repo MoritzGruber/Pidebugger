@@ -35,7 +35,8 @@ class pidebuggerUITests: XCTestCase {
         let states:[String] = ["h","i", "l"]
         
         //get all UIButton elements
-
+        XCUIApplication().buttons["Button"].tap()
+        
         
         let activePinsLLowHHighIInputElementsQuery = XCUIApplication().otherElements.containing(.staticText, identifier:"Active Pins (l = low, h = high, i = input)")
         
