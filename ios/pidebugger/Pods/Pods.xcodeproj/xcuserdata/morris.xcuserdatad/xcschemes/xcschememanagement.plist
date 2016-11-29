@@ -4,52 +4,35 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>LANScanner.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
 		<key>NMSSH.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 		<key>Pods-pidebugger.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>Pods-pidebuggerTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Pods-pidebuggerUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>Socket.IO-Client-Swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>215D3232F1F6549F2E898A121973AED8</key>
+		<key>26B7C032EAB62105DA728993982BC000</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -69,42 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>582AB3A8E07320F4FC8040B04821B18D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5D2BC54DD72B9C1CF0D8972E94B15D49</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6928D24386DFCE2188A3B07C1834957C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7FD375F015D0602F949E751034050079</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8793E3E9E40B3EA8F2C9AFFC2C412239</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9F007733BEB6081EC00736DCC9090560</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EEF8995E68A6CC1B9337BB73CBAA3885</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FC4C3839C67B77ADF5C117DCD802AE7C</key>
+		<key>F3A0C1C96414EE4F0FDD33C51C1283B4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

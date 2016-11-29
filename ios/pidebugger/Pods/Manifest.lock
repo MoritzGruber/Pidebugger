@@ -1,18 +1,15 @@
 PODS:
-  - LANScanner (0.2.1)
   - NMSSH (2.2.5)
   - Socket.IO-Client-Swift (8.1.2)
 
 DEPENDENCIES:
-  - LANScanner (~> 0.2)
   - NMSSH (~> 2.2.5)
   - Socket.IO-Client-Swift (~> 8.1.2)
 
 SPEC CHECKSUMS:
-  LANScanner: 0c7bd7344c92c011d84358984319030e1d336991
   NMSSH: 8643df89d73b9a3e398a5a5971f6ea4bb1179ea7
   Socket.IO-Client-Swift: 542d82e6708f9901b3f6c1d134fb60fa0d09d4d1
 
-PODFILE CHECKSUM: c5aac0e3be9173a1fd316a06e5539aec58b9056b
+PODFILE CHECKSUM: 4f5404af9d3cd0f5096c3b7f68a7c5b5eace3a69
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.0.1

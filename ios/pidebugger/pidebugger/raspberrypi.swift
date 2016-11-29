@@ -7,6 +7,45 @@
 //
 
 import Foundation
+//this vars are shared with all parts of the app
+//used for ssh and socket connection
+var piIp: String = "localhost"
+var piUsername: String = "pi"
+var piPassword:String = "raspberry"
+/*
+struct piCredentials {
+    //ip
+    var _ip: String = "localhost"
+    var ip: String  {
+        get{
+            return _ip
+        }
+        set(newValue){
+            _ip = newValue
+        }
+    }
+    //username
+    var _username: String = "pi"
+    var username: String  {
+        get{
+            return _username
+        }
+        set(newValue){
+            _username = newValue
+        }
+    }
+    //password
+    var _password:String = "raspberry";
+    var password: String  {
+        get{
+            return _password
+        }
+        set(newValue){
+            _password = newValue
+        }
+    }
+}
+ */
 
 class raspberrypi {
     
@@ -14,11 +53,7 @@ class raspberrypi {
     // Array initialized with 40 default values ("l" = low). Only 26 Pins of the Raspberry's GPIO are user-editable (3 possible states: "l" = low, "h" = high, "i" = input). 14 Pins are non user-editable (inactive) and will later be deactivated ("d" = deactivated).
     var pins = [String](repeating: "f", count: 40)
     
-    //setup to connect via ssh/socket
-    var ip:String;
-    var username:String = "pi";
-    var password:String = "raspberry";
-    
+
     
     // All inactive Pin numbers (1,2,4,6,9,14,17,20,25,27,28,30,34,39)
     let groundPins = [6,9,14,20,25,30,34,39];
@@ -31,10 +66,8 @@ class raspberrypi {
     let inactivePins:[Int];
     
 
-    init(ip: String){
-        
-        self.ip = ip
-        
+    init(){
+        //deactivate all inactive pins on init
         var currentPin = 0
         inactivePins = groundPins + I2CPins + V5Pins + V3Pins;
         
@@ -43,11 +76,6 @@ class raspberrypi {
             pins[currentPin] = "d"
         }
 
-    }
-    convenience init(ip: String, username: String, password: String){
-        self.init(ip: ip)
-        self.username = username
-        self.password = password
     }
     
     

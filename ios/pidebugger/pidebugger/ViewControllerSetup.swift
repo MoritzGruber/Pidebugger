@@ -8,13 +8,18 @@
 
 import UIKit
 
+
 //View controller for the setup screen
 class ViewControllerSetup: UIViewController  {
     
-    
+    @IBOutlet weak var statusLabel: UILabel!
+
     override func viewDidLoad() {
-       scanService.init()
-        // Do any additional setup after loading the view.
+       //we start scanning the wifi network
+       let wifiScanner = scanService.init(VC: self)
+       wifiScanner.start()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,6 +27,30 @@ class ViewControllerSetup: UIViewController  {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if let label = statusLabel {
+            label.text = "Status: Searching for to Pi"
+        }
+        
+    }
+    
+    func gotIpAdress() {
+        //wifiScanner calls this if he is finished
+        
+        
+        if let label = statusLabel {
+            label.text = "Status: Connecting to Pi"
+            }
+        
+        //sshService.start(VC: self)
+
+    }
+    
+    func setLoadingPercentage(percentage: Float, status: String){
+        
+        statusLabel.text = "Status: \(status)"
+        
+    }
 
     /*
     // MARK: - Navigation

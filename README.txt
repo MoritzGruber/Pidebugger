@@ -4,7 +4,7 @@ Description:
 Debugging Tool for the RaspberryPi. Setup and testing GPIO pins.
 
 Categories:
-- Connectivity: Bluetooth, Wifi, etc.   (SSH)
+- Connectivity: Bluetooth, Wifi, etc.   (Wifi, SSH)
 - Networking: JSON parse, API consume (Socket.io)
 
 Members:

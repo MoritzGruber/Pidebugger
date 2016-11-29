@@ -12,12 +12,12 @@ import NMSSH
 class sshService {
     
    
-    static func start(pi: raspberrypi){
-        let session = NMSSHSession(host: pi.ip, andUsername: pi.username)
+    static func start(VC: ViewControllerSetup){
+        let session = NMSSHSession(host: piIp, andUsername: piUsername)
         session?.connect()
         if let isConnected = session?.isConnected {
             print(isConnected)
-            session?.authenticate(byPassword: pi.password)
+            session?.authenticate(byPassword: piPassword)
             if let isAuthorized = session?.isAuthorized {
                 print("step1")
                 do {
@@ -54,7 +54,7 @@ class sshService {
                     try session?.channel.execute("pwd")
                     print(session?.channel.lastResponse ?? "no respone of last command")
 
-                    socketService.init(pi: pi)
+                    
                     }
                     catch {
                         print("catchted error")

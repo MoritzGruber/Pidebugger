@@ -7,14 +7,13 @@
 //
 
 import UIKit
-import LANScanner
 
 
 class ViewControllerMain: UIViewController {
     
     @IBOutlet weak var right: UIStackView!
     @IBOutlet weak var left: UIStackView!
-    let pi = raspberrypi.init(ip: "192.168.0.105")
+    let pi = raspberrypi.init()
    
     var screenwidth : CGFloat!
     var screenheight : CGFloat!
@@ -31,100 +30,7 @@ class ViewControllerMain: UIViewController {
         super.viewDidLoad()
 
         // Loading the background design of the ViewController
-        addBackground()
-
-        
-        //ab hier bitte löschen!!!
-        /*
-        //get Screensize
-        screenwidth = self.view.frame.size.width
-        screenheight = self.view.frame.size.height
-        
-        //calculate variables for rendering buttons later
-        let spacingTop = 30;
-        let spacingBot = 50;
-        let oneButtonSpace = (Int(screenheight!) - (spacingTop + spacingBot))/20;
-        var yHeight = spacingTop;
-        let xFirstRow = (Int(screenwidth) - 4 * oneButtonSpace);
-        let xSecRow = (Int(screenwidth) - 2 * oneButtonSpace);
-
-       
-        
-        //define function to gerate a responive row of buttons
-        func generateRow(x: Int, indexOffset: Int){
-            //reset top start point
-            yHeight = spacingTop;
-            for index in 1...20 {
-                //create button with the right index to call him later by his index
-                let button = TriStateButton(frame: CGRect(x: x, y: (Int(yHeight)), width: Int(oneButtonSpace)-2, height: Int(oneButtonSpace)-2), buttonTag: (index * 2) + indexOffset, piObject: pi);
-                //set attributes
-                button.alpha = 0
-                //button.fadeIn(duration: TimeInterval(durationFadeIn), delay: 60)
-                button.fadeIn(duration: durationFadeIn, delay: 30.0)
- 
-                //add to view
-                self.view.addSubview(button);
-            yHeight += Int(oneButtonSpace);
-            }
-            
-        }
-
-        //create the left Row of buttons
-        generateRow(x: xFirstRow, indexOffset: -1)
-        //create the right Row of buttons
-        generateRow(x: xSecRow, indexOffset: 0)
-        
-        //create Elements for the legend on the left side
-        yHeight = spacingTop;
-        for index in 1...5 {
-            let button = TriStateButton(frame: CGRect(x: 10, y: (Int(yHeight)), width: Int(((oneButtonSpace)-2)/2), height: Int(((oneButtonSpace)-2))/2), buttonTag: 0, piObject: pi);
-        
-            button.alpha = 0
-            button.fadeIn(duration: durationFadeIn, delay: 0.0)
- 
-            switch index {
-            case 1: button.backgroundColor = UIColor.green;
-            case 2: button.backgroundColor = UIColor.orange;
-            case 3: button.backgroundColor = UIColor.red;
-            case 4: button.backgroundColor = UIColor.black;
-            case 5: button.backgroundColor = UIColor.gray;
-            default: print("wrong index value");
-            }
-            
-            self.view.addSubview(button);
-            yHeight += Int(oneButtonSpace);
-            
-        }
-        
-        
-        // Creating the labels for the description legend
-        let xLabel = 10 + oneButtonSpace;
-        yHeight = spacingTop;
-        for index in 1...5 {
-            let label = UILabel(frame: CGRect(x: xLabel, y: (Int(yHeight)), width: 200, height: Int(((oneButtonSpace)-2))/2));
-            
-            label.alpha = 0
-            label.fadeIn(duration: durationFadeIn, delay: 0.0)
-            
-            label.textAlignment = .left
-            label.font = UIFont(name: "Helvetica", size: CGFloat(Int(oneButtonSpace/4)));
-        
-            switch index {
-            case 1: label.text = "Active Pins (l = low, h = high, i = input)";
-            case 2: label.text = "3,3V Pins (inactive)";
-            case 3: label.text = "5V Pins (inactive)";
-            case 4: label.text = "Ground Pins (inactive)";
-            case 5: label.text = "ID Pins (inactive)";
-            default: print("wrong index value");
-            }
-        
-            self.view.addSubview(label);
-            yHeight += Int(oneButtonSpace);
-        }
-        */
-        //bis hier löschen!!!
-        
-        
+        addBackground()        
         
     }
     
