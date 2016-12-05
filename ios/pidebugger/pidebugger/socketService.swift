@@ -31,6 +31,6 @@ class socketService {
     
     func setPin(pin: Int, Value: Int) {
         //emit the set pin to the raspberrypi
-        socket.emit("set", 40, 1);
+        socket.emit("set", pin, Value);
     }
 }
