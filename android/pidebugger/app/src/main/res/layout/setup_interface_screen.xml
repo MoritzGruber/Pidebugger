@@ -46,7 +46,7 @@
         android:layout_below="@+id/skip"
         android:layout_alignLeft="@+id/skip"
         android:layout_alignStart="@+id/skip"
-        android:id="@+id/button2" />
+        android:id="@+id/setup" />
 
     <TextView
         android:text="Status: Searching for Pi "
