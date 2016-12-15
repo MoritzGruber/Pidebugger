@@ -19,12 +19,11 @@ import android.widget.Toast;
 import com.moritzgruber.pidebugger.pidebugger.R;
 import com.moritzgruber.pidebugger.pidebugger.networkScanner.com.unwind.netTools.Pinger;
 import com.moritzgruber.pidebugger.pidebugger.networkScanner.com.unwind.netTools.model.Device;
-
 import java.net.Inet4Address;
+import org.apache.http.conn.util.InetAddressUtils;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
-import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -179,8 +178,6 @@ public class Scan extends AppCompatActivity {
         }
 
 
-
-
         public static String getLocalIpv4Address(){
             try {
                 String ipv4;
@@ -190,13 +187,9 @@ public class Scan extends AppCompatActivity {
                         List<InetAddress>  ialist = Collections.list(ni.getInetAddresses());
                         if(ialist.size()>0){
                             for (InetAddress address: ialist){
-                                    try {
-                                        if(Inet4Address.getByName(ipv4=address.getHostAddress()) != null){
-                                            return ipv4;
-                                        }
-                                    } catch (UnknownHostException ex) {
-                                        //return false;
-                                    }
+                                if (!address.isLoopbackAddress() && InetAddressUtils.isIPv4Address(ipv4=address.getHostAddress())){
+                                    return ipv4;
+                                }
                             }
                         }
 
