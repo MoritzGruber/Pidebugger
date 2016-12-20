@@ -26,6 +26,7 @@ public class DiscoverRunner implements Runnable {
     @Override
     public void run() {
         int timeout = 4000;
+        Log.w("in run", " there was");
         for (int i = startAdd; i < startAdd + numAdds; i++) {
             String host = subnet + "." + i;
 
@@ -36,12 +37,25 @@ public class DiscoverRunner implements Runnable {
                     InetAddress a = InetAddress.getByName(host);
                     Log.i(TAG, "run: "+ a.getHostAddress());
                     results.add(a);
+                    String macAd = Pinger.getMacFromArpCache(a.getHostAddress());
+                    String vendorA;
+                    Log.i(TAG, "mac of run: "+ macAd);
+
+                    try {
+                        vendorA = Pinger.getVendor("http://api.macvendors.com/" + macAd);
+                        Log.i(TAG, "vendor of run: "+ vendorA);
+
+                    }catch(java.lang.Exception e3) {
+                        vendorA = "";
+                    }
+
                 }else {
                     throw new IOException("Unable to get ping from runtime");
                 }
             } catch (IOException | InterruptedException e) {
                 try {
                     InetAddress a = InetAddress.getByName(host);
+                    //Log.w("in run", "" + a);
                     if (a.isReachable(timeout)) {
                         results.add(a);
                     }

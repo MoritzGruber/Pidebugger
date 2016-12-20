@@ -31,7 +31,6 @@ public class NetDeviceAdapter extends RecyclerView.Adapter<NetDeviceAdapter.View
         this.mContext = mContext;
     }
 
-
     @Override
     public NetDeviceAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(rowLayout, viewGroup, false);
