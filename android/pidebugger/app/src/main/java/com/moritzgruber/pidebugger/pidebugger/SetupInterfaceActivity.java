@@ -74,10 +74,10 @@ public class SetupInterfaceActivity extends AppCompatActivity {
 
         }
         Log.w("aipv4", aipv4);
-        DiscoverRunner runner = new DiscoverRunner(aipv4.substring(0, aipv4.length()-4), 0, 1);
+        //DiscoverRunner runner = new DiscoverRunner(aipv4.substring(0, aipv4.length()-4), 0, 1);
         Log.w("aipv4", " after create");
 
-        runner.run();
+        //runner.run();
         Log.w("aipv4", "done");
 
 
