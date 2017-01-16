@@ -73,21 +73,13 @@ public class SetupInterfaceActivity extends AppCompatActivity {
             Log.w("try", "exeton");
 
         }
-        //Log.w("aipv4", aipv4);
+
+        Log.w("aipv4", aipv4);
         //DiscoverRunner runner = new DiscoverRunner(aipv4.substring(0, aipv4.length()-4), 0, 1);
-        //Log.w("aipv4", " after create");
+        Log.w("aipv4", " after create");
 
-        // runner.run();
-        //Log.w("aipv4", "done");
-
-
-         //   JSch jsch=new JSch();
-        //try{
-        //    Session session=jsch.getSession("root", "138.68.74.156", 22);
-        //    session.connect(3000);
-        //} catch(Exception e){
-
-        //}
+        //runner.run();
+        Log.w("aipv4", "done");
 
 
 
