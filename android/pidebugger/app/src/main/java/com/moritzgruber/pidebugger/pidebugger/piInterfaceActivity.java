@@ -24,6 +24,10 @@ public class PiInterfaceActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
+        //setting up socket
+        final SocketService mySocket = new SocketService("http://10.60.60.254:3000");
+        mySocket.connect();
+
         //template code
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -46,7 +50,7 @@ public class PiInterfaceActivity extends AppCompatActivity {
         layoutParams.bottomMargin= 10;
 
         //create an array to store the created buttons
-        Button[] pinArrry = new Button[40];
+        final Button[] pinArrry = new Button[40];
 
 
 
@@ -64,12 +68,30 @@ public class PiInterfaceActivity extends AppCompatActivity {
         for (int i = 0; i < 40; i++) {
             //create new button and store it in the array
             pinArrry[i] = new Button(this);
+            //for active buttons online
+            pinArrry[i].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    // Perform action on click
+                   Log.w(" asdf ", " " + v.getId());
+                    if(pinArrry[v.getId()].getText() == "l"){
+                        pinArrry[v.getId()].setText("h");
+                        mySocket.send();
+                    } else {
+                        pinArrry[v.getId()].setText("l");
+                        mySocket.send();
+
+                    }
+
+                }
+            });
             //give the right styling to the button
             pinArrry[i].setBackground(getDrawable(R.drawable.active_pin));
             pinArrry[i].setTextSize(50);
             pinArrry[i].setWidth(screenWidth/4);
             pinArrry[i].setHeight(screenWidth/4);
             pinArrry[i].setTransformationMethod(null);
+            pinArrry[i].setId(i);
+
 
 
             //set inital text for that button

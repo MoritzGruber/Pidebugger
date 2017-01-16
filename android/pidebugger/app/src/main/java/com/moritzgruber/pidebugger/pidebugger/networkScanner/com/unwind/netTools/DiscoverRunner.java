@@ -1,13 +1,15 @@
 package com.moritzgruber.pidebugger.pidebugger.networkScanner.com.unwind.netTools;
 
+import android.os.AsyncTask;
 import android.util.Log;
 
 import java.io.IOException;
 import java.net.InetAddress;
+import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
 
-public class DiscoverRunner implements Runnable {
+public class DiscoverRunner extends AsyncTask<URL, Integer, Long> implements Runnable {
     private static final String CMD = "/system/bin/ping -c 1 %s";
     private static final String TAG = "DiscoverRunner";
     private List<InetAddress> results;
@@ -55,7 +57,7 @@ public class DiscoverRunner implements Runnable {
             } catch (IOException | InterruptedException e) {
                 try {
                     InetAddress a = InetAddress.getByName(host);
-                    //Log.w("in run", "" + a);
+                    Log.w("in run", "" + a);
                     if (a.isReachable(timeout)) {
                         results.add(a);
                     }
@@ -71,4 +73,8 @@ public class DiscoverRunner implements Runnable {
         return results;
     }
 
+    @Override
+    protected Long doInBackground(URL... params) {
+        return null;
+    }
 }

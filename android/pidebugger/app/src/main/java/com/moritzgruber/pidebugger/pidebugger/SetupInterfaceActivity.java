@@ -7,9 +7,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.moritzgruber.pidebugger.pidebugger.networkScanner.com.unwind.netTools.DiscoverRunner;
-import com.moritzgruber.pidebugger.pidebugger.networkScanner.com.unwind.networkmonitor.Scan;
-
 import org.apache.http.conn.util.InetAddressUtils;
 
 import java.net.InetAddress;
@@ -41,10 +38,13 @@ public class SetupInterfaceActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
+                String[] strArray = new String[]{"root@138.68.74.156","Bar","Baz"};
+                Log.w("in setup", "main");
 
-                mySocket.send();
-                Log.w("socket", "connected");
-                startActivity(new Intent(SetupInterfaceActivity.this, Scan.class));
+                ssh.main(strArray);
+//                mySocket.send();
+//                Log.w("socket", "connected");
+//                startActivity(new Intent(SetupInterfaceActivity.this, Scan.class));
 
 
             }
@@ -73,12 +73,21 @@ public class SetupInterfaceActivity extends AppCompatActivity {
             Log.w("try", "exeton");
 
         }
-        Log.w("aipv4", aipv4);
-        DiscoverRunner runner = new DiscoverRunner(aipv4.substring(0, aipv4.length()-4), 0, 1);
-        Log.w("aipv4", " after create");
+        //Log.w("aipv4", aipv4);
+        //DiscoverRunner runner = new DiscoverRunner(aipv4.substring(0, aipv4.length()-4), 0, 1);
+        //Log.w("aipv4", " after create");
 
-        runner.run();
-        Log.w("aipv4", "done");
+        // runner.run();
+        //Log.w("aipv4", "done");
+
+
+         //   JSch jsch=new JSch();
+        //try{
+        //    Session session=jsch.getSession("root", "138.68.74.156", 22);
+        //    session.connect(3000);
+        //} catch(Exception e){
+
+        //}
 
 
 
