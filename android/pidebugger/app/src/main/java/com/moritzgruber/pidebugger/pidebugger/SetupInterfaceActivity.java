@@ -1,6 +1,9 @@
 package com.moritzgruber.pidebugger.pidebugger;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.wifi.WifiManager;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -16,6 +19,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class SetupInterfaceActivity extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,20 +42,13 @@ public class SetupInterfaceActivity extends AppCompatActivity {
         final Button button2 = (Button) findViewById(R.id.setup);
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Perform action on click
-                String[] strArray = new String[]{"root@138.68.74.156","Bar","Baz"};
-                Log.w("in setup", "main");
 
-                ssh.main(strArray);
-//                mySocket.send();
-//                Log.w("socket", "connected");
-//                startActivity(new Intent(SetupInterfaceActivity.this, Scan.class));
-
+                AsyncTask a = new SearchForPiIpAdressTask().execute();
+                Log.w("try", "Status: " + a.getStatus());
 
             }
         });
         //testing stuff with ip
-
         String aipv4 = "";
         try {
             String ipv4;

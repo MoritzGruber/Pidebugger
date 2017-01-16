@@ -9,7 +9,7 @@ import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
 
-public class DiscoverRunner extends AsyncTask<URL, Integer, Long> implements Runnable {
+public class DiscoverRunner extends AsyncTask<Void, Integer, Long> implements Runnable {
     private static final String CMD = "/system/bin/ping -c 1 %s";
     private static final String TAG = "DiscoverRunner";
     private List<InetAddress> results;
@@ -74,7 +74,7 @@ public class DiscoverRunner extends AsyncTask<URL, Integer, Long> implements Run
     }
 
     @Override
-    protected Long doInBackground(URL... params) {
+    protected Long doInBackground(Void... params) {
         return null;
     }
 }
