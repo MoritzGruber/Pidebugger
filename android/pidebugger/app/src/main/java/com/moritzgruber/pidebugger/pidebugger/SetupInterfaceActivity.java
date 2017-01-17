@@ -1,22 +1,10 @@
 package com.moritzgruber.pidebugger.pidebugger;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.wifi.WifiManager;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-
-import org.apache.http.conn.util.InetAddressUtils;
-
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.net.SocketException;
-import java.util.Collections;
-import java.util.List;
 
 public class SetupInterfaceActivity extends AppCompatActivity {
 
@@ -43,57 +31,13 @@ public class SetupInterfaceActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                AsyncTask a = new SearchForPiIpAdressTask().execute();
-                Log.w("try", "Status: " + a.getStatus());
+                //AsyncTask a = new SearchForPiIpAdressTask().execute();
+                //Log.w("try", "Status: " + a.getStatus());
+                new SshConnectAsync().execute("asdf");
+
 
             }
         });
-        //testing stuff with ip
-        String aipv4 = "";
-        try {
-            String ipv4;
-            List<NetworkInterface> nilist = Collections.list(NetworkInterface.getNetworkInterfaces());
-            if(nilist.size() > 0){
-                for (NetworkInterface ni: nilist){
-                    List<InetAddress>  ialist = Collections.list(ni.getInetAddresses());
-                    if(ialist.size()>0){
-                        for (InetAddress address: ialist){
-                            if (!address.isLoopbackAddress() && InetAddressUtils.isIPv4Address(ipv4=address.getHostAddress())){
-                                aipv4 = ipv4;
-                            }
-                        }
-                    }
-
-                }
-            }
-
-        } catch (SocketException ex) {
-            Log.w("try", "exeton");
-
-        }
-
-        Log.w("aipv4", aipv4);
-        //DiscoverRunner runner = new DiscoverRunner(aipv4.substring(0, aipv4.length()-4), 0, 1);
-        Log.w("aipv4", " after create");
-
-        //runner.run();
-        Log.w("aipv4", "done");
-
-
-
-            try {
-                Thread.sleep(0);
-                //Log.w("pinger", Pinger.getDevicesOnNetwork(aipv4.substring(0, aipv4.length()-4)).toString());
-
-
-
-            }
-            catch (Exception e){
-                System.err.println(e);
-            }
-
-
-
-
+         //ssh.main("pi@192.168.0.100");
     }
 }

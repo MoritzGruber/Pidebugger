@@ -9,17 +9,24 @@ package com.moritzgruber.pidebugger.pidebugger;
  * be ugly because of lacks of terminal-emulation, but you can issue commands.
  */
 
+import android.os.AsyncTask;
 import android.util.Log;
 
-import com.jcraft.jsch.Channel;
+import com.jcraft.jsch.ChannelExec;
 import com.jcraft.jsch.JSch;
-import com.jcraft.jsch.Logger;
 import com.jcraft.jsch.Session;
 import com.jcraft.jsch.UIKeyboardInteractive;
 import com.jcraft.jsch.UserInfo;
 
+import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStreamReader;
+import java.util.Properties;
+
 public class ssh {
-    public static void main(String[] arg) {
+
+
+    public static void main(String arg) {
 
 
         Log.w("we are in ssh", "main");
@@ -28,85 +35,36 @@ public class ssh {
 
             //jsch.setKnownHosts("/home/foo/.ssh/known_hosts");
 
-            String host = null;
-            if (arg.length > 0) {
-                host = arg[0];
-            }
+            String host = arg;
             String user = host.substring(0, host.indexOf('@'));
             host = host.substring(host.indexOf('@') + 1);
 
             Session session = jsch.getSession(user, host, 22);
 
-            session.setPassword("DevMakesWorldBetter");
-            UserInfo ui = new MyUserInfo() {
-                public void showMessage(String message) {
+            session.setPassword("raspberry");
+            Properties config = new Properties();
+            config.put("StrictHostKeyChecking", "no");
+            session.setConfig(config);
+            AsyncTask a = new SshConnectAsync();
+            a.execute(session);
 
-                }
+            ChannelExec channel=(ChannelExec) session.openChannel("exec");
+            BufferedReader in=new BufferedReader(new InputStreamReader(channel.getInputStream()));
+            channel.setCommand("pwd;");
+            channel.connect();
+
+            String msg=null;
+            while((msg=in.readLine())!=null){
+                Log.w("in ssh","result msg:" + msg);
+
+            }
+
+            channel.disconnect();
+            session.disconnect();
 
 
-                // If password is not given before the invocation of Session#connect(),
-                // implement also following methods,
-                //   * UserInfo#getPassword(),
-                //   * UserInfo#promptPassword(String message) and
-                //   * UIKeyboardInteractive#promptKeyboardInteractive()
-
-            };
-
-            //session.setUserInfo(ui);
-
-            // It must not be recommended, but if you want to skip host-key check,
-            // invoke following,
-            // session.setConfig("StrictHostKeyChecking", "no");
-            JSch.setLogger(new Logger() {
-                @Override
-                public boolean isEnabled(int level) {
-                    return true;
-                }
-
-                @Override
-                public void log(int level, String message) {
-
-                }
-            });
-            Log.w("4","4");
-
-            //session.connect();
-            session.connect(3000);   // making a connection with timeout.
-            Log.w("3","3");
-
-            Channel channel = session.openChannel("shell");
-
-            // Enable agent-forwarding.
-            //((ChannelShell)channel).setAgentForwarding(true);
-
-            //channel.setInputStream(System.in);
-      /*
-      // a hack for MS-DOS prompt on Windows.
-      channel.setInputStream(new FilterInputStream(System.in){
-          public int read(byte[] b, int off, int len)throws IOException{
-            return in.read(b, off, (len>1024?1024:len));
-          }
-        });
-       */
-            Log.w("2","2");
-
-            channel.setOutputStream(System.out);
-
-      /*
-      // Choose the pty-type "vt102".
-      ((ChannelShell)channel).setPtyType("vt102");
-      */
-
-      /*
-      // Set environment variable "LANG" as "ja_JP.eucJP".
-      ((ChannelShell)channel).setEnv("LANG", "ja_JP.eucJP");
-      */
-            Log.w("1","1");
-
-            //channel.connect();
-            channel.connect(3 * 1000);
         } catch (Exception e) {
-            Log.w("asdf","asdf");
+            Log.w("in ssh","error:" + e.getMessage());
             System.out.println(e.getMessage());
 
             System.out.println(e);

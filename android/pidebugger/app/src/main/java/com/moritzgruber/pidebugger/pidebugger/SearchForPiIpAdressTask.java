@@ -1,27 +1,15 @@
 package com.moritzgruber.pidebugger.pidebugger;
 
-import android.content.Context;
-import android.net.wifi.WifiInfo;
-import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
-import android.text.format.Formatter;
 import android.util.Log;
 
 import com.moritzgruber.pidebugger.pidebugger.networkScanner.com.unwind.netTools.Pinger;
 
-import org.apache.http.conn.util.InetAddressUtils;
-
-import java.io.IOException;
-import java.net.Inet4Address;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
-import java.net.UnknownHostException;
 import java.util.Collections;
 import java.util.List;
-
-import static android.content.Context.WIFI_SERVICE;
-import static java.security.AccessController.getContext;
 
 /**
  * Created by morris on 16.01.2017.
@@ -81,7 +69,7 @@ public class SearchForPiIpAdressTask extends AsyncTask<Void, Integer, String> {
                     try {
                         aVendor = Pinger.getVendor("http://api.macvendors.com/" + macAd);
                         //check if its the right vendor
-                        if(aVendor.contains("aspbeery")){
+                        if(aVendor.contains("aspberry")){
                             //save results and break the loop
                             resultIp = host;
                             i = 255;
