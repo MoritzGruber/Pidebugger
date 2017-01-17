@@ -33,7 +33,7 @@ dependencies {
         exclude group: 'org.json', module: 'json'
     }
     // https://mvnrepository.com/artifact/com.jcraft/jsch
-    compile group: 'com.jcraft', name: 'jsch', version: '0.1.44-1'
+    compile group: 'com.jcraft', name: 'jsch', version: '0.1.52'
 
     testCompile 'junit:junit:4.12'
 }
