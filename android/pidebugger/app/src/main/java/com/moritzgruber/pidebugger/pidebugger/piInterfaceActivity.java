@@ -90,6 +90,7 @@ public class PiInterfaceActivity extends AppCompatActivity {
             pinArrry[i].setWidth(screenWidth/4);
             pinArrry[i].setHeight(screenWidth/4);
             pinArrry[i].setTransformationMethod(null);
+            //set id of the button
             pinArrry[i].setId(i);
 
 

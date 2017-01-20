@@ -1,4 +1,9 @@
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+
 import com.moritzgruber.pidebugger.pidebugger.PiInterfaceActivity;
+import com.moritzgruber.pidebugger.pidebugger.R;
 
 import dalvik.annotation.TestTargetClass;
 
@@ -13,15 +18,40 @@ public class buttonTest {
     @Test
     public void buttonClickedTest() {
 
-    for (int i=0; i<40; i++){
+
+        final Button[] pinArrry = new Button[40];
+
+        for (int i=0; i<40; i++){
+
+            pinArrry[i].setText("l");
+
+            assertTrue("l".equals(pinArrry[i].getText()));
+
+            pinArrry[i].setOnClickListener(new View.OnClickListener() {
+               public void performClick() {
+
+                   if (pinArrry[i].getText() == "l") {
+                       pinArrry[v.getId()].setText("h");
+                   } else {
+                       pinArrry[v.getId()].setText("l");
+                   }
+               }
+           });
 
 
-        PiInterfaceActivity.pinArrry[i].setId(i);
+            pinArrry[i].performClick();
+
+            //pinArrry[i] = new Button();
+
+
+
+        }
+
 
     }
 
 
-    }
+
 
 
 }
