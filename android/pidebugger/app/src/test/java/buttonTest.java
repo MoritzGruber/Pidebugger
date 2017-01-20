@@ -27,22 +27,8 @@ public class buttonTest {
 
             assertTrue("l".equals(pinArrry[i].getText()));
 
-            pinArrry[i].setOnClickListener(new View.OnClickListener() {
-               public void performClick() {
-
-                   if (pinArrry[i].getText() == "l") {
-                       pinArrry[v.getId()].setText("h");
-                   } else {
-                       pinArrry[v.getId()].setText("l");
-                   }
-               }
-           });
-
 
             pinArrry[i].performClick();
-
-            //pinArrry[i] = new Button();
-
 
 
         }
