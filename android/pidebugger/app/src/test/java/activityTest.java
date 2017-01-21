@@ -8,6 +8,11 @@ import com.moritzgruber.pidebugger.pidebugger.SetupInterfaceActivity;
 
 import org.junit.Test;
 
+
+//new test: check if views will be loaded correctly?
+
+//check if activities will be loaded correctly
+
 public class activityTest extends ActivityUnitTestCase<SetupInterfaceActivity> {
 
     private Intent mStartIntent;

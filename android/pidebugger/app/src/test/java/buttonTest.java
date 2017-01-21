@@ -15,6 +15,14 @@ import static org.junit.Assert.assertTrue;
 
 public class buttonTest {
 
+    //new test: check if buttons are clickable
+
+    //new test: check if buttons are visible
+
+
+
+    //check if values will be set correct on button click
+
     @Test
     public void buttonClickedTest() {
 
