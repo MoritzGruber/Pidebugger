@@ -38,8 +38,8 @@ public class SetupInterfaceActivity extends AppCompatActivity {
 
                 //
                 //Log.w("try", "Status: " + a.getStatus());
-                //AsyncTask setupServer = new SshConnectAsync().execute("ls", "pwd");
-                AsyncTask setupServer = new SshConnectAsync().execute(
+                //AsyncTask setupServer = new SshConnectTask().execute("ls", "pwd");
+                AsyncTask setupServer = new SshConnectTask().execute(
                         "sudo apt-get update",
                         "sudo apt-get dist upgrade",
                         "sudo apt-get install git -y",

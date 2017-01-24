@@ -15,7 +15,7 @@ import java.util.Properties;
  * Created by moritz on 17/01/2017.
  */
 
-public class SshConnectAsync extends AsyncTask<String, Integer, String> {
+public class SshConnectTask extends AsyncTask<String, Integer, String> {
 
 
     @Override

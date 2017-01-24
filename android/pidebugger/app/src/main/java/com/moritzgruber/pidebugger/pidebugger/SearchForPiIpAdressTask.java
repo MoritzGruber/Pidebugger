@@ -2,9 +2,6 @@ package com.moritzgruber.pidebugger.pidebugger;
 
 import android.os.AsyncTask;
 import android.util.Log;
-
-import com.moritzgruber.pidebugger.pidebugger.networkScanner.com.unwind.netTools.Pinger;
-
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
@@ -64,10 +61,10 @@ public class SearchForPiIpAdressTask extends AsyncTask<Void, Integer, String> {
                 int exitValue = exec.waitFor();
                 if (exitValue == 0){ //ping was succsessful
                     InetAddress a = InetAddress.getByName(host);
-                    String macAd = Pinger.getMacFromArpCache(a.getHostAddress());
+                    String macAd = NetworkService.getMacFromArpCache(a.getHostAddress());
                     String aVendor;
                     try {
-                        aVendor = Pinger.getVendor("http://api.macvendors.com/" + macAd);
+                        aVendor = NetworkService.getVendor("http://api.macvendors.com/" + macAd);
                         //check if its the right vendor
                         if(aVendor.contains("aspberry")){
                             //save results and break the loop
@@ -100,5 +97,6 @@ public class SearchForPiIpAdressTask extends AsyncTask<Void, Integer, String> {
         SetupInterfaceActivity.updateProgress(progress[0]);
 
     }
+
 
 }
