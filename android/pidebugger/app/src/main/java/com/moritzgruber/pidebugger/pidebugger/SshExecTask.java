@@ -15,8 +15,9 @@ import java.util.Properties;
  * Created by moritz on 17/01/2017.
  */
 
+//this class async executes driffrent commands with a ssh connection
+//Commands(Stings) as given Params , Integer as progress Status and a String as Result (feedback)
 public class SshExecTask extends AsyncTask<String, Integer, String> {
-
 
     @Override
     protected String doInBackground(String... params) {
@@ -25,36 +26,33 @@ public class SshExecTask extends AsyncTask<String, Integer, String> {
         long totalSize = 0;
         //loop through all commands
         for (int i = 0; i < count; i++) {
-            //execute the command
+            //we create new sessions to run diffrent commands at the same time
             JSch jsch = new JSch();
             Session session = null;
             try {
+                //setup ssh
                 session = jsch.getSession("pi", SetupInterfaceActivity.ipAddress, 22);
-
                 session.setPassword("raspberry");
 
                 // Avoid asking for key confirmation
                 Properties prop = new Properties();
                 prop.put("StrictHostKeyChecking", "no");
                 session.setConfig(prop);
-
+                //connect ssh
                 session.connect();
-                Log.w("ssh exec ", " connected " +i);
-                // SSH Channel
+
+                //open SSH Channel
                 ChannelExec channelssh = (ChannelExec)
                         session.openChannel("exec");
-                ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                channelssh.setOutputStream(baos);
-                Log.w("ssh exec res:", "before...");
-                // Execute command
+                ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+                channelssh.setOutputStream(outputStream);
+                // Execute command from params
                 channelssh.setCommand(params[i]);
-                channelssh.connect(1000000);
-                Log.w("ssh exec res:", "" +channelssh.isEOF());
-
+                channelssh.connect(1800000); //this seems like bad code, but the framework has a bug if you use empty Brackets
+                //now disconnect if the command has run throgh or half an our is over (timeout)
                 channelssh.disconnect();
 
-                res = baos.toString();
-                Log.w("ssh exec res:", res);
+                res = res + " -- "+i+":" + outputStream.toString();
 
             } catch (JSchException e) {
                 e.printStackTrace();
@@ -71,12 +69,11 @@ public class SshExecTask extends AsyncTask<String, Integer, String> {
     @Override
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
-        Log.w("ssh exec res:", s);
-
+        //just log the result
+        Log.i("ssh exec res:", s);
     }
-
+    //update after each command
     protected void onProgressUpdate(Integer... progress) {
         SetupInterfaceActivity.updateProgress(progress[0]);
-
     }
 }

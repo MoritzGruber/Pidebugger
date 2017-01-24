@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -12,18 +11,19 @@ import android.widget.TextView;
 
 public class SetupInterfaceActivity extends AppCompatActivity {
 
+    //define elements
     static ProgressBar statusProgressBar;
     static TextView statusText;
     static Button setupButton;
     static Button skipButton;
-    public static String ipAddress = "192.168.0.102";
+    public static String ipAddress = "192.168.0.102"; //this could be any ip
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.setup_interface_screen);
 
-        //init progress bar
+        //init progress bar and status text
         statusProgressBar = (ProgressBar) findViewById(R.id.progressBar);
         statusProgressBar.setProgressDrawable(getDrawable(R.drawable.progressbar));
         statusText = (TextView) findViewById(R.id.textView2);
@@ -38,16 +38,18 @@ public class SetupInterfaceActivity extends AppCompatActivity {
             }
         });
 
+        //disable buttons until you have found the ip of the raspberry pi
         skipButton = (Button) findViewById(R.id.skip);
         setupButton = (Button) findViewById(R.id.setup);
         //disableButton(skipButton);
-        //disableButton(setupButton);
+        disableButton(setupButton);
 
+        //setub button action
         setupButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.w("asdfasf ", " asdfasfd");
+                //change status message
                 statusText.setText("Status: Setting up Server");
-                //AsyncTask setupServer = new SshExecTask().execute("ls", "pwd");
+                //async execute all setup commands to setup the server
                 AsyncTask setupServer = new SshExecTask().execute(
                         "sudo apt-get update",
                         "sudo apt-get dist upgrade",
@@ -63,17 +65,23 @@ public class SetupInterfaceActivity extends AppCompatActivity {
 
     }
 
+    // Start Scanning the network immediately (async)
+    AsyncTask asyncTask = new SearchForPiIpAddressTask().execute();
+
+
+    //update progress bar
     public static void updateProgress (Integer i){
         statusProgressBar.setProgress(i);
     }
 
-    AsyncTask asyncTask = new SearchForPiIpAdressTask().execute();
-
+    //enable a button
     public static void enableButton(Button aButton) {
         aButton.setEnabled(true);
         aButton.setClickable(true);
         aButton.setAlpha(1);
     }
+
+    //disable a button
     public static void disableButton(Button aButton) {
         aButton.setEnabled(false);
         aButton.setClickable(false);

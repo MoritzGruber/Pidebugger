@@ -11,16 +11,14 @@ import java.util.List;
 /**
  * Created by morris on 16.01.2017.
  */
+// This class runs async in the background and scans the network for a device sold by the Raspberry Pi Foundation and returns its ip address
+public class SearchForPiIpAddressTask extends AsyncTask<Void, Integer, String> {
 
-public class SearchForPiIpAdressTask extends AsyncTask<Void, Integer, String> {
-
-    final String TAG = "SearchForPiIpAdressTask";
+    final String TAG = "SearchIP";
 
     @Override
     protected String doInBackground(Void... voids) {
-        //step 1 get own ip
-
-
+        //To start we get our own ip
         String ipAddress = "";
         try {
 
@@ -47,28 +45,33 @@ public class SearchForPiIpAdressTask extends AsyncTask<Void, Integer, String> {
             Log.w("Get IP", "Cannot get own ip");
 
         }
-        //use the ip to get subnet
+        //we use our ip to get the our subnet
         String subnet = ipAddress.substring(0, ipAddress.length()-4);
-        //search the subnet for other devices that answer to pings
-         final String CMD = "/system/bin/ping -c 1 %s";
+        //search the subnet for other devices that answer to pings with this command
+        final String CMD = "/system/bin/ping -c 1 %s";
 
         String resultIp = "";
         //loop through the whole subnet
         for (int i = 0; i < 255; i++) {
+            //increment ip address
             String host = subnet + "." + i;
             try {
+                //execute ping
                 Process exec = Runtime.getRuntime().exec(String.format(CMD, host));
                 int exitValue = exec.waitFor();
                 if (exitValue == 0){ //ping was succsessful
                     InetAddress a = InetAddress.getByName(host);
+                    //get mac address
                     String macAd = NetworkService.getMacFromArpCache(a.getHostAddress());
                     String aVendor;
                     try {
                         aVendor = NetworkService.getVendor("http://api.macvendors.com/" + macAd);
                         //check if its the right vendor
                         if(aVendor.contains("aspberry")){
+                            //we have found a raspberry pi
                             //save results and break the loop
                             resultIp = host;
+                            //set i to 255 so the loop stops
                             i = 255;
                         }
 
@@ -82,6 +85,7 @@ public class SearchForPiIpAdressTask extends AsyncTask<Void, Integer, String> {
             } catch ( Exception e) {
                 Log.i(TAG, "Unable to execute ping");
             }
+            //update progress
             publishProgress((int) ((i / (float) 255) * 100));
         }
 
@@ -89,6 +93,7 @@ public class SearchForPiIpAdressTask extends AsyncTask<Void, Integer, String> {
     }
 
     protected void onPostExecute(String result) {
+        //update the ui and save the ip
         SetupInterfaceActivity.updateProgress(100);
         SetupInterfaceActivity.statusText.setText("Successful: Pi has IP " + result);
         SetupInterfaceActivity.ipAddress = result;
@@ -99,6 +104,7 @@ public class SearchForPiIpAdressTask extends AsyncTask<Void, Integer, String> {
     }
 
     protected void onProgressUpdate(Integer... progress) {
+        //send progress informations to ui thread
         SetupInterfaceActivity.updateProgress(progress[0]);
 
     }
