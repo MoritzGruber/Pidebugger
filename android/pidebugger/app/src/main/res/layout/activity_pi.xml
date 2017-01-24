@@ -5,29 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.moritzgruber.pidebugger.pidebugger.PiInterfaceActivity">
+    tools:context="com.moritzgruber.pidebugger.pidebugger.PiInterfaceActivity"
+    >
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/app_bar_height"
         android:fitsSystemWindows="true"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="#171717">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/toolbar_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
-            app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            app:contentScrim="#171717"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:statusBarScrim="#171717">
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
+                android:layout_height="0dp"
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            <TextView
+                android:text="Pi Debugger"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/textView3"
+                android:textColor="#ffffff"
+                android:elegantTextHeight="true"
+                android:textSize="36sp"
+                android:gravity="center"
+                android:scrollHorizontally="true" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
@@ -41,7 +55,9 @@
         android:layout_margin="@dimen/fab_margin"
         app:layout_anchor="@+id/app_bar"
         app:layout_anchorGravity="bottom|left"
-        app:srcCompat="@android:drawable/ic_dialog_email"
-        android:layout_gravity="center_vertical|center_horizontal" />
+        app:srcCompat="@android:drawable/ic_dialog_info"
+        android:layout_gravity="center_vertical|center_horizontal"
+        app:backgroundTint="#afea4f"
+        app:rippleColor="#171717" />
 
 </android.support.design.widget.CoordinatorLayout>
