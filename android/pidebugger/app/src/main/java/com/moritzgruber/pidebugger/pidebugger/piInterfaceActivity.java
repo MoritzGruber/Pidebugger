@@ -1,9 +1,9 @@
 package com.moritzgruber.pidebugger.pidebugger;
 
+import android.app.Dialog;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -30,13 +30,15 @@ public class PiInterfaceActivity extends AppCompatActivity {
         final SocketService mySocket = new SocketService();
         mySocket.connect();
 
-        //template code
+        //fab that links to the legend
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Legend goes in here", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                // legend dialog
+                final Dialog dialog = new Dialog(PiInterfaceActivity.this);
+                dialog.setContentView(R.layout.dialogcustom);
+                dialog.show();
             }
         });
 

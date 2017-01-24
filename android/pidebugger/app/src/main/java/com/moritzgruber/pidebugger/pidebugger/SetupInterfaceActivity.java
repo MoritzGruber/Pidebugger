@@ -25,6 +25,7 @@ public class SetupInterfaceActivity extends AppCompatActivity {
 
         //init progress bar
         statusProgressBar = (ProgressBar) findViewById(R.id.progressBar);
+        statusProgressBar.setProgressDrawable(getDrawable(R.drawable.progressbar));
         statusText = (TextView) findViewById(R.id.textView2);
 
 
@@ -66,7 +67,7 @@ public class SetupInterfaceActivity extends AppCompatActivity {
         statusProgressBar.setProgress(i);
     }
 
-    //AsyncTask a = new SearchForPiIpAdressTask().execute();
+    AsyncTask asyncTask = new SearchForPiIpAdressTask().execute();
 
     public static void enableButton(Button aButton) {
         aButton.setEnabled(true);
