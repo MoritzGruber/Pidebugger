@@ -1,3 +1,5 @@
+package com.moritzgruber.pidebugger.pidebugger;
+
 import android.content.Intent;
 import android.test.ActivityUnitTestCase;
 import android.test.suitebuilder.annotation.MediumTest;
@@ -11,8 +13,7 @@ import org.junit.Test;
 
 //new test: check if views will be loaded correctly?
 
-//check if activities will be loaded correctly
-
+//check if skip button starts and loads next activitiy correctly
 public class activityTest extends ActivityUnitTestCase<SetupInterfaceActivity> {
 
     private Intent mStartIntent;
@@ -35,7 +36,7 @@ public class activityTest extends ActivityUnitTestCase<SetupInterfaceActivity> {
     @MediumTest
     public void testPreconditions() {
         startActivity(mStartIntent, null, null);
-        mButton = (Button) getActivity().findViewById(R.id.scrollView);
+        mButton = (Button) getActivity().findViewById(R.id.skip);
 
         assertNotNull(getActivity());
         assertNotNull(mButton);

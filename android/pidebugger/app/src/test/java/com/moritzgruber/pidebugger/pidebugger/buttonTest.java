@@ -1,3 +1,5 @@
+package com.moritzgruber.pidebugger.pidebugger;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +16,7 @@ import org.junit.runner.RunWith;
 import java.util.regex.Pattern;
 
 import static android.R.attr.button;
+import static android.R.attr.fingerprintAuthDrawable;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -30,36 +33,46 @@ public class buttonTest {
 
     //check if values will be set correct on button click
 
+
     @Test
     public void buttonClickedTest() {
 
 
-        final Button[] pinArrry = new Button[40];
+
+        final Button[] pinArray = new Button[40];
+
+
 
         for (int i = 0; i < 40; i++) {
 
-            pinArrry[i].setOnClickListener(new View.OnClickListener() {
+
+            pinArray[i].setText("l");
+
+
+            /*
+            pinArray[i].setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
 
 
                    v.performClick();
 
-                    if(pinArrry[v.getId()].getText() == "l"){
-                        pinArrry[v.getId()].setText("h");
-                        assertTrue("h".equals(pinArrry[v.getId()].getText()));
+                    if(pinArray[v.getId()].getText() == "l"){
+                        pinArray[v.getId()].setText("h");
+                        assertTrue("h".equals(pinArray[v.getId()].getText()));
 
                     } else {
-                        pinArrry[v.getId()].setText("l");
-                        assertTrue("l".equals(pinArrry[v.getId()].getText()));
+                        pinArray[v.getId()].setText("l");
+                        assertTrue("l".equals(pinArray[v.getId()].getText()));
 
                     }
 
                 }
             });
+            */
 
-            pinArrry[i].setId(i);
+            pinArray[i].setId(i);
 
-            pinArrry[i].setText("l");
+            //pinArray[i].setText("l");
 
         }
 
