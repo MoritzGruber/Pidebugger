@@ -33,7 +33,7 @@ public class SetupInterfaceActivity extends AppCompatActivity {
 
                 //AsyncTask a = new SearchForPiIpAdressTask().execute();
                 //Log.w("try", "Status: " + a.getStatus());
-                new SshConnectAsync().execute("asdf");
+                new SshConnectAsync().execute("ls", "pwd");
 
 
             }

@@ -1,7 +1,5 @@
 package com.moritzgruber.pidebugger.pidebugger;
 
-import android.os.Bundle;
-
 import java.net.URISyntaxException;
 
 import io.socket.client.IO;
@@ -25,7 +23,7 @@ public class SocketService {
     public void connect() {
         mSocket.connect();
     }
-    public void send(){
-        mSocket.emit("new message", "hello world from hdm");
+    public void send(Integer pin, Integer Value){
+        mSocket.emit("set", pin, Value);
     }
 }

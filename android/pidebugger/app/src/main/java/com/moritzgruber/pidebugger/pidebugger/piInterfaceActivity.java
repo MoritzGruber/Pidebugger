@@ -75,10 +75,10 @@ public class PiInterfaceActivity extends AppCompatActivity {
                    Log.w(" asdf ", " " + v.getId());
                     if(pinArrry[v.getId()].getText() == "l"){
                         pinArrry[v.getId()].setText("h");
-                        mySocket.send();
+                        mySocket.send(v.getId(), 1);
                     } else {
                         pinArrry[v.getId()].setText("l");
-                        mySocket.send();
+                        mySocket.send(v.getId(), 0);
 
                     }
 

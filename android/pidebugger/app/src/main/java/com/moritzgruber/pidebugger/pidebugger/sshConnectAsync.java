@@ -15,47 +15,57 @@ import java.util.Properties;
  * Created by moritz on 17/01/2017.
  */
 
-public class SshConnectAsync extends AsyncTask<String, Void, String> {
+public class SshConnectAsync extends AsyncTask<String, Integer, String> {
 
 
     @Override
     protected String doInBackground(String... params) {
-
+        int count = params.length;
         String res = "";
-        JSch jsch = new JSch();
-        Session session = null;
-        try {
-            session = jsch.getSession("pi", "192.168.0.100", 22);
+        long totalSize = 0;
+        //loop through all commands
+        for (int i = 0; i < count; i++) {
+            //execute the command
+            JSch jsch = new JSch();
+            Session session = null;
+            try {
+                session = jsch.getSession("pi", "192.168.0.100", 22);
 
-            session.setPassword("raspberry");
+                session.setPassword("raspberry");
 
-            // Avoid asking for key confirmation
-            Properties prop = new Properties();
-            prop.put("StrictHostKeyChecking", "no");
-            //prop.put("kex", "diffie-hellman-group-exchange-sha256");
-            session.setConfig(prop);
+                // Avoid asking for key confirmation
+                Properties prop = new Properties();
+                prop.put("StrictHostKeyChecking", "no");
+                //prop.put("kex", "diffie-hellman-group-exchange-sha256");
+                session.setConfig(prop);
 
-            session.connect();
+                session.connect();
 
-            // SSH Channel
-            ChannelExec channelssh = (ChannelExec)
-                    session.openChannel("exec");
-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            channelssh.setOutputStream(baos);
-            Log.w("ssh exec res:", "before...");
-            // Execute command
-            channelssh.setCommand("pwd");
-            channelssh.connect(1000000);
-            Log.w("ssh exec res:", "" +channelssh.isEOF());
+                // SSH Channel
+                ChannelExec channelssh = (ChannelExec)
+                        session.openChannel("exec");
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                channelssh.setOutputStream(baos);
+                Log.w("ssh exec res:", "before...");
+                // Execute command
+                channelssh.setCommand(params[i]);
+                channelssh.connect(1000000);
+                Log.w("ssh exec res:", "" +channelssh.isEOF());
 
-            channelssh.disconnect();
+                channelssh.disconnect();
 
-            res = baos.toString();
-            Log.w("ssh exec res:", res);
+                res = baos.toString();
+                Log.w("ssh exec res:", res);
 
-        } catch (JSchException e) {
-            e.printStackTrace();
+            } catch (JSchException e) {
+                e.printStackTrace();
+            }
+            //update progress
+            publishProgress((int) ((i / (float) count) * 100));
+            // Escape early if cancel() is called
+            if (isCancelled()) break;
         }
+
         return res;
     }
 
