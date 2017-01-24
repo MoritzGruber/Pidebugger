@@ -119,11 +119,28 @@ public class PiInterfaceActivity extends AppCompatActivity {
                 descRow.addView(tv, layoutParams);
             }
 
+            //deactivate and style disabled pins
             if(isDisabled(i)){
                 pinArray[i-1].setClickable(false);
                 pinArray[i-1].setEnabled(false);
-                pinArray[i-1].setBackground(getDrawable(R.drawable.ground_pin));
-                if(i == 1)
+                pinArray[i-1].setText("");
+
+                if(i == 27 || i == 28){
+                    //style for ic pins
+                    pinArray[i-1].setBackground(getDrawable(R.drawable.ic_pin));
+                }
+                else if(i == 2 || i == 4){
+                    //style for 5V pins
+                    pinArray[i-1].setBackground(getDrawable(R.drawable.v5_pin));
+
+                }
+                else if(i == 1 || i == 17){
+                    //style for 3V pins
+                    pinArray[i-1].setBackground(getDrawable(R.drawable.v3_pin));
+                } else {
+                    //style for ground pins
+                    pinArray[i-1].setBackground(getDrawable(R.drawable.ground_pin));
+                }
             }
 
         }

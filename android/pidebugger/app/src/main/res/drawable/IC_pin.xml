@@ -7,13 +7,9 @@
                 />
             <gradient
                 android:angle="45"
-                android:startColor="#000000"
-                android:endColor="#000000"
+                android:startColor="#C5FFC7"
+                android:endColor="#C5FFC7"
                 android:type="linear"
-                />
-            <stroke
-                android:width="3dp"
-                android:color="#000000"
                 />
         </shape>
     </item>
