@@ -11,14 +11,14 @@ import com.moritzgruber.pidebugger.pidebugger.SetupInterfaceActivity;
 import org.junit.Test;
 
 
-//new test: check if views will be loaded correctly?
+//check if skip button works and loads the next activitiy correctly
 
-//check if skip button starts and loads next activitiy correctly
 public class activityTest extends ActivityUnitTestCase<SetupInterfaceActivity> {
 
     private Intent mStartIntent;
     private Button mButton;
 
+    SetupInterfaceActivity activity;
 
     public activityTest() {
         super(SetupInterfaceActivity.class);
@@ -33,6 +33,7 @@ public class activityTest extends ActivityUnitTestCase<SetupInterfaceActivity> {
     }
 
 
+
     @MediumTest
     public void testPreconditions() {
         startActivity(mStartIntent, null, null);
@@ -40,14 +41,17 @@ public class activityTest extends ActivityUnitTestCase<SetupInterfaceActivity> {
 
         assertNotNull(getActivity());
         assertNotNull(mButton);
+
+        startActivityTest();
     }
 
 
+
     @MediumTest
-    public void startPiInterfaceActivityTest() {
+    public void startActivityTest() {
 
         SetupInterfaceActivity activity = startActivity(mStartIntent, null, null);
-        mButton = (Button) activity.findViewById(R.id.scrollView);
+        mButton = (Button) activity.findViewById(R.id.skip);
 
         mButton.performClick();
 

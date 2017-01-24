@@ -1,133 +1,66 @@
 package com.moritzgruber.pidebugger.pidebugger;
 
-import android.util.Log;
-import android.view.View;
+
+import android.content.Intent;
+import android.test.ActivityUnitTestCase;
+import android.test.suitebuilder.annotation.MediumTest;
 import android.widget.Button;
-import android.widget.TextView;
 
-import com.moritzgruber.pidebugger.pidebugger.PiInterfaceActivity;
-import com.moritzgruber.pidebugger.pidebugger.R;
-
-import dalvik.annotation.TestTargetClass;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-
-import java.util.regex.Pattern;
-
-import static android.R.attr.button;
-import static android.R.attr.fingerprintAuthDrawable;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+public class buttonTest extends ActivityUnitTestCase<SetupInterfaceActivity> {
 
 
+    private Intent mStartIntent;
+    private Button skipButton;
+    private Button setupButton;
 
 
-public class buttonTest {
-
-    //new test: check if buttons are clickable
-
-    //new test: check if buttons are visible
+    public buttonTest() {
+        super(SetupInterfaceActivity.class);
+    }
 
 
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
 
-    //check if values will be set correct on button click
-
-
-    @Test
-    public void buttonClickedTest() {
-
-
-
-        final Button[] pinArray = new Button[40];
+        mStartIntent = new Intent(Intent.ACTION_MAIN);
+    }
 
 
+    @MediumTest
+    public void testPreconditions() {
+        startActivity(mStartIntent, null, null);
+        skipButton = (Button) getActivity().findViewById(R.id.skip);
+        setupButton = (Button) getActivity().findViewById(R.id.setup);
 
-        for (int i = 0; i < 40; i++) {
+        assertNotNull(skipButton);
+        assertNotNull(setupButton);
 
-
-            pinArray[i].setText("l");
-
-
-            /*
-            pinArray[i].setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-
-
-                   v.performClick();
-
-                    if(pinArray[v.getId()].getText() == "l"){
-                        pinArray[v.getId()].setText("h");
-                        assertTrue("h".equals(pinArray[v.getId()].getText()));
-
-                    } else {
-                        pinArray[v.getId()].setText("l");
-                        assertTrue("l".equals(pinArray[v.getId()].getText()));
-
-                    }
-
-                }
-            });
-            */
-
-            pinArray[i].setId(i);
-
-            //pinArray[i].setText("l");
-
-        }
+        startPiInterfaceActivityTest();
+    }
 
 
-        /*
-        for (int i=0; i<40; i++){
+    @MediumTest
+    public void startPiInterfaceActivityTest() {
 
-            pinArrry[i].setText("l");
-            assertTrue("l".equals(pinArrry[i].getText()));
-
-            pinArrry[i].setOnClickListener(new View.OnClickListener() {
-                   public void onClick(View v) {
-
-                       if (pinArrry[v.getId()].getText() == "l") {
-                           pinArrry[v.getId()].setText("h");
-                           assertTrue("h".equals(pinArrry[i].getText()));
+        SetupInterfaceActivity activity = startActivity(mStartIntent, null, null);
 
 
-                       } else {
-                           pinArrry[v.getId()].setText("l");
+        skipButton = (Button) activity.findViewById(R.id.testbtn);
+        setupButton = (Button) activity.findViewById(R.id.testbtn);
 
 
-                       }
-                   }
+        //mButton = (Button) activity.findViewById(R.id.testbtn);
 
-               }
-               */
+        skipButton.performClick();
 
-
-
-
-
-
-
-
-            //pinArrry[i] = new Button();
-
-            //pinArrry[i].setText("l");
-
-            //assertTrue("l".equals(pinArrry[i].getText()));
-
-
-            //button.perform(click());
-
-            //pinArrry[i].performClick();
-
-
-
-
-
+        assertNotNull(getStartedActivityIntent());
+        assertTrue(isFinishCalled());
 
     }
 
 
-
-
-
 }
+
+
+

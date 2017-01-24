@@ -26,61 +26,13 @@ public class uiTest extends InstrumentationTestCase {
         Object piDebugger = device.findObject(By.text("piDebugger2"));
         */
 
-
-
-
     }
 
 
     public void uiTesting() throws Exception {
 
-
         UiObject2 skipbtn = device.findObject(By.text("Skip"));
         skipbtn.click();
-
-
-        final Button[] pinArray = new Button[40];
-
-        for (int i = 0; i < 40; i++) {
-
-
-            pinArray[i].setText("l");
-
-
-
-
-
-
-            /*
-            pinArray[i].setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-
-
-                   v.performClick();
-
-                    if(pinArray[v.getId()].getText() == "l"){
-                        pinArray[v.getId()].setText("h");
-                        assertTrue("h".equals(pinArray[v.getId()].getText()));
-
-                    } else {
-                        pinArray[v.getId()].setText("l");
-                        assertTrue("l".equals(pinArray[v.getId()].getText()));
-
-                    }
-
-                }
-            });
-            */
-
-
-            pinArray[i].setId(i);
-
-
-        }
-
-
-
-
 
     }
 
