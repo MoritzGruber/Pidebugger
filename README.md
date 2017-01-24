@@ -11,4 +11,4 @@ Members:
 Jens Janny - jj028
 Moritz Gruber - mg166
 
-
+UPDATE: Since November 2016 the Raspbian Image has SSH disabled by default.

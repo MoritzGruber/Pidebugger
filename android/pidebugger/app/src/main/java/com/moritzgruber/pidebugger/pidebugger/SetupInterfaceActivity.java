@@ -55,7 +55,7 @@ public class SetupInterfaceActivity extends AppCompatActivity {
                         "sudo apt-get install npm -y && sudo ln -s /usr/bin/nodejs /usr/bin/node",
                         "git clone https://github.com/MoritzGruber/RPI.git",
                         "cd RPI && npm install",
-                        "sh RPI/start.sh &"
+                        "sh start.sh &"
                 );
             }
         });

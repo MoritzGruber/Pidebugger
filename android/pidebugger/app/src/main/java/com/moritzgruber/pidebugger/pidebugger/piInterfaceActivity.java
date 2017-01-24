@@ -16,6 +16,8 @@ import android.widget.TextView;
 
 public class PiInterfaceActivity extends AppCompatActivity {
 
+    int[] disabledPins = {1,2,4,6,9,14,17,20,25,27,28,30,34,39};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +52,7 @@ public class PiInterfaceActivity extends AppCompatActivity {
         layoutParams.bottomMargin= 10;
 
         //create an array to store the created buttons
-        final Button[] pinArrry = new Button[40];
+        final Button[] pinArray = new Button[40];
 
 
 
@@ -67,16 +69,16 @@ public class PiInterfaceActivity extends AppCompatActivity {
         //this loop creates all 40 buttons and 20 textviews, so he fills up all the three linear layouts with 20 items
         for (int i = 0; i < 40; i++) {
             //create new button and store it in the array
-            pinArrry[i] = new Button(this);
+            pinArray[i] = new Button(this);
             //for active buttons online
-            pinArrry[i].setOnClickListener(new View.OnClickListener() {
+            pinArray[i].setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     // Perform action on click
-                    if(pinArrry[v.getId()].getText() == "l"){
-                        pinArrry[v.getId()].setText("h");
+                    if(pinArray[v.getId()].getText() == "l"){
+                        pinArray[v.getId()].setText("h");
                         mySocket.send(v.getId(), 1);
                     } else {
-                        pinArrry[v.getId()].setText("l");
+                        pinArray[v.getId()].setText("l");
                         mySocket.send(v.getId(), 0);
 
                     }
@@ -84,25 +86,26 @@ public class PiInterfaceActivity extends AppCompatActivity {
                 }
             });
             //give the right styling to the button
-            pinArrry[i].setBackground(getDrawable(R.drawable.active_pin));
-            pinArrry[i].setTextSize(50);
-            pinArrry[i].setWidth(screenWidth/4);
-            pinArrry[i].setHeight(screenWidth/4);
-            pinArrry[i].setTransformationMethod(null);
+            pinArray[i].setBackground(getDrawable(R.drawable.active_pin));
+            pinArray[i].setTextSize(50);
+            pinArray[i].setWidth(screenWidth/4);
+            pinArray[i].setHeight(screenWidth/4);
+            pinArray[i].setTransformationMethod(null);
             //set id of the button
-            pinArrry[i].setId(i);
+            pinArray[i].setId(i);
 
 
 
             //set inital text for that button
-            pinArrry[i].setText("l");
+            pinArray[i].setText("l");
+
             //check if the index is odd or even, since its an int we can use the bitwise and operator, its faster than modulo
             if ( (i & 1) == 0 ) {
                 //even... so button is added to the right row
-                leftRow.addView(pinArrry[i], layoutParams);
+                leftRow.addView(pinArray[i], layoutParams);
             } else {
                 //odd... so button is added to the left row
-                rightRow.addView(pinArrry[i], layoutParams);
+                rightRow.addView(pinArray[i], layoutParams);
 
                 //create a description of the pins for each to buttons
 
@@ -115,6 +118,23 @@ public class PiInterfaceActivity extends AppCompatActivity {
                 tv.setText(" "+i+" / "+(i+1));
                 descRow.addView(tv, layoutParams);
             }
+
+            if(isDisabled(i)){
+                pinArray[i-1].setClickable(false);
+                pinArray[i-1].setEnabled(false);
+                pinArray[i-1].setBackground(getDrawable(R.drawable.ground_pin));
+                if(i == 1)
+            }
+
         }
+    }
+
+    public boolean isDisabled (int pinNumber){
+        for (int j=0; j<disabledPins.length; j++) {
+            if(disabledPins[j] == pinNumber){
+                return true;
+            }
+        }
+        return false;
     }
 }
