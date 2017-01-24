@@ -91,13 +91,10 @@ public class SearchForPiIpAdressTask extends AsyncTask<Void, Integer, String> {
     protected void onPostExecute(String result) {
         SetupInterfaceActivity.updateProgress(100);
         SetupInterfaceActivity.statusText.setText("Successful: Pi has IP " + result);
-        SocketService.ipAddress = result;
-        SetupInterfaceActivity.setupButton.setEnabled(true);
-        SetupInterfaceActivity.skipButton.setEnabled(true);
-        SetupInterfaceActivity.setupButton.setClickable(true);
-        SetupInterfaceActivity.skipButton.setClickable(true);
-        SetupInterfaceActivity.setupButton.setAlpha(1);
-        SetupInterfaceActivity.skipButton.setAlpha(1);
+        SetupInterfaceActivity.ipAddress = result;
+        SetupInterfaceActivity.enableButton(SetupInterfaceActivity.setupButton);
+        SetupInterfaceActivity.enableButton(SetupInterfaceActivity.skipButton);
+
 
     }
 

@@ -15,7 +15,7 @@ import java.util.Properties;
  * Created by moritz on 17/01/2017.
  */
 
-public class SshConnectTask extends AsyncTask<String, Integer, String> {
+public class SshExecTask extends AsyncTask<String, Integer, String> {
 
 
     @Override
@@ -29,18 +29,17 @@ public class SshConnectTask extends AsyncTask<String, Integer, String> {
             JSch jsch = new JSch();
             Session session = null;
             try {
-                session = jsch.getSession("pi", "192.168.0.100", 22);
+                session = jsch.getSession("pi", SetupInterfaceActivity.ipAddress, 22);
 
                 session.setPassword("raspberry");
 
                 // Avoid asking for key confirmation
                 Properties prop = new Properties();
                 prop.put("StrictHostKeyChecking", "no");
-                //prop.put("kex", "diffie-hellman-group-exchange-sha256");
                 session.setConfig(prop);
 
                 session.connect();
-
+                Log.w("ssh exec ", " connected " +i);
                 // SSH Channel
                 ChannelExec channelssh = (ChannelExec)
                         session.openChannel("exec");

@@ -16,6 +16,7 @@ public class SetupInterfaceActivity extends AppCompatActivity {
     static TextView statusText;
     static Button setupButton;
     static Button skipButton;
+    public static String ipAddress = "192.168.0.102";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,21 +38,16 @@ public class SetupInterfaceActivity extends AppCompatActivity {
         });
 
         skipButton = (Button) findViewById(R.id.skip);
-        skipButton.setEnabled(false);
-        skipButton.setAlpha(.5f);
-        skipButton.setClickable(false);
         setupButton = (Button) findViewById(R.id.setup);
-        setupButton.setEnabled(false);
-        setupButton.setAlpha(.5f);
-        setupButton.setClickable(false);
-
+        //disableButton(skipButton);
+        //disableButton(setupButton);
 
         setupButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.w("asdfasf ", " asdfasfd");
                 statusText.setText("Status: Setting up Server");
-                //AsyncTask setupServer = new SshConnectTask().execute("ls", "pwd");
-                AsyncTask setupServer = new SshConnectTask().execute(
+                //AsyncTask setupServer = new SshExecTask().execute("ls", "pwd");
+                AsyncTask setupServer = new SshExecTask().execute(
                         "sudo apt-get update",
                         "sudo apt-get dist upgrade",
                         "sudo apt-get install git -y",
@@ -63,7 +59,6 @@ public class SetupInterfaceActivity extends AppCompatActivity {
                 );
             }
         });
-         //ssh.main("pi@192.168.0.100");
 
     }
 
@@ -71,5 +66,16 @@ public class SetupInterfaceActivity extends AppCompatActivity {
         statusProgressBar.setProgress(i);
     }
 
-    AsyncTask a = new SearchForPiIpAdressTask().execute();
+    //AsyncTask a = new SearchForPiIpAdressTask().execute();
+
+    public static void enableButton(Button aButton) {
+        aButton.setEnabled(true);
+        aButton.setClickable(true);
+        aButton.setAlpha(1);
+    }
+    public static void disableButton(Button aButton) {
+        aButton.setEnabled(false);
+        aButton.setClickable(false);
+        aButton.setAlpha(.5f);
+    }
 }

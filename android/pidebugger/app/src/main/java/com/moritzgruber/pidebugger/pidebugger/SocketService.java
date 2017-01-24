@@ -9,15 +9,16 @@ import io.socket.client.Socket;
 
 public class SocketService {
 
-    public static String ipAddress;
     private Socket mSocket;
-
+    private String ip;
 
     public SocketService() {
         // Body of constructor
         {
             try {
-                mSocket = IO.socket(ipAddress);
+                ip = SetupInterfaceActivity.ipAddress;
+                Log.w("ip in socket = ", ip);
+                mSocket = IO.socket("http://" + ip);
             } catch (URISyntaxException e) {}
         }
     }
