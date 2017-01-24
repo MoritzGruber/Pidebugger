@@ -75,4 +75,9 @@ public class SshConnectAsync extends AsyncTask<String, Integer, String> {
         Log.w("ssh exec res:", s);
 
     }
+
+    protected void onProgressUpdate(Integer... progress) {
+        SetupInterfaceActivity.updateProgress(progress[0]);
+
+    }
 }

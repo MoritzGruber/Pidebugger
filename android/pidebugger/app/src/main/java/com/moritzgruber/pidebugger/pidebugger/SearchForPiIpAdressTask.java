@@ -85,6 +85,7 @@ public class SearchForPiIpAdressTask extends AsyncTask<Void, Integer, String> {
             } catch ( Exception e) {
                 Log.i(TAG, "Unable to execute ping");
             }
+            publishProgress((int) ((i / (float) 255) * 100));
         }
 
         return resultIp;
@@ -92,5 +93,12 @@ public class SearchForPiIpAdressTask extends AsyncTask<Void, Integer, String> {
 
     protected void onPostExecute(String result) {
         Log.w("SearchForPiIpAdressTask", "Pi has ip " + result + " as result of scan");
+        SetupInterfaceActivity.updateProgress(100);
     }
+
+    protected void onProgressUpdate(Integer... progress) {
+        SetupInterfaceActivity.updateProgress(progress[0]);
+
+    }
+
 }
