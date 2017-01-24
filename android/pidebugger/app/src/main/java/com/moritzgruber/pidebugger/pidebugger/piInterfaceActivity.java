@@ -25,7 +25,7 @@ public class PiInterfaceActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         //setting up socket
-        final SocketService mySocket = new SocketService("http://10.60.60.254:3000");
+        final SocketService mySocket = new SocketService();
         mySocket.connect();
 
         //template code
@@ -72,7 +72,6 @@ public class PiInterfaceActivity extends AppCompatActivity {
             pinArrry[i].setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     // Perform action on click
-                   Log.w(" asdf ", " " + v.getId());
                     if(pinArrry[v.getId()].getText() == "l"){
                         pinArrry[v.getId()].setText("h");
                         mySocket.send(v.getId(), 1);

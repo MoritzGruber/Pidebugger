@@ -4,13 +4,18 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 public class SetupInterfaceActivity extends AppCompatActivity {
 
-    static ProgressBar aProgressBar;
+    static ProgressBar statusProgressBar;
+    static TextView statusText;
+    static Button setupButton;
+    static Button skipButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +23,9 @@ public class SetupInterfaceActivity extends AppCompatActivity {
         setContentView(R.layout.setup_interface_screen);
 
         //init progress bar
-        aProgressBar = (ProgressBar) findViewById(R.id.progressBar);
+        statusProgressBar = (ProgressBar) findViewById(R.id.progressBar);
+        statusText = (TextView) findViewById(R.id.textView2);
+
 
         //find the skip button and switch to the piInterface if you press it
         final Button button = (Button) findViewById(R.id.skip);
@@ -29,15 +36,20 @@ public class SetupInterfaceActivity extends AppCompatActivity {
             }
         });
 
-        //testing socket ...
-        final SocketService mySocket = new SocketService("http://10.60.60.254:3000");
-        mySocket.connect();
-        final Button button2 = (Button) findViewById(R.id.setup);
-        button2.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+        skipButton = (Button) findViewById(R.id.skip);
+        skipButton.setEnabled(false);
+        skipButton.setAlpha(.5f);
+        skipButton.setClickable(false);
+        setupButton = (Button) findViewById(R.id.setup);
+        setupButton.setEnabled(false);
+        setupButton.setAlpha(.5f);
+        setupButton.setClickable(false);
 
-                //
-                //Log.w("try", "Status: " + a.getStatus());
+
+        setupButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Log.w("asdfasf ", " asdfasfd");
+                statusText.setText("Status: Setting up Server");
                 //AsyncTask setupServer = new SshConnectTask().execute("ls", "pwd");
                 AsyncTask setupServer = new SshConnectTask().execute(
                         "sudo apt-get update",
@@ -56,8 +68,7 @@ public class SetupInterfaceActivity extends AppCompatActivity {
     }
 
     public static void updateProgress (Integer i){
-        aProgressBar.setProgress(i);
-
+        statusProgressBar.setProgress(i);
     }
 
     AsyncTask a = new SearchForPiIpAdressTask().execute();
