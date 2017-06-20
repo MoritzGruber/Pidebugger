@@ -1,0 +1,15 @@
+PODS:
+  - NMSSH (2.2.5)
+  - Socket.IO-Client-Swift (8.1.2)
+
+DEPENDENCIES:
+  - NMSSH (~> 2.2.5)
+  - Socket.IO-Client-Swift (~> 8.1.2)
+
+SPEC CHECKSUMS:
+  NMSSH: 8643df89d73b9a3e398a5a5971f6ea4bb1179ea7
+  Socket.IO-Client-Swift: 542d82e6708f9901b3f6c1d134fb60fa0d09d4d1
+
+PODFILE CHECKSUM: 4f5404af9d3cd0f5096c3b7f68a7c5b5eace3a69
+
+COCOAPODS: 1.0.1

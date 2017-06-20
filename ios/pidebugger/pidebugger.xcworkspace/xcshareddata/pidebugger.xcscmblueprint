@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8B05C34C3BB54E708A36489F0057DC9F39A6E3DA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8B05C34C3BB54E708A36489F0057DC9F39A6E3DA" : 9223372036854775807,
+    "CC736D227A29F609AE61B55FA3D72159FB828F32" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "80BB7AAF-0D09-461B-B97E-8044B48EFA87",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8B05C34C3BB54E708A36489F0057DC9F39A6E3DA" : "pma-ws16-pidebugger2\/",
+    "CC736D227A29F609AE61B55FA3D72159FB828F32" : "MMLanScan\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "pidebugger",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios\/pidebugger\/pidebugger.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/version.mi.hdm-stuttgart.de\/git\/pma-ws16-pidebugger2",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8B05C34C3BB54E708A36489F0057DC9F39A6E3DA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mavris\/MMLanScan.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CC736D227A29F609AE61B55FA3D72159FB828F32"
+    }
+  ]
+}

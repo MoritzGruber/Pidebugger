@@ -1,0 +1,6 @@
+framework module Pods_pidebugger {
+  umbrella header "Pods-pidebugger-umbrella.h"
+
+  export *
+  module * { export * }
+}
